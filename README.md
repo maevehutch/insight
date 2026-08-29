@@ -1,1 +1,1 @@
-# insight
+# InSight
