@@ -6,7 +6,7 @@
 
 InSight is a benchmark for evaluating multimodal agents on claim verification over interactive visualizations. Given an interactive HTML visualization and a natural-language proposition, an agent must interact with the visualization over multiple turns , clicking, hovering, and navigating, and classify the proposition as **True**, **False**, or **NotEnoughInfo**.
 
-The benchmark environment renders visualizations with playwright and supports evaluation of both open-source* (via HuggingFace) and closed-source (via OpenAI-compatible APIs) vision-language models, with results logged to Weights & Biases.
+The benchmark environment renders visualizations with playwright and supports evaluation of both open-source (via HuggingFace) and closed-source (via OpenAI-compatible APIs) vision-language models, with results logged to Weights & Biases.
 
 ---
 
