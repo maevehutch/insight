@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":800,"height":580,"config":{"view":{"stroke":null},"legend":{"orient":"bottom-right","offset":0}},"layer":[{"data":{"url":"https://gicentre.github.io/data/geoTutorials/londonBoroughs.json","format":{"type":"topojson","feature":"boroughs"}},"mark":{"type":"geoshape","fill":"#ADD8E6","stroke":"black"}},{"data":{"url":"https://gicentre.github.io/data/geoTutorials/londonCentroids.csv"},"transform":[{"lookup":"FID","from":{"data":{"values":[{"borough":"Hounslow","household income":"32,516","betting outlets":61,"crime rate":"173.5","population":"270,782","bshopsDIVpopulation":"4439"},{"borough":"Barking and Dagenham","household income":"32,931","betting outlets":47,"crime rate":"182.9","population":"211,998","bshopsDIVpopulation":"4511"},{"borough":"Brent","household income":"33,805","betting outlets":76,"crime rate":"169.8","population":"331,616","bshopsDIVpopulation":"4363"},{"borough":"Merton","household income":"34,127","betting outlets":24,"crime rate":"126.0","population":"206,186","bshopsDIVpopulation":"8591"},{"borough":"Ealing","household income":"34,190","betting outlets":56,"crime rate":"168.2","population":"344,837","bshopsDIVpopulation":"6158"},{"borough":"Newham","household income":"34,869","betting outlets":67,"crime rate":"191","population":"352,005","bshopsDIVpopulation":"5254"},{"borough":"Lewisham","household income":"35,365","betting outlets":57,"crime rate":"175.3","population":"303,536","bshopsDIVpopulation":"5325"},{"borough":"Enfield","household income":"35,586","betting outlets":71,"crime rate":"170.6","population":"338,201","bshopsDIVpopulation":"4763"},{"borough":"Greenwich","household income":"35,598","betting outlets":49,"crime rate":"184.0","population":"286,186","bshopsDIVpopulation":"5841"},{"borough":"Hillingdon","household income":"35,695","betting outlets":46,"crime rate":"156.0","population":"304,824","bshopsDIVpopulation":"6627"},{"borough":"Barnet","household income":"35,716","betting outlets":59,"crime rate":"138.2","population":"395,839","bshopsDIVpopulation":"6709"},{"borough":"Havering","household income":"35,885","betting outlets":44,"crime rate":"203.2","population":"257,810","bshopsDIVpopulation":"5859"},{"borough":"Haringey","household income":"35,963","betting outlets":61,"crime rate":"203.2","population":"270,624","bshopsDIVpopulation":"4436"},{"borough":"Waltham Forest","household income":"36,096","betting outlets":51,"crime rate":"162.5","population":"276,700","bshopsDIVpopulation":"5425"},{"borough":"Croydon","household income":"36,347","betting outlets":56,"crime rate":"170.0","population":"385,346","bshopsDIVpopulation":"6881"},{"borough":"Hackney","household income":"36,351","betting outlets":42,"crime rate":"220.0","population":"279,665","bshopsDIVpopulation":"6659"},{"borough":"Sutton","household income":"36,459","betting outlets":20,"crime rate":"125.0","population":"204,525","bshopsDIVpopulation":"10226"},{"borough":"Redbridge","household income":"37,118","betting outlets":53,"crime rate":"153.0","population":"303,858","bshopsDIVpopulation":"5733"},{"borough":"Bexley","household income":"37,572","betting outlets":29,"crime rate":"122.8","population":"247,258","bshopsDIVpopulation":"8526"},{"borough":"Southwark","household income":"38,030","betting outlets":57,"crime rate":"201.2","population":"317,256","bshopsDIVpopulation":"5566"},{"borough":"Harrow","household income":"38,827","betting outlets":52,"crime rate":"123.9","population":"250,149","bshopsDIVpopulation":"4811"},{"borough":"Hammersmith and Fulham","household income":"39,430","betting outlets":34,"crime rate":"217.8","population":"185,426","bshopsDIVpopulation":"5454"},{"borough":"Camden","household income":"39,994","betting outlets":39,"crime rate":"231.4","population":"262,226","bshopsDIVpopulation":"6724"},{"borough":"Lambeth","household income":"40,511","betting outlets":31,"crime rate":"190.3","population":"328,244","bshopsDIVpopulation":"10589"},{"borough":"Tower Hamlets","household income":"40,533","betting outlets":56,"crime rate":"206.0","population":"319,821","bshopsDIVpopulation":"5711"},{"borough":"Kingston upon Thames","household income":"40,572","betting outlets":23,"crime rate":"128.4","population":"175,470","bshopsDIVpopulation":"7629"},{"borough":"Bromley","household income":"41,170","betting outlets":39,"crime rate":"133.3","population":"334,536","bshopsDIVpopulation":"8578"},{"borough":"Westminster","household income":"41,977","betting outlets":86,"crime rate":"400.7","population":"253,137","bshopsDIVpopulation":"2943"},{"borough":"Richmond upon Thames","household income":"42,151","betting outlets":18,"crime rate":"117.7","population":"196,904","bshopsDIVpopulation":"10939"},{"borough":"Islington","household income":"42,786","betting outlets":22,"crime rate":"212.7","population":"239,142","bshopsDIVpopulation":"10870"},{"borough":"Wandsworth","household income":"43,651","betting outlets":36,"crime rate":"156.4","population":"327,451","bshopsDIVpopulation":"9096"},{"borough":"Kensington and Chelsea","household income":"50,337","betting outlets":24,"crime rate":"231.5","population":"156,197","bshopsDIVpopulation":"6508"}]},"key":"borough","fields":["household income","betting outlets","crimeRate","population"]}}],"encoding":{"longitude":{"field":"cx"},"latitude":{"field":"cy"},"size":{"field":"betting outlets","scale":{"range":[1,1900],"type":"pow","exponent":1}},"tooltip":[{"field":"FID"},{"field":"betting outlets"},{"field":"household income"}]},"mark":{"type":"circle","opacity":0.8}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","config":{"scale":{"bandPaddingInner":0.2}},"data":{"values":[{"boroughs":"Hounslow","crime rate":173.5,"betting outlets":61,"household income":"32,516","population":"270,782"},{"boroughs":"Barking and Dagenham","crime rate":182.9,"betting outlets":47,"household income":"32,931","population":"211,998"},{"boroughs":"Brent","crime rate":169.8,"betting outlets":76,"household income":"33,805","population":"331,616"},{"boroughs":"Merton","crime rate":126,"betting outlets":24,"household income":"34,127","population":"206,186"},{"boroughs":"Ealing","crime rate":168.2,"betting outlets":56,"household income":"34,190","population":"344,837"},{"boroughs":"Newham","crime rate":191,"betting outlets":67,"household income":"34,869","population":"352,005"},{"boroughs":"Lewisham","crime rate":175.3,"betting outlets":57,"household income":"35,365","population":"303,536"},{"boroughs":"Enfield","crime rate":170.6,"betting outlets":71,"household income":"35,586","population":"338,201"},{"boroughs":"Greenwich","crime rate":184,"betting outlets":49,"household income":"35,598","population":"286,186"},{"boroughs":"Hillingdon","crime rate":156,"betting outlets":46,"household income":"35,695","population":"304,824"},{"boroughs":"Barnet","crime rate":138.2,"betting outlets":59,"household income":"35,716","population":"395,839"},{"boroughs":"Havering","crime rate":203.2,"betting outlets":44,"household income":"35,885","population":"257,810"},{"boroughs":"Haringey","crime rate":203.2,"betting outlets":61,"household income":"35,963","population":"270,624"},{"boroughs":"Waltham Forest","crime rate":162.5,"betting outlets":51,"household income":"36,096","population":"276,700"},{"boroughs":"Croydon","crime rate":170,"betting outlets":56,"household income":"36,347","population":"385,346"},{"boroughs":"Hackney","crime rate":220,"betting outlets":42,"household income":"36,351","population":"279,665"},{"boroughs":"Sutton","crime rate":125,"betting outlets":20,"household income":"36,459","population":"204,525"},{"boroughs":"Redbridge","crime rate":153,"betting outlets":53,"household income":"37,118","population":"303,858"},{"boroughs":"Bexley","crime rate":122.8,"betting outlets":29,"household income":"37,572","population":"247,258"},{"boroughs":"Southwark","crime rate":201.2,"betting outlets":57,"household income":"38,030","population":"317,256"},{"boroughs":"Harrow","crime rate":123.9,"betting outlets":52,"household income":"38,827","population":"250,149"},{"boroughs":"Hammersmith and Fulham","crime rate":217.8,"betting outlets":34,"household income":"39,430","population":"185,426"},{"boroughs":"Camden","crime rate":231.4,"betting outlets":39,"household income":"39,994","population":"262,226"},{"boroughs":"Lambeth","crime rate":190.3,"betting outlets":31,"household income":"40,511","population":"328,244"},{"boroughs":"Tower Hamlets","crime rate":206,"betting outlets":56,"household income":"40,533","population":"319,821"},{"boroughs":"Kingston upon Thames","crime rate":128.4,"betting outlets":23,"household income":"40,572","population":"175,470"},{"boroughs":"Bromley","crime rate":133.3,"betting outlets":39,"household income":"41,170","population":"334,536"},{"boroughs":"Westminster","crime rate":400.7,"betting outlets":86,"household income":"41,977","population":"253,137"},{"boroughs":"Richmond upon Thames","crime rate":117.7,"betting outlets":18,"household income":"42,151","population":"196,904"},{"boroughs":"Islington","crime rate":212.7,"betting outlets":22,"household income":"42,786","population":"239,142"},{"boroughs":"Wandsworth","crime rate":156.4,"betting outlets":36,"household income":"43,651","population":"327,451"},{"boroughs":"Kensington and Chelsea","crime rate":231.5,"betting outlets":24,"household income":"50,337","population":"156,197"}]},"params":[{"name":"highlight","select":{"type":"point","on":"mouseover"}},{"name":"select","select":"point"}],"encoding":{"x":{"field":"boroughs","type":"ordinal"},"y":{"field":"betting outlets","type":"quantitative"},"fillOpacity":{"condition":{"param":"select","value":1},"value":0.4},"strokeWidth":{"condition":[{"param":"select","empty":false,"value":2},{"param":"highlight","empty":false,"value":2}],"value":0},"tooltip":[{"field":"crime rate"}]},"mark":"bar"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p interactive="false" style="display: inline-block"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg class="marks" height="220" version="1.1" viewbox="0 0 784 220" width="784" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><rect fill="white" height="220" width="784"></rect><g fill="none" stroke-miterlimit="10" transform="translate(43,10)"><g aria-roledescription="group mark container" class="mark-group role-frame root" role="graphics-object"><g transform="translate(0,0)"><path aria-hidden="true" class="background" d="M0.5,0.5h550v200h-550Z" stroke="#ddd"></path><g><g aria-hidden="true" class="mark-group role-axis"><g transform="translate(0.5,0.5)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,200)" x2="550" y2="0"></line><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,150)" x2="550" y2="0"></line><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,100)" x2="550" y2="0"></line><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,50)" x2="550" y2="0"></line><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,0)" x2="550" y2="0"></line></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g aria-label="Y-axis titled 'betting outlets' for a linear scale with values from 0 to 80" aria-roledescription="axis" class="mark-group role-axis" role="graphics-symbol"><g transform="translate(0.5,0.5)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,200)" x2="-5" y2="0"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,150)" x2="-5" y2="0"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,100)" x2="-5" y2="0"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,50)" x2="-5" y2="0"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,0)" x2="-5" y2="0"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,203)">0</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,153)">20</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,103)">40</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,53)">60</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,3)">80</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,200)" x2="0" y2="-200"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="11px" font-weight="bold" opacity="1" text-anchor="middle" transform="translate(-27,100) rotate(-90) translate(0,-2)">betting outlets</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g aria-roledescription="rect mark container" class="mark-rect role-mark layer_0_marks" role="graphics-object"><path aria-label="Boroughs: Hounslow; betting outlets: 61" aria-roledescription="bar" d="M371.25,47.50000000000001h82.5v152.5h-82.5Z" fill="#8B0000" role="graphics-symbol"></path><path aria-label="Boroughs: Barking and Dagenham; betting outlets: 47" aria-roledescription="bar" d="M279.5833333333333,82.5h82.5v117.5h-82.5Z" fill="rgb(208,45,65)" role="graphics-symbol"></path><path aria-label="Boroughs: Brent; betting outlets: 76" aria-roledescription="bar" d="M462.9166666666667,10.000000000000009h82.5v190h-82.5Z" fill="#CB4C4E" role="graphics-symbol"></path><path aria-label="Boroughs: Islington; betting outlets: 22" aria-roledescription="bar" d="M4.583333333333314,145h82.5v55h-82.5Z" fill="#9BB9D0" role="graphics-symbol"></path><path aria-label="Boroughs: Wandsworth; betting outlets: 36" aria-roledescription="bar" d="M187.91666666666666,110.00000000000001h82.5v89.99999999999999h-82.5Z" fill="#00008b" role="graphics-symbol"></path><path aria-label="Boroughs: Kensington and Chelsea; betting outlets: 24" aria-roledescription="bar" d="M96.24999999999999,140h82.5v60h-82.5Z" fill="rgb(65,149,213)" role="graphics-symbol"></path></g><g aria-roledescription="text mark container" class="mark-text role-mark layer_1_marks" role="graphics-object"><text aria-label="Boroughs: Hounslow; betting outlets: 61; household income: £32,516" aria-roledescription="text mark" fill="#8B0000" font-family="sans-serif" font-size="11px" role="graphics-symbol" text-anchor="middle" transform="translate(412.5,41.50000000000001)">£32,516</text><text aria-label="Boroughs: Barking and Dagenham; betting outlets: 47; household income: £32,931" aria-roledescription="text mark" fill="rgb(208,45,65)" font-family="sans-serif" font-size="11px" role="graphics-symbol" text-anchor="middle" transform="translate(320.8333333333333,76.5)">£32,931</text><text aria-label="Boroughs: Brent; betting outlets: 76; household income: £33,805" aria-roledescription="text mark" fill="#CB4C4E" font-family="sans-serif" font-size="11px" role="graphics-symbol" text-anchor="middle" transform="translate(504.1666666666667,4.000000000000009)">£33,805</text><text aria-label="Boroughs: Islington; betting outlets: 22; household income: £42,786" aria-roledescription="text mark" fill="#9BB9D0" font-family="sans-serif" font-size="11px" role="graphics-symbol" text-anchor="middle" transform="translate(45.833333333333314,139)">£42,786</text><text aria-label="Boroughs: Wandsworth; betting outlets: 36; household income: £43,651" aria-roledescription="text mark" fill="#00008b" font-family="sans-serif" font-size="11px" role="graphics-symbol" text-anchor="middle" transform="translate(229.16666666666666,104.00000000000001)">£43,651</text><text aria-label="Boroughs: Kensington and Chelsea; betting outlets: 24; household income: £50,337" aria-roledescription="text mark" fill="rgb(65,149,213)" font-family="sans-serif" font-size="11px" role="graphics-symbol" text-anchor="middle" transform="translate(137.5,134)">£50,337</text></g><g aria-label="Symbol legend titled 'Boroughs' for fill color with 6 values: Kensington and Chelsea, Wandsworth, Islington, Barking and Dagenham, Brent, Hounslow" aria-roledescription="legend" class="mark-group role-legend" role="graphics-symbol"><g transform="translate(568,0)"><path aria-hidden="true" class="background" d="M0,0h168v92h-168Z" pointer-events="none"></path><g><g class="mark-group role-legend-entry"><g transform="translate(0,16)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g aria-roledescription="group mark container" class="mark-group role-scope" role="graphics-object"><g transform="translate(0,0)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="rgb(65,149,213)" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">Kensington and Che…</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,13)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#00008b" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">Wandsworth</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,26)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#9BB9D0" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">Islington</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,39)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="rgb(208,45,65)" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">Barking and Dagenh…</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,52)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#CB4C4E" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">Brent</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,65)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#8B0000" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">Hounslow</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g class="mark-text role-legend-title" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="11px" font-weight="bold" opacity="1" text-anchor="start" transform="translate(0,9)">Boroughs</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g></g><path aria-hidden="true" class="foreground" d="" display="none"></path></g></g></g></svg></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":800,"height":494.4375772558714,"config":{"view":{"stroke":null},"axis":{"ticks":false,"domain":false,"labelAngle":0}},"data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data1.csv"},"transform":[{"calculate":"round(datum.averageValue)","as":"roundedAverageValue"}],"encoding":{"x":{"field":"age","scale":{"paddingInner":0.1},"type":"ordinal","bin":{"step":5},"axis":{"title":"age"}},"xOffset":{"field":"classification"},"y":{"field":"roundedAverageValue","type":"quantitative","axis":null},"color":{"field":"classification","scale":{"scheme":"greenblue"},"title":""},"tooltip":[{"field":"roundedAverageValue","type":"quantitative"}]},"mark":"bar"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":800,"height":494.4375772558714,"data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data2.csv"},"config":{"view":{"stroke":null},"axis":{"ticks":false,"domain":false,"labelAngle":0,"labelPadding":5},"legend":{"orient":"right","labelFontSize":8}},"encoding":{"x":{"field":"age","type":"quantitative","axis":{"title":"age"}},"y":{"field":"population","type":"quantitative"},"color":{"condition":{"param":"areaSelection","field":"region","scale":{"scheme":"greenblue"},"title":""},"value":"black"},"stroke":{"field":"classification","scale":{"domain":["Urban","Rural"],"range":["black","white"]},"title":""},"opacity":{"condition":{"param":"areaSelection","value":1},"value":0.1},"tooltip":[{"field":"population","type":"quantitative"},{"field":"age","type":"quantitative"}]},"params":[{"name":"areaSelection","select":{"type":"point","fields":["region"]},"bind":{"legend":"click"}}],"mark":{"type":"area","strokeWidth":1}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":750,"height":463.53522867737945,"data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data1.csv"},"encoding":{"x":{"field":"age","type":"quantitative","bin":{"step":5}},"y":{"field":"roundedAverageValue","axis":null,"type":"quantitative"},"color":{"field":"classification","scale":{"scheme":"greenblue"},"title":""}},"config":{"view":{"stroke":null},"axis":{"ticks":false,"domain":false,"labelAngle":0},"legend":{"orient":"top","labelFontSize":10}},"transform":[{"calculate":"round(datum.averageValue)","as":"roundedAverageValue"}],"mark":"boxplot"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":500,"height":309.0234857849196,"config":{"view":{"stroke":null},"axis":{"ticks":false,"domain":false,"labelAngle":0},"legend":{"orient":"right","labelFontSize":10}},"data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data3.csv"},"transform":[{"calculate":"round(datum.averageValue)","as":"roundedAverageValue"}],"encoding":{"x":{"field":"classification","scale":{"paddingInner":0.1},"type":"nominal","axis":{"title":"classification"}},"y":{"field":"roundedAverageValue","type":"quantitative","axis":null},"color":{"field":"occupationCategory","scale":{"scheme":"greenblue"},"title":"","legend":{"labelLimit":0}},"tooltip":[{"field":"roundedAverageValue","type":"quantitative"},{"field":"occupationCategory","type":"nominal"}]},"mark":"bar"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data4.csv"},"encoding":{"theta":{"field":"population","type":"quantitative"},"color":{"condition":{"param":"pieSelection","field":"employment","scale":{"scheme":"greenblue"},"title":"","legend":{"labelLimit":0}},"value":"black"},"column":{"field":"region","header":{"title":null}},"stroke":{"field":"classification","scale":{"domain":["Urban","Rural"],"range":["black","white"]},"title":""},"opacity":{"condition":{"param":"pieSelection","value":1},"value":0.1},"tooltip":[{"field":"employment"},{"field":"population","type":"quantitative"}]},"mark":{"type":"arc","strokeWidth":1},"config":{"legend":{"orient":"top","labelFontSize":8}},"params":[{"name":"pieSelection","select":{"type":"point","fields":["employment"]},"bind":{"legend":"click"}}],"height":100,"width":100}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":1000,"height":618.0469715698392,"config":{"view":{"stroke":null},"axis":{"ticks":false,"domain":false,"labelAngle":0}},"data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data5.csv"},"encoding":{"x":{"field":"roundedRuralValue","type":"quantitative","scale":{"type":"log"},"axis":{"grid":false}},"y":{"field":"roundedUrbanValue","type":"quantitative","scale":{"type":"log"},"axis":{"grid":false}},"color":{"condition":{"param":"scatterSelection","field":"occupationDescription","scale":{"scheme":"greenblue"},"title":"","legend":null},"value":"black"},"opacity":{"condition":{"param":"scatterSelection","empty":false,"value":1},"value":0.1},"size":{"condition":{"param":"scatterSelection","empty":false,"value":1000},"value":100},"tooltip":[{"field":"occupationDescription"},{"field":"roundedRuralValue","type":"quantitative"},{"field":"roundedUrbanValue","type":"quantitative"}]},"transform":[{"calculate":"round(datum.ruralValue)","as":"roundedRuralValue"},{"calculate":"round(datum.urbanValue)","as":"roundedUrbanValue"}],"params":[{"name":"scatterSelection","value":"Does not apply","bind":{"input":"select","name":"Occupation type:","options":["Does not apply","Chief Executives and Senior Officials","Production Managers and Directors","Functional Managers and Directors","Directors in Logistics Warehousing and Transport","Managers and Directors in Retail and Wholesale","Senior Officers in Protective Services","Health and Social Services Managers and Directors","Managers and Proprietors in Agriculture Related Services","Managers and Proprietors in Hospitality and Leisure Services","Managers and Proprietors in Health and Care Services","Managers in Logistics Warehousing and Transport","Managers and Proprietors in Other Services","Natural and Social Science Professionals","Engineering Professionals","Information Technology Professionals","Web and Multimedia Design Professionals","Conservation and Environment Professionals","Research and Development (R&amp;D) and Other Research Professionals","Medical Practitioners","Therapy Professionals","Nursing and Midwifery Professionals","Veterinarians","Other Health Professionals","Teaching and other Educational Professionals","Other Educational Professionals","Legal Professionals","Finance Professionals","Business Research and Administrative Professionals","Business and Financial Project Management Professionals","Architects Chartered Architectural Technologists Planning Officers Surveyors and Construction Professionals","Welfare Professionals","Librarians and Related Professionals","Quality and Regulatory Professionals","Media Professionals","Science Engineering and Production Technicians","CAD Drawing and Architectural Technicians","Information Technology Technicians","Health Associate Professionals","Welfare and Housing Associate Professionals","Teaching and Childcare Associate Professionals","Veterinary nurses","Protective Service Occupations","Artistic Literary and Media Occupations","Design Occupations","Sports and Fitness Occupations","Transport Associate Professionals","Legal Associate Professionals","Finance Associate Professionals","Business Associate Professionals","Sales Marketing and Related Associate Professionals","Public Services Associate Professionals","HR Training and Other Vocational Associate Guidance Professionals","Regulatory Associate Professionals","Administrative Occupations: Government and Related Organisations","Administrative Occupations: Finance","Administrative Occupations: Records","Administrative Occupations: Office Managers and Supervisors","Other Administrative Occupations","Secretarial and Related Occupations","Agricultural and Related Trades","Metal Forming Welding and Related Trades","Metal Machining Fitting and Instrument Making Trades","Vehicle Trades","Electrical and Electronic Trades","Skilled Metal Electrical and Electronic Trades Supervisors","Construction and Building Trades","Building Finishing Trades","Construction and Building Trades Supervisors","Textiles and Garments Trades","Printing Trades","Food Preparation and Hospitality Trades","Other Skilled Trades","Teaching and Childcare Support Occupations","Animal Care and Control Services","Caring Personal Services","Leisure and Travel Services","Hairdressers and Related Services","Housekeeping and Related Services","Cleaning and Housekeeping Managers and Supervisors","Bed and Breakfast and Guest House Owners and Proprietors","Community and Civil Enforcement Occupations","Sales Assistants and Retail Cashiers","Sales Related Occupations","Shopkeepers and Sales Supervisors","Customer Service Occupations","Customer Service Supervisors","Process Operatives","Metal Working Machine Operatives","Plant and Machine Operatives","Assemblers and Routine Operatives","Construction Operatives","Production Factory and Assembly Supervisors","Road Transport Drivers","Mobile Machine Drivers and Operatives","Other Drivers and Transport Operatives","Elementary Agricultural Occupations","Elementary Construction Occupations","Elementary Process Plant Occupations","Elementary Administration Occupations","Elementary Cleaning Occupations","Elementary Security Occupations","Elementary Sales Occupations","Elementary Storage Occupations","Other Elementary Services Occupations"]},"select":{"type":"point","fields":["occupationDescription"]}}],"mark":"point"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":100,"height":61.80469715698393,"config":{"view":{"stroke":null},"axis":{"ticks":false,"domain":false,"labelAngle":0},"legend":{"orient":"top","labelFontSize":8}},"data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data6.csv"},"encoding":{"x":{"field":"tenureCategory","axis":null},"y":{"field":"population","type":"quantitative","axis":null},"color":{"condition":{"param":"barSelection","field":"tenureCategory","scale":{"scheme":"greenblue"},"title":"","legend":{"labelLimit":0}},"value":"black"},"column":{"field":"region","header":{"title":null}},"stroke":{"field":"classification","scale":{"domain":["Urban","Rural"],"range":["black","white"]},"title":""},"opacity":{"condition":{"param":"barSelection","value":1},"value":0.1},"tooltip":[{"field":"tenureCategory"},{"field":"population","type":"quantitative"}]},"params":[{"name":"barSelection","select":{"type":"point","fields":["tenureCategory"]},"bind":{"legend":"click"}}],"mark":"bar"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":1000,"height":618.0469715698392,"config":{"view":{"stroke":null},"axis":{"ticks":false,"domain":false,"labelAngle":0}},"data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data7.csv"},"encoding":{"x":{"field":"homeowners","type":"quantitative","axis":{"grid":false},"scale":{"zero":false}},"y":{"field":"renters","type":"quantitative","axis":{"grid":false},"scale":{"zero":false}},"color":{"condition":{"param":"ratioScatterSelection","field":"constituency","scale":{"scheme":"greenblue"},"title":"","legend":null},"value":"black"},"opacity":{"condition":{"param":"ratioScatterSelection","empty":false,"value":1},"value":0.1},"size":{"condition":{"param":"ratioScatterSelection","empty":false,"value":100},"value":25},"tooltip":[{"field":"constituency"},{"field":"homeowners","type":"quantitative"},{"field":"renters","type":"quantitative"}]},"params":[{"name":"ratioScatterSelection","value":"Urban","bind":{"input":"radio","name":"classification:","options":["Urban","Rural"]},"select":{"type":"point","fields":["classification"]}}],"mark":"square"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":750,"height":463.53522867737945,"data":{"url":"https://Viruthan-Kanthan.github.io/in3030csv/data8.csv"},"encoding":{"x":{"field":"tenureCategory"},"xOffset":{"field":"region"},"y":{"field":"population","type":"quantitative","axis":null},"stroke":{"field":"classification","scale":{"domain":["Urban","Rural"],"range":["black","white"]},"title":""},"color":{"field":"region","scale":{"scheme":"greenblue"},"title":"","legend":{"labelLimit":0}},"tooltip":[{"field":"region"},{"field":"population","type":"quantitative"}],"fillOpacity":{"condition":{"param":"barSelect","value":1},"value":0.33},"strokeWidth":{"condition":[{"param":"barSelect","empty":false,"value":2},{"param":"barHighlight","empty":false,"value":2}],"value":1}},"config":{"view":{"stroke":null},"axis":{"ticks":false,"domain":false,"labelAngle":0},"legend":{"orient":"top-right","labelFontSize":10}},"params":[{"name":"barHighlight","select":{"type":"point","on":"mouseover"}},{"name":"barSelect","select":"point"}],"mark":"bar"}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

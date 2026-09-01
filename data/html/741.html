@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":600,"height":450,"config":{"view":{"stroke":null},"legend":{"orient":"bottom-right","offset":0}},"data":{"url":"https://gicentre.github.io/data/geoTutorials/londonBoroughs.json","format":{"type":"topojson","feature":"boroughs"}},"transform":[{"lookup":"id","from":{"data":{"values":[{"borough":"Barking and Dagenham","CovidCases":33381.2,"Population":211998},{"borough":"Barnet","CovidCases":35010,"Population":392140},{"borough":"Bexley","CovidCases":35438.1,"Population":247258},{"borough":"Brent","CovidCases":32163.6,"Population":330795},{"borough":"Bromley","CovidCases":35992.4,"Population":331096},{"borough":"Camden","CovidCases":36134.1,"Population":262226},{"borough":"City of London","CovidCases":39234.2,"Population":8706},{"borough":"Croydon","CovidCases":34225.2,"Population":385346},{"borough":"Ealing","CovidCases":34698.1,"Population":341982},{"borough":"Enfield","CovidCases":31538.1,"Population":333869},{"borough":"Greenwich","CovidCases":33533.7,"Population":286186},{"borough":"Hackney","CovidCases":36866.3,"Population":279665},{"borough":"Hammersmith and Fulham","CovidCases":36781.3,"Population":185426},{"borough":"Haringey","CovidCases":34093.7,"Population":270624},{"borough":"Harrow","CovidCases":33974.4,"Population":250149},{"borough":"Havering","CovidCases":36471.1,"Population":257810},{"borough":"Hillingdon","CovidCases":35493,"Population":304824},{"borough":"Hounslow","CovidCases":34890.9,"Population":270782},{"borough":"Islington","CovidCases":36542.1,"Population":239142},{"borough":"Kensington and Chelsea","CovidCases":33128.8,"Population":156197},{"borough":"Kingston upon Thames","CovidCases":38733.9,"Population":175470},{"borough":"Lambeth","CovidCases":37753.3,"Population":325917},{"borough":"Lewisham","CovidCases":34616.1,"Population":303536},{"borough":"Merton","CovidCases":36468.4,"Population":206186},{"borough":"Newham","CovidCases":31693.5,"Population":352005},{"borough":"Redbridge","CovidCases":34285.4,"Population":303858},{"borough":"Richmond upon Thames","CovidCases":37049.9,"Population":196904},{"borough":"Southwark","CovidCases":35340.6,"Population":317256},{"borough":"Sutton","CovidCases":37659.1,"Population":204525},{"borough":"Tower Hamlets","CovidCases":34813.6,"Population":317705},{"borough":"Waltham Forest","CovidCases":34900.9,"Population":276700},{"borough":"Wandsworth","CovidCases":38029.1,"Population":326474},{"borough":"Westminster","CovidCases":34929.9,"Population":255324},{"borough":"Yorkshire and The Humber","CovidCases":35330.8,"Population":5486000},{"borough":"London","CovidCases":35389.2,"Population":8982000},{"borough":"","CovidCases":0,"Population":0}]},"key":"borough","fields":["CovidCases","Population"]}}],"projection":{"type":"transverseMercator","rotate":{"expr":"[2,0,0]"}},"encoding":{"color":{"field":"CovidCases","type":"quantitative","title":"% CovidCases","scale":{"scheme":"reds"}},"tooltip":[{"field":"id"},{"field":"CovidCases"},{"field":"Population"}]},"mark":{"type":"geoshape","stroke":"black"}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p interactive="false" style="display: inline-block"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg class="marks" height="369" version="1.1" viewbox="0 0 920 369" width="920" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><rect fill="white" height="369" width="920"></rect><g fill="none" stroke-miterlimit="10" transform="translate(109,10)"><g aria-roledescription="group mark container" class="mark-group role-frame root" role="graphics-object"><g transform="translate(0,0)"><path aria-hidden="true" class="background" d="M0.5,0.5h700v200h-700Z" stroke="#ddd"></path><g><g aria-hidden="true" class="mark-group role-axis"><g transform="translate(0.5,0.5)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,200)" x2="700" y2="0"></line><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,150)" x2="700" y2="0"></line><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,100)" x2="700" y2="0"></line><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,50)" x2="700" y2="0"></line><line opacity="1" stroke="#ddd" stroke-width="1" transform="translate(0,0)" x2="700" y2="0"></line></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g aria-label="X-axis titled 'borough' for a discrete scale with 35 values: Barking and Dagenham, Barnet, Bexley, Brent, Bromley, ending with Yorkshire and The Humber" aria-roledescription="axis" class="mark-group role-axis" role="graphics-symbol"><g transform="translate(0.5,200.5)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line opacity="1" stroke="#888" stroke-width="1" transform="translate(10,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(30,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(50,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(70,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(90,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(110,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(130,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(150,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(170,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(190,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(210,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(230,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(250,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(270,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(290,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(310,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(330,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(350,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(370,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(390,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(410,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(430,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(450,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(470,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(490,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(510,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(530,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(550,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(570,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(590,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(610,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(630,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(650,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(670,0)" x2="0" y2="5"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(690,0)" x2="0" y2="5"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(9.5,7) rotate(315) translate(0,8)">Barking and Dagenham</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(29.5,7) rotate(315) translate(0,8)">Barnet</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(49.5,7) rotate(315) translate(0,8)">Bexley</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(69.5,7) rotate(315) translate(0,8)">Brent</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(89.5,7) rotate(315) translate(0,8)">Bromley</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(109.5,7) rotate(315) translate(0,8)">Camden</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(129.5,7) rotate(315) translate(0,8)">City of London</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(149.5,7) rotate(315) translate(0,8)">Croydon</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(169.5,7) rotate(315) translate(0,8)">Ealing</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(189.5,7) rotate(315) translate(0,8)">Enfield</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(209.5,7) rotate(315) translate(0,8)">Greenwich</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(229.5,7) rotate(315) translate(0,8)">Hackney</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(249.5,7) rotate(315) translate(0,8)">Hammersmith and Fulham</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(269.5,7) rotate(315) translate(0,8)">Haringey</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(289.5,7) rotate(315) translate(0,8)">Harrow</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(309.5,7) rotate(315) translate(0,8)">Havering</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(329.5,7) rotate(315) translate(0,8)">Hillingdon</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(349.5,7) rotate(315) translate(0,8)">Hounslow</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(369.5,7) rotate(315) translate(0,8)">Islington</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(389.5,7) rotate(315) translate(0,8)">Kensington and Chelsea</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(409.5,7) rotate(315) translate(0,8)">Kingston upon Thames</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(429.5,7) rotate(315) translate(0,8)">Lambeth</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(449.5,7) rotate(315) translate(0,8)">Lewisham</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(469.5,7) rotate(315) translate(0,8)">London</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(489.5,7) rotate(315) translate(0,8)">Merton</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(509.5,7) rotate(315) translate(0,8)">Newham</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(529.5,7) rotate(315) translate(0,8)">Redbridge</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(549.5,7) rotate(315) translate(0,8)">Richmond upon Thames</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(569.5,7) rotate(315) translate(0,8)">Southwark</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(589.5,7) rotate(315) translate(0,8)">Sutton</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(609.5,7) rotate(315) translate(0,8)">Tower Hamlets</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(629.5,7) rotate(315) translate(0,8)">Waltham Forest</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(649.5,7) rotate(315) translate(0,8)">Wandsworth</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(669.5,7) rotate(315) translate(0,8)">Westminster</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(689.5,7) rotate(315) translate(0,8)">Yorkshire and The Hum…</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,0)" x2="700" y2="0"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="11px" font-weight="bold" opacity="1" text-anchor="middle" transform="translate(350,151.52186130069788)">borough</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g aria-label="Y-axis titled 'CovidCases' for a linear scale with values from 0 to 40,000" aria-roledescription="axis" class="mark-group role-axis" role="graphics-symbol"><g transform="translate(0.5,0.5)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,200)" x2="-5" y2="0"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,150)" x2="-5" y2="0"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,100)" x2="-5" y2="0"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,50)" x2="-5" y2="0"></line><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,0)" x2="-5" y2="0"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,203)">0</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,153)">10,000</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,103)">20,000</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,53)">30,000</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-7,3)">40,000</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line opacity="1" stroke="#888" stroke-width="1" transform="translate(0,200)" x2="0" y2="-200"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="11px" font-weight="bold" opacity="1" text-anchor="middle" transform="translate(-59,100) rotate(-90) translate(0,-2)">CovidCases</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g aria-roledescription="rect mark container" class="mark-rect role-mark marks" role="graphics-object"><path aria-label="borough: Barking and Dagenham; CovidCases: 33381.2; Population: 211998" aria-roledescription="bar" d="M1,33.09400000000002h18v166.90599999999998h-18Z" fill="rgb(247, 96, 69)" role="graphics-symbol"></path><path aria-label="borough: Barnet; CovidCases: 35010; Population: 392140" aria-roledescription="bar" d="M21,24.950000000000006h18v175.04999999999998h-18Z" fill="rgb(151, 11, 19)" role="graphics-symbol"></path><path aria-label="borough: Bexley; CovidCases: 35438.1; Population: 247258" aria-roledescription="bar" d="M41,22.809500000000014h18v177.1905h-18Z" fill="rgb(239, 70, 52)" role="graphics-symbol"></path><path aria-label="borough: Brent; CovidCases: 32163.6; Population: 330795" aria-roledescription="bar" d="M61,39.182h18v160.81799999999998h-18Z" fill="rgb(196, 25, 28)" role="graphics-symbol"></path><path aria-label="borough: Bromley; CovidCases: 35992.4; Population: 331096" aria-roledescription="bar" d="M81,20.038h18v179.962h-18Z" fill="rgb(196, 25, 28)" role="graphics-symbol"></path><path aria-label="borough: Camden; CovidCases: 36134.1; Population: 262226" aria-roledescription="bar" d="M101,19.3295h18v180.6705h-18Z" fill="rgb(234, 60, 46)" role="graphics-symbol"></path><path aria-label="borough: City of London; CovidCases: 39234.2; Population: 199960" aria-roledescription="bar" d="M121,3.8290000000000157h18v196.171h-18Z" fill="rgb(249, 104, 76)" role="graphics-symbol"></path><path aria-label="borough: Croydon; CovidCases: 34225.2; Population: 385346" aria-roledescription="bar" d="M141,28.874000000000024h18v171.12599999999998h-18Z" fill="rgb(156, 12, 20)" role="graphics-symbol"></path><path aria-label="borough: Ealing; CovidCases: 34698.1; Population: 341982" aria-roledescription="bar" d="M161,26.50950000000001h18v173.4905h-18Z" fill="rgb(189, 22, 26)" role="graphics-symbol"></path><path aria-label="borough: Enfield; CovidCases: 31538.1; Population: 333869" aria-roledescription="bar" d="M181,42.3095h18v157.6905h-18Z" fill="rgb(194, 25, 28)" role="graphics-symbol"></path><path aria-label="borough: Greenwich; CovidCases: 33533.7; Population: 286186" aria-roledescription="bar" d="M201,32.33150000000003h18v167.66849999999997h-18Z" fill="rgb(222, 45, 38)" role="graphics-symbol"></path><path aria-label="borough: Hackney; CovidCases: 36866.3; Population: 279665" aria-roledescription="bar" d="M221,15.668499999999996h18v184.3315h-18Z" fill="rgb(225, 49, 40)" role="graphics-symbol"></path><path aria-label="borough: Hammersmith and Fulham; CovidCases: 36781.3; Population: 185426" aria-roledescription="bar" d="M241,16.093499999999985h18v183.90650000000002h-18Z" fill="rgb(250, 115, 84)" role="graphics-symbol"></path><path aria-label="borough: Haringey; CovidCases: 34093.7; Population: 270624" aria-roledescription="bar" d="M261,29.531500000000023h18v170.46849999999998h-18Z" fill="rgb(230, 55, 43)" role="graphics-symbol"></path><path aria-label="borough: Harrow; CovidCases: 33974.4; Population: 250149" aria-roledescription="bar" d="M281,30.128h18v169.872h-18Z" fill="rgb(238, 68, 50)" role="graphics-symbol"></path><path aria-label="borough: Havering; CovidCases: 36471.1; Population: 257810" aria-roledescription="bar" d="M301,17.644499999999997h18v182.3555h-18Z" fill="rgb(236, 63, 47)" role="graphics-symbol"></path><path aria-label="borough: Hillingdon; CovidCases: 35493; Population: 304824" aria-roledescription="bar" d="M321,22.534999999999993h18v177.465h-18Z" fill="rgb(212, 36, 34)" role="graphics-symbol"></path><path aria-label="borough: Hounslow; CovidCases: 34890.9; Population: 270782" aria-roledescription="bar" d="M341,25.545499999999997h18v174.4545h-18Z" fill="rgb(230, 55, 43)" role="graphics-symbol"></path><path aria-label="borough: Islington; CovidCases: 36542.1; Population: 239142" aria-roledescription="bar" d="M361,17.289500000000004h18v182.7105h-18Z" fill="rgb(241, 76, 56)" role="graphics-symbol"></path><path aria-label="borough: Kensington and Chelsea; CovidCases: 33128.8; Population: 156197" aria-roledescription="bar" d="M381,34.35599999999999h18v165.644h-18Z" fill="rgb(252, 135, 103)" role="graphics-symbol"></path><path aria-label="borough: Kingston upon Thames; CovidCases: 38733.9; Population: 175470" aria-roledescription="bar" d="M401,6.3304999999999945h18v193.6695h-18Z" fill="rgb(251, 122, 90)" role="graphics-symbol"></path><path aria-label="borough: Lambeth; CovidCases: 37753.3; Population: 325917" aria-roledescription="bar" d="M421,11.233499999999985h18v188.7665h-18Z" fill="rgb(199, 27, 29)" role="graphics-symbol"></path><path aria-label="borough: Lewisham; CovidCases: 34616.1; Population: 303536" aria-roledescription="bar" d="M441,26.919500000000006h18v173.0805h-18Z" fill="rgb(213, 36, 34)" role="graphics-symbol"></path><path aria-label="borough: Merton; CovidCases: 36468.4; Population: 206186" aria-roledescription="bar" d="M481,17.657999999999994h18v182.342h-18Z" fill="rgb(248, 100, 72)" role="graphics-symbol"></path><path aria-label="borough: Newham; CovidCases: 31693.5; Population: 352005" aria-roledescription="bar" d="M501,41.53249999999999h18v158.4675h-18Z" fill="rgb(182, 20, 25)" role="graphics-symbol"></path><path aria-label="borough: Redbridge; CovidCases: 34285.4; Population: 303858" aria-roledescription="bar" d="M521,28.572999999999983h18v171.42700000000002h-18Z" fill="rgb(212, 36, 34)" role="graphics-symbol"></path><path aria-label="borough: Richmond upon Thames; CovidCases: 37049.9; Population: 196904" aria-roledescription="bar" d="M541,14.750499999999999h18v185.2495h-18Z" fill="rgb(249, 107, 77)" role="graphics-symbol"></path><path aria-label="borough: Southwark; CovidCases: 35340.6; Population: 317256" aria-roledescription="bar" d="M561,23.29700000000001h18v176.70299999999997h-18Z" fill="rgb(204, 30, 31)" role="graphics-symbol"></path><path aria-label="borough: Sutton; CovidCases: 37659.1; Population: 204525" aria-roledescription="bar" d="M581,11.704500000000007h18v188.2955h-18Z" fill="rgb(248, 101, 73)" role="graphics-symbol"></path><path aria-label="borough: Tower Hamlets; CovidCases: 34813.6; Population: 317705" aria-roledescription="bar" d="M601,25.932h18v174.068h-18Z" fill="rgb(204, 30, 31)" role="graphics-symbol"></path><path aria-label="borough: Waltham Forest; CovidCases: 34900.9; Population: 276700" aria-roledescription="bar" d="M621,25.495499999999982h18v174.5045h-18Z" fill="rgb(227, 51, 41)" role="graphics-symbol"></path><path aria-label="borough: Wandsworth; CovidCases: 38029.1; Population: 326474" aria-roledescription="bar" d="M641,9.85450000000001h18v190.1455h-18Z" fill="rgb(199, 27, 29)" role="graphics-symbol"></path><path aria-label="borough: Westminster; CovidCases: 34929.9; Population: 255324" aria-roledescription="bar" d="M661,25.350499999999986h18v174.64950000000002h-18Z" fill="rgb(237, 64, 48)" role="graphics-symbol"></path><path aria-label="borough: Yorkshire and The Humber; CovidCases: 35330.8; Population: 54860" aria-roledescription="bar" d="M681,23.34599999999998h18v176.65400000000002h-18Z" fill="rgb(253, 201, 180)" role="graphics-symbol"></path><path aria-label="borough: London; CovidCases: 35389.2; Population: 89820" aria-roledescription="bar" d="M461,23.05400000000002h18v176.94599999999997h-18Z" fill="rgb(252, 179, 153)" role="graphics-symbol"></path></g><g aria-label="Gradient legend titled 'Population' for fill color with values from 54,860 to 392,140" aria-roledescription="legend" class="mark-group role-legend" role="graphics-symbol"><g transform="translate(718,0)"><path aria-hidden="true" class="background" d="M0,0h88v216h-88Z" pointer-events="none"></path><g><g class="mark-group role-legend-entry"><g transform="translate(0,16)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rect role-legend-gradient" pointer-events="none"><path d="M0,0h16v200h-16Z" fill="url(#gradient_4)" opacity="1" stroke="#ddd" stroke-width="0"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(18,176.23292220113854)">100,000</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(18,116.93500948766604)">200,000</text><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(18,57.63709677419355)">300,000</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g class="mark-text role-legend-title" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="11px" font-weight="bold" opacity="1" text-anchor="start" transform="translate(0,9)">Population</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g></g><path aria-hidden="true" class="foreground" d="" display="none"></path></g></g></g><defs><lineargradient id="gradient_4" x1="0" x2="0" y1="1" y2="0"><stop offset="0" stop-color="rgb(253, 201, 180)"></stop><stop offset="0.015239563567362429" stop-color="rgb(253, 198, 176)"></stop><stop offset="0.07453747628083492" stop-color="rgb(252, 185, 161)"></stop><stop offset="0.1338353889943074" stop-color="rgb(252, 173, 145)"></stop><stop offset="0.1931333017077799" stop-color="rgb(252, 160, 130)"></stop><stop offset="0.2524312144212524" stop-color="rgb(252, 146, 115)"></stop><stop offset="0.31172912713472484" stop-color="rgb(252, 132, 100)"></stop><stop offset="0.37102703984819735" stop-color="rgb(251, 119, 87)"></stop><stop offset="0.4303249525616698" stop-color="rgb(249, 104, 76)"></stop><stop offset="0.4896228652751423" stop-color="rgb(246, 90, 65)"></stop><stop offset="0.5489207779886148" stop-color="rgb(241, 75, 55)"></stop><stop offset="0.6082186907020873" stop-color="rgb(235, 61, 46)"></stop><stop offset="0.6675166034155597" stop-color="rgb(225, 49, 40)"></stop><stop offset="0.7268145161290323" stop-color="rgb(215, 38, 35)"></stop><stop offset="0.7861124288425048" stop-color="rgb(203, 29, 30)"></stop><stop offset="0.8454103415559773" stop-color="rgb(190, 23, 27)"></stop><stop offset="0.9047082542694497" stop-color="rgb(177, 18, 24)"></stop><stop offset="0.9640061669829222" stop-color="rgb(161, 14, 21)"></stop><stop offset="1" stop-color="rgb(151, 11, 19)"></stop></lineargradient></defs></svg></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

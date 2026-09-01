@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v4.json","width":800,"height":500,"data":{"values":[{"country":"Afghanistan","cases":56779,"lnCases":10.94692182,"longitude":67.709953,"latitude":33.93911,"code":"AF","popdens":56.93776001,"travel":0},{"country":"Albania","cases":126936,"lnCases":11.7514383,"longitude":20.168331,"latitude":41.153332,"code":"AL","popdens":104.6122628,"travel":6406000},{"country":"Algeria","cases":117879,"lnCases":11.67741395,"longitude":1.659626,"latitude":28.033886,"code":"DZ","popdens":17.73006763,"travel":2371000},{"country":"Andorra","cases":12328,"lnCases":9.419628377,"longitude":1.601554,"latitude":42.546245,"code":"AD","popdens":163.8425532,"travel":8235000},{"country":"Angola","cases":22885,"lnCases":10.03823695,"longitude":17.873887,"latitude":-11.202692,"code":"AO","popdens":24.71305206,"travel":218000},{"country":"Antigua and Barbuda","cases":1173,"lnCases":7.067319849,"longitude":-61.796428,"latitude":17.060816,"code":"AG","popdens":218.8318182,"travel":1035000},{"country":"Argentina","cases":2428029,"lnCases":14.70259038,"longitude":-63.616672,"latitude":-38.416097,"code":"AR","popdens":16.2585101,"travel":7399000},{"country":"Armenia","cases":197873,"lnCases":12.19538069,"longitude":45.038189,"latitude":40.069099,"code":"AM","popdens":103.6802248,"travel":1894000},{"country":"Australia","cases":29379,"lnCases":10.28803541,"longitude":133.775136,"latitude":-25.274398,"code":"AU","popdens":3.24787091,"travel":9466000},{"country":"Austria","cases":562907,"lnCases":13.24086971,"longitude":14.550072,"latitude":47.516231,"code":"AT","popdens":107.1318589,"travel":31884000},{"country":"Azerbaijan","cases":273869,"lnCases":12.52040517,"longitude":47.576927,"latitude":40.143105,"code":"AZ","popdens":120.2575919,"travel":3170000},{"country":"Bahamas","cases":9270,"lnCases":9.134538659,"longitude":-77.39628,"latitude":25.03428,"code":"BS","popdens":38.52547453,"travel":7250000},{"country":"Bahrain","cases":150811,"lnCases":11.92378268,"longitude":50.637772,"latitude":25.930414,"code":"BH","popdens":2012.101282,"travel":11061000},{"country":"Bangladesh","cases":651652,"lnCases":13.38726596,"longitude":90.356331,"latitude":23.684994,"code":"BD","popdens":1239.579312,"travel":323000},{"country":"Barbados","cases":3691,"lnCases":8.213652703,"longitude":-59.543198,"latitude":13.193887,"code":"BB","popdens":666.6069767,"travel":966000},{"country":"Belarus","cases":329258,"lnCases":12.70459692,"longitude":27.953389,"latitude":53.709807,"code":"BY","popdens":46.72134693,"travel":11832000},{"country":"Belgium","cases":904673,"lnCases":13.71532883,"longitude":4.469936,"latitude":50.503887,"code":"BE","popdens":377.3795905,"travel":9343000},{"country":"Belize","cases":12477,"lnCases":9.431642228,"longitude":-88.49765,"latitude":17.189877,"code":"BZ","popdens":16.79399386,"travel":1674000},{"country":"Benin","cases":7313,"lnCases":8.897408865,"longitude":2.315834,"latitude":9.30769,"code":"BJ","popdens":101.8539198,"travel":337000},{"country":"Bhutan","cases":896,"lnCases":6.797940413,"longitude":90.433601,"latitude":27.514162,"code":"BT","popdens":19.77960147,"travel":316000},{"country":"Bolivia","cases":276890,"lnCases":12.53137559,"longitude":-63.588653,"latitude":-16.290154,"code":"BO","popdens":10.48014585,"travel":1239000},{"country":"Bosnia and Herzegovina","cases":177506,"lnCases":12.08675969,"longitude":17.679076,"latitude":43.915886,"code":"BA","popdens":64.92048828,"travel":1198000},{"country":"Botswana","cases":41710,"lnCases":10.63849619,"longitude":24.684866,"latitude":-22.328474,"code":"BW","popdens":3.977424876,"travel":1830000},{"country":"Brazil","cases":13100580,"lnCases":16.38816706,"longitude":-51.92528,"latitude":-14.235004,"code":"BR","popdens":25.06171624,"travel":6353000},{"country":"Brunei","cases":214,"lnCases":5.365976015,"longitude":114.727669,"latitude":4.535277,"code":"BN","popdens":81.39696395,"travel":333000},{"country":"Bulgaria","cases":356859,"lnCases":12.78509602,"longitude":25.48583,"latitude":42.733883,"code":"BG","popdens":64.71109985,"travel":12552000},{"country":"Burkina Faso","cases":12845,"lnCases":9.46070991,"longitude":-1.561593,"latitude":12.238333,"code":"BF","popdens":72.19128289,"travel":143000},{"country":"Burma","cases":142530,"lnCases":11.86730778,"longitude":95.956,"latitude":21.9162,"code":"MM","popdens":82.27514974,"travel":4364000},{"country":"Burundi","cases":2970,"lnCases":7.996317232,"longitude":29.918886,"latitude":-3.373056,"code":"BI","popdens":435.178271,"travel":0},{"country":"Cambodia","cases":2915,"lnCases":7.977625099,"longitude":104.990963,"latitude":12.565679,"code":"KH","popdens":92.05641287,"travel":6611000},{"country":"Cameroon","cases":57337,"lnCases":10.95670142,"longitude":12.354722,"latitude":7.369722,"code":"CM","popdens":53.34398891,"travel":997000},{"country":"Canada","cases":1027854,"lnCases":13.84298369,"longitude":-106.346771,"latitude":56.130366,"code":"CA","popdens":4.133332553,"travel":32430000},{"country":"Cape Verde","cases":18023,"lnCases":9.799403999,"longitude":-23.0418,"latitude":16.5388,"code":"CV","popdens":134.9297767,"travel":758000},{"country":"Central African Republic","cases":5313,"lnCases":8.577911926,"longitude":20.939444,"latitude":6.611111,"code":"CF","popdens":7.490412212,"travel":109000},{"country":"Chad","cases":4603,"lnCases":8.434463544,"longitude":18.732207,"latitude":15.454166,"code":"TD","popdens":12.29173364,"travel":0},{"country":"Chile","cases":1037780,"lnCases":13.85259437,"longitude":-71.542969,"latitude":-35.675147,"code":"CL","popdens":25.18944713,"travel":5431000},{"country":"China","cases":101920,"lnCases":11.53194347,"longitude":104.195397,"latitude":35.86166,"code":"CN","popdens":147.7744195,"travel":162538000},{"country":"Colombia","cases":2468236,"lnCases":14.71901428,"longitude":-74.297333,"latitude":4.570868,"code":"CO","popdens":44.75985219,"travel":4529000},{"country":"Comoros","cases":3738,"lnCases":8.226305988,"longitude":43.872219,"latitude":-11.875001,"code":"KM","popdens":447.2444922,"travel":45099.99847},{"country":"Costa Rica","cases":219846,"lnCases":12.30068258,"longitude":-83.753428,"latitude":9.748917,"code":"CR","popdens":97.91306306,"travel":3366000},{"country":"Croatia","cases":280899,"lnCases":12.54575045,"longitude":15.2,"latitude":45.1,"code":"HR","popdens":72.23613713,"travel":60021000},{"country":"Cuba","cases":81640,"lnCases":11.31007462,"longitude":-77.781167,"latitude":21.521757,"code":"CU","popdens":109.2306166,"travel":4276000},{"country":"Cyprus","cases":48837,"lnCases":10.7962435,"longitude":33.429859,"latitude":35.126413,"code":"CY","popdens":128.7083333,"travel":4117000},{"country":"Czechia","cases":1555245,"lnCases":14.25714365,"longitude":15.473,"latitude":49.8175,"code":"CZ","popdens":137.6933679,"travel":36268000},{"country":"Democratic Republic of the Congo","cases":28377,"lnCases":10.25333424,"longitude":21.7587,"latitude":-4.0383,"code":"CD","popdens":37.08259236,"travel":0},{"country":"Denmark","cases":235009,"lnCases":12.36737909,"longitude":9.501785,"latitude":56.26392,"code":"DK","popdens":144.8409,"travel":32903000},{"country":"Djibouti","cases":9111,"lnCases":9.117237754,"longitude":42.590275,"latitude":11.825138,"code":"DJ","popdens":41.36842105,"travel":0},{"country":"Dominica","cases":165,"lnCases":5.105945474,"longitude":-61.370976,"latitude":15.414999,"code":"DM","popdens":95.5,"travel":322000},{"country":"Dominican Republic","cases":254603,"lnCases":12.44746075,"longitude":-70.162651,"latitude":18.735693,"code":"DO","popdens":219.9785759,"travel":7550000},{"country":"Ecuador","cases":337702,"lnCases":12.72991913,"longitude":-78.183406,"latitude":-1.831239,"code":"EC","popdens":68.78868175,"travel":2108000},{"country":"Egypt","cases":206510,"lnCases":12.23810412,"longitude":30.802498,"latitude":26.820553,"code":"EG","popdens":98.87346929,"travel":13026000},{"country":"El Salvador","cases":65491,"lnCases":11.08966801,"longitude":-88.89653,"latitude":13.794185,"code":"SV","popdens":309.8814672,"travel":2639000},{"country":"Equatorial Guinea","cases":7059,"lnCases":8.862058677,"longitude":10.267895,"latitude":1.650801,"code":"GQ","popdens":46.66573975,"travel":0},{"country":"Eritrea","cases":3363,"lnCases":8.120588712,"longitude":39.782334,"latitude":15.179384,"code":"ER","popdens":34.186,"travel":0},{"country":"Estonia","cases":110680,"lnCases":11.61439843,"longitude":25.013607,"latitude":58.595272,"code":"EE","popdens":30.41124914,"travel":6103000},{"country":"Ethiopia","cases":219381,"lnCases":12.29856522,"longitude":40.489673,"latitude":9.145,"code":"ET","popdens":96.71878268,"travel":812000},{"country":"Fiji","cases":67,"lnCases":4.204692619,"longitude":179.414413,"latitude":-16.578193,"code":"FJ","popdens":48.35703339,"travel":969000},{"country":"Finland","cases":80068,"lnCases":11.29063155,"longitude":25.748151,"latitude":61.92411,"code":"FI","popdens":18.14795012,"travel":3290000},{"country":"France","cases":4902025,"lnCases":15.40515894,"longitude":2.213749,"latitude":46.227638,"code":"FR","popdens":122.2994355,"travel":211998000},{"country":"Gabon","cases":19863,"lnCases":9.896613984,"longitude":11.609444,"latitude":-0.803689,"code":"GA","popdens":8.224764233,"travel":0},{"country":"Gambia","cases":5564,"lnCases":8.624072553,"longitude":-15.310139,"latitude":13.443182,"code":"GM","popdens":225.3065217,"travel":619000},{"country":"Georgia","cases":284958,"lnCases":12.56009708,"longitude":43.356892,"latitude":42.315407,"code":"GE","popdens":65.19733021,"travel":7726000},{"country":"Germany","cases":2909902,"lnCases":14.88362996,"longitude":10.451526,"latitude":51.165691,"code":"DE","popdens":237.2940123,"travel":39563000},{"country":"Ghana","cases":90946,"lnCases":11.4180212,"longitude":-1.023194,"latitude":7.946527,"code":"GH","popdens":130.8214292,"travel":0},{"country":"Greece","cases":281570,"lnCases":12.54813636,"longitude":21.824312,"latitude":39.074208,"code":"GR","popdens":83.26518231,"travel":34005000},{"country":"Grenada","cases":155,"lnCases":5.043425117,"longitude":-61.604171,"latitude":12.262776,"code":"GD","popdens":327.8058824,"travel":526000},{"country":"Guatemala","cases":197020,"lnCases":12.19106053,"longitude":-90.230759,"latitude":15.783471,"code":"GT","popdens":152.5471258,"travel":2560000},{"country":"Guinea","cases":20510,"lnCases":9.928667851,"longitude":-9.696645,"latitude":9.945587,"code":"GN","popdens":50.52221227,"travel":0},{"country":"Guinea-Bissau","cases":3662,"lnCases":8.205764725,"longitude":-15.180413,"latitude":11.803749,"code":"GW","popdens":66.65394737,"travel":52400.00153},{"country":"Guyana","cases":10637,"lnCases":9.272093768,"longitude":-58.93018,"latitude":4.860416,"code":"GY","popdens":3.957348235,"travel":315000},{"country":"Haiti","cases":12803,"lnCases":9.457434797,"longitude":-72.285215,"latitude":18.971187,"code":"HT","popdens":403.5985486,"travel":938000},{"country":"Honduras","cases":192413,"lnCases":12.16739938,"longitude":-86.241905,"latitude":15.199999,"code":"HN","popdens":85.68703191,"travel":2315000},{"country":"Hungary","cases":691743,"lnCases":13.44696978,"longitude":19.503304,"latitude":47.162494,"code":"HU","popdens":107.1177296,"travel":61397000},{"country":"Iceland","cases":6241,"lnCases":8.738895705,"longitude":-19.020835,"latitude":64.963051,"code":"IS","popdens":3.498175146,"travel":2202000},{"country":"India","cases":12686049,"lnCases":16.35601344,"longitude":78.96288,"latitude":20.593684,"code":"IN","popdens":454.9380726,"travel":17914000},{"country":"Indonesia","cases":1542516,"lnCases":14.24892541,"longitude":113.921327,"latitude":-0.789275,"code":"ID","popdens":142.5623043,"travel":16107000},{"country":"Iran","cases":1963394,"lnCases":14.49018517,"longitude":53.688046,"latitude":32.427908,"code":"IR","popdens":50.22242012,"travel":9107000},{"country":"Iraq","cases":887291,"lnCases":13.69592828,"longitude":43.679291,"latitude":33.223191,"code":"IQ","popdens":88.53057163,"travel":0},{"country":"Ireland","cases":238907,"lnCases":12.38382963,"longitude":-8.24389,"latitude":53.41291,"code":"IE","popdens":70.65344753,"travel":10951000},{"country":"Israel","cases":834920,"lnCases":13.63509119,"longitude":34.851612,"latitude":31.046051,"code":"IL","popdens":410.4805915,"travel":4905000},{"country":"Italy","cases":3686707,"lnCases":15.12024421,"longitude":12.56738,"latitude":41.87194,"code":"IT","popdens":202.941457,"travel":95399000},{"country":"Ivory Coast","cases":44854,"lnCases":10.71116805,"longitude":-5.5471,"latitude":7.54,"code":"CI","popdens":78.83405346,"travel":2070000},{"country":"Jamaica","cases":41328,"lnCases":10.62929552,"longitude":-77.297508,"latitude":18.109581,"code":"JM","popdens":270.9930748,"travel":4233000},{"country":"Japan","cases":489407,"lnCases":13.10094973,"longitude":138.252924,"latitude":36.204824,"code":"JP","popdens":347.1305898,"travel":31882000},{"country":"Jordan","cases":645449,"lnCases":13.37770148,"longitude":36.238414,"latitude":30.585164,"code":"JO","popdens":112.1424983,"travel":5361000},{"country":"Kazakhstan","cases":309756,"lnCases":12.64354017,"longitude":66.923684,"latitude":48.019573,"code":"KZ","popdens":6.769825721,"travel":8515000},{"country":"Kenya","cases":139842,"lnCases":11.84826849,"longitude":37.906193,"latitude":-0.023559,"code":"KE","popdens":90.29941666,"travel":2049000},{"country":"Kuwait","cases":239952,"lnCases":12.38819418,"longitude":47.481766,"latitude":29.31166,"code":"KW","popdens":232.1723906,"travel":8565000},{"country":"Kyrgyzstan","cases":89277,"lnCases":11.39949917,"longitude":74.766098,"latitude":41.20438,"code":"KG","popdens":32.96558916,"travel":8508000},{"country":"Laos","cases":49,"lnCases":3.891820298,"longitude":102.495496,"latitude":19.85627,"code":"LA","popdens":30.59578423,"travel":4791000},{"country":"Latvia","cases":104533,"lnCases":11.55725809,"longitude":24.603189,"latitude":56.879635,"code":"LV","popdens":31.03839588,"travel":8342000},{"country":"Lebanon","cases":482798,"lnCases":13.08735363,"longitude":35.862285,"latitude":33.854721,"code":"LB","popdens":669.4941349,"travel":1936000},{"country":"Lesotho","cases":10707,"lnCases":9.278653012,"longitude":28.233608,"latitude":-29.609988,"code":"LS","popdens":69.43781291,"travel":1142000},{"country":"Liberia","cases":2042,"lnCases":7.621684999,"longitude":-9.429499,"latitude":6.428055,"code":"LR","popdens":50.03090739,"travel":0},{"country":"Libya","cases":164318,"lnCases":12.00955885,"longitude":17.228331,"latitude":26.3351,"code":"LY","popdens":3.795632381,"travel":0},{"country":"Liechtenstein","cases":2697,"lnCases":7.899895323,"longitude":9.555373,"latitude":47.166,"code":"LI","popdens":236.9375,"travel":98099.99847},{"country":"Lithuania","cases":220900,"lnCases":12.30546539,"longitude":23.881275,"latitude":55.169438,"code":"LT","popdens":44.73164618,"travel":6150000},{"country":"Luxembourg","cases":62625,"lnCases":11.04491984,"longitude":6.129583,"latitude":49.815273,"code":"LU","popdens":250.1851852,"travel":1041000},{"country":"Madagascar","cases":25874,"lnCases":10.16099388,"longitude":46.869107,"latitude":-18.766947,"code":"MG","popdens":45.13985562,"travel":486000},{"country":"Malawi","cases":33685,"lnCases":10.42480791,"longitude":34.301525,"latitude":-13.254308,"code":"MW","popdens":192.4407616,"travel":871000},{"country":"Malaysia","cases":353329,"lnCases":12.77515491,"longitude":101.975766,"latitude":4.210484,"code":"MY","popdens":95.96282149,"travel":26101000},{"country":"Maldives","cases":25053,"lnCases":10.12874886,"longitude":73.22068,"latitude":3.202778,"code":"MV","popdens":1718.986667,"travel":1703000},{"country":"Mali","cases":10758,"lnCases":9.283404943,"longitude":-3.996166,"latitude":17.570692,"code":"ML","popdens":15.63501586,"travel":217000},{"country":"Malta","cases":29343,"lnCases":10.2868093,"longitude":14.375416,"latitude":35.937496,"code":"MT","popdens":1514.46875,"travel":3519000},{"country":"Marshall Islands","cases":4,"lnCases":1.386294361,"longitude":171.184478,"latitude":7.131474,"code":"MH","popdens":324.5166667,"travel":6099.999905},{"country":"Mauritania","cases":17955,"lnCases":9.795623907,"longitude":-10.940835,"latitude":21.00789,"code":"MR","popdens":4.272163578,"travel":0},{"country":"Mauritius","cases":1130,"lnCases":7.029972912,"longitude":57.552152,"latitude":-20.348404,"code":"MU","popdens":623.3019704,"travel":1418000},{"country":"Mexico","cases":2256509,"lnCases":14.62932949,"longitude":-102.552784,"latitude":23.634501,"code":"MX","popdens":64.91462641,"travel":97406000},{"country":"Micronesia","cases":1,"lnCases":0,"longitude":150.550812,"latitude":7.425554,"code":"FM","popdens":160.9142857,"travel":18000},{"country":"Moldova","cases":236563,"lnCases":12.37396984,"longitude":28.369885,"latitude":47.411631,"code":"MD","popdens":94.26443028,"travel":174000},{"country":"Monaco","cases":2345,"lnCases":7.760040681,"longitude":7.412841,"latitude":43.750298,"code":"MC","popdens":19083.37444,"travel":363000},{"country":"Mongolia","cases":11651,"lnCases":9.363147292,"longitude":103.846656,"latitude":46.862496,"code":"MN","popdens":2.035766782,"travel":637000},{"country":"Montenegro","cases":93030,"lnCases":11.4406773,"longitude":19.37439,"latitude":42.708678,"code":"ME","popdens":46.26223048,"travel":2510000},{"country":"Morocco","cases":499025,"lnCases":13.12041147,"longitude":-7.09262,"latitude":31.791702,"code":"MA","popdens":80.72851893,"travel":13109000},{"country":"Mozambique","cases":68292,"lnCases":11.13154791,"longitude":35.529562,"latitude":-18.665695,"code":"MZ","popdens":37.50853531,"travel":2033000},{"country":"Namibia","cases":45008,"lnCases":10.71459553,"longitude":18.49041,"latitude":-22.95764,"code":"NA","popdens":2.973745582,"travel":1651000},{"country":"Nepal","cases":278470,"lnCases":12.53706561,"longitude":84.124008,"latitude":28.394857,"code":"NP","popdens":195.9391071,"travel":1197000},{"country":"Netherlands","cases":1335312,"lnCases":14.10467553,"longitude":5.291266,"latitude":52.132633,"code":"NL","popdens":511.7797446,"travel":20129000},{"country":"New Zealand","cases":2531,"lnCases":7.836369761,"longitude":174.885971,"latitude":-40.900557,"code":"NZ","popdens":18.38517337,"travel":3888000},{"country":"Nicaragua","cases":6727,"lnCases":8.813884558,"longitude":-85.207229,"latitude":12.865416,"code":"NI","popdens":53.72704836,"travel":1455000},{"country":"Niger","cases":5048,"lnCases":8.526747404,"longitude":8.081666,"latitude":17.607789,"code":"NE","popdens":17.71765059,"travel":192000},{"country":"Nigeria","cases":163388,"lnCases":12.00388302,"longitude":8.675277,"latitude":9.081999,"code":"NG","popdens":215.064989,"travel":0},{"country":"Norway","cases":100149,"lnCases":11.51441436,"longitude":8.468946,"latitude":60.472024,"code":"NO","popdens":14.54889562,"travel":5879000},{"country":"Oman","cases":165480,"lnCases":12.01660562,"longitude":55.923255,"latitude":21.512583,"code":"OM","popdens":15.6041454,"travel":3506000},{"country":"Pakistan","cases":700188,"lnCases":13.45910415,"longitude":69.345116,"latitude":30.375321,"code":"PK","popdens":275.2893187,"travel":0},{"country":"Panama","cases":356913,"lnCases":12.78524733,"longitude":-80.782127,"latitude":8.537981,"code":"PA","popdens":56.30954339,"travel":2494000},{"country":"Papua New Guinea","cases":7406,"lnCases":8.910045761,"longitude":143.95555,"latitude":-6.314993,"code":"PG","popdens":19.00436338,"travel":211000},{"country":"Paraguay","cases":224736,"lnCases":12.32268166,"longitude":-58.443832,"latitude":-23.442503,"code":"PY","popdens":17.50835892,"travel":4368000},{"country":"Peru","cases":1590209,"lnCases":14.27937601,"longitude":-75.015152,"latitude":-9.189967,"code":"PE","popdens":24.99160625,"travel":5275000},{"country":"Philippines","cases":812760,"lnCases":13.60819114,"longitude":121.774017,"latitude":12.879721,"code":"PH","popdens":357.6883053,"travel":8261000},{"country":"Poland","cases":2456709,"lnCases":14.71433321,"longitude":19.145136,"latitude":51.919438,"code":"PL","popdens":124.0315838,"travel":88515000},{"country":"Portugal","cases":824368,"lnCases":13.62237231,"longitude":-8.224454,"latitude":39.399872,"code":"PT","popdens":112.261936,"travel":17174000},{"country":"Qatar","cases":185261,"lnCases":12.12952092,"longitude":51.183884,"latitude":25.354826,"code":"QA","popdens":242.0954743,"travel":2136500},{"country":"Republic of the Congo","cases":10084,"lnCases":9.218705288,"longitude":15.8277,"latitude":-0.228,"code":"CG","popdens":15.35684627,"travel":158000},{"country":"Romania","cases":983217,"lnCases":13.79858513,"longitude":24.96676,"latitude":45.943161,"code":"RO","popdens":84.63380129,"travel":12815000},{"country":"Russia","cases":4546307,"lnCases":15.32982581,"longitude":105.318756,"latitude":61.52401,"code":"RU","popdens":8.822067953,"travel":24419000},{"country":"Rwanda","cases":22862,"lnCases":10.03723142,"longitude":29.873888,"latitude":-1.940278,"code":"RW","popdens":498.6598703,"travel":1634000},{"country":"Saint Kitts and Nevis","cases":44,"lnCases":3.784189634,"longitude":-62.782998,"latitude":17.357822,"code":"KN","popdens":201.6846154,"travel":1107000},{"country":"Saint Lucia","cases":4297,"lnCases":8.365672384,"longitude":-60.978893,"latitude":13.909444,"code":"LC","popdens":298.1786885,"travel":1220000},{"country":"Saint Vincent and the Grenadines","cases":1765,"lnCases":7.475905969,"longitude":-61.287228,"latitude":12.984305,"code":"VC","popdens":282.5897436,"travel":392000},{"country":"Samoa","cases":3,"lnCases":1.098612289,"longitude":-172.104629,"latitude":-13.759029,"code":"WS","popdens":69.30388693,"travel":181000},{"country":"San Marino","cases":4864,"lnCases":8.489616424,"longitude":12.457777,"latitude":43.94236,"code":"SM","popdens":563.0833333,"travel":1904000},{"country":"Saudi Arabia","cases":394169,"lnCases":12.88453503,"longitude":45.079162,"latitude":23.885942,"code":"SA","popdens":15.67665431,"travel":20292000},{"country":"Senegal","cases":39127,"lnCases":10.57456804,"longitude":-14.452362,"latitude":14.497401,"code":"SN","popdens":82.34747832,"travel":0},{"country":"Serbia","cases":625773,"lnCases":13.34674296,"longitude":21.005859,"latitude":44.016521,"code":"RS","popdens":79.8376858,"travel":1847000},{"country":"Seychelles","cases":4320,"lnCases":8.371010681,"longitude":55.491977,"latitude":-4.679574,"code":"SC","popdens":210.3521739,"travel":428000},{"country":"Sierra Leone","cases":3990,"lnCases":8.29154651,"longitude":-11.779889,"latitude":8.460555,"code":"SL","popdens":105.987171,"travel":71000},{"country":"Singapore","cases":60519,"lnCases":11.01071264,"longitude":103.819836,"latitude":1.352083,"code":"SG","popdens":7952.99859,"travel":19116000},{"country":"Slovakia","cases":365733,"lnCases":12.80965884,"longitude":19.699024,"latitude":48.669026,"code":"SK","popdens":113.2855865,"travel":0},{"country":"Slovenia","cases":220698,"lnCases":12.30455053,"longitude":14.995463,"latitude":46.151241,"code":"SI","popdens":102.9922926,"travel":4702000},{"country":"Solomon Islands","cases":19,"lnCases":2.944438979,"longitude":160.156194,"latitude":-9.64571,"code":"SB","popdens":23.32468739,"travel":28899.99962},{"country":"Somalia","cases":11978,"lnCases":9.390826913,"longitude":46.199616,"latitude":5.152149,"code":"SO","popdens":23.9234769,"travel":0},{"country":"South Africa","cases":1552853,"lnCases":14.25560444,"longitude":22.937506,"latitude":-30.559482,"code":"ZA","popdens":47.63011978,"travel":14797000},{"country":"South Korea","cases":106898,"lnCases":11.57963039,"longitude":127.7669,"latitude":35.9078,"code":"KR","popdens":529.1902482,"travel":17503000},{"country":"South Sudan","cases":10286,"lnCases":9.238539026,"longitude":31.307,"latitude":6.877,"code":"SS","popdens":17.36893738,"travel":0},{"country":"Spain","cases":3317948,"lnCases":15.01485708,"longitude":-3.74922,"latitude":40.463667,"code":"ES","popdens":93.66979208,"travel":126170000},{"country":"Sri Lanka","cases":93690,"lnCases":11.44774674,"longitude":80.771797,"latitude":7.873054,"code":"LK","popdens":350.284495,"travel":2027000},{"country":"Sudan","cases":31833,"lnCases":10.36825877,"longitude":30.217636,"latitude":12.862807,"code":"SD","popdens":22.60478633,"travel":836000},{"country":"Suriname","cases":9184,"lnCases":9.125218119,"longitude":-56.027783,"latitude":3.919305,"code":"SR","popdens":3.692224359,"travel":0},{"country":"Sweden","cases":834993,"lnCases":13.63517862,"longitude":18.643501,"latitude":60.128161,"code":"SE","popdens":24.98149812,"travel":7616000},{"country":"Switzerland","cases":610274,"lnCases":13.32166332,"longitude":8.227512,"latitude":46.818188,"code":"CH","popdens":215.4651922,"travel":11818000},{"country":"Syria","cases":19641,"lnCases":9.885374497,"longitude":38.996815,"latitude":34.802075,"code":"SY","popdens":92.06710777,"travel":2424000},{"country":"Tajikistan","cases":13308,"lnCases":9.496120637,"longitude":71.276093,"latitude":38.861034,"code":"TJ","popdens":65.57271417,"travel":1035000},{"country":"Tanzania","cases":509,"lnCases":6.232448017,"longitude":34.888822,"latitude":-6.369028,"code":"TZ","popdens":63.5790788,"travel":1527000},{"country":"Thailand","cases":29571,"lnCases":10.29454943,"longitude":100.992541,"latitude":15.870032,"code":"TH","popdens":135.8972068,"travel":39916000},{"country":"Timor-Leste","cases":779,"lnCases":6.658011046,"longitude":125.727539,"latitude":-8.874217,"code":"TL","popdens":85.27047747,"travel":74800.00305},{"country":"Togo","cases":11310,"lnCases":9.333442569,"longitude":0.824782,"latitude":8.619543,"code":"TG","popdens":145.0467733,"travel":876000},{"country":"Trinidad and Tobago","cases":8214,"lnCases":9.013595295,"longitude":-61.222503,"latitude":10.691803,"code":"TT","popdens":270.9274854,"travel":480000},{"country":"Tunisia","cases":263043,"lnCases":12.4800728,"longitude":9.537499,"latitude":33.886917,"code":"TN","popdens":74.44132338,"travel":9429000},{"country":"Turkey","cases":3579185,"lnCases":15.09064568,"longitude":35.243322,"latitude":38.963745,"code":"TR","popdens":106.9601289,"travel":51747000},{"country":"Uganda","cases":41023,"lnCases":10.62188816,"longitude":32.290275,"latitude":1.373333,"code":"UG","popdens":213.0617345,"travel":0},{"country":"Ukraine","cases":1820725,"lnCases":14.41474533,"longitude":31.16558,"latitude":48.379433,"code":"UA","popdens":77.0150466,"travel":13710000},{"country":"United Arab Emirates","cases":474136,"lnCases":13.06924948,"longitude":53.847818,"latitude":23.424076,"code":"AE","popdens":135.6091101,"travel":21553000},{"country":"United Kingdom","cases":4379033,"lnCases":15.29233848,"longitude":-3.435973,"latitude":55.378051,"code":"GB","popdens":274.7089819,"travel":40857000},{"country":"United States of America","cases":30846396,"lnCases":17.24453048,"longitude":-95.712891,"latitude":37.09024,"code":"US","popdens":35.71362209,"travel":166009000},{"country":"Uruguay","cases":123063,"lnCases":11.7204517,"longitude":-55.765835,"latitude":-32.522779,"code":"UY","popdens":19.70802765,"travel":3480000},{"country":"Uzbekistan","cases":83935,"lnCases":11.33779797,"longitude":64.585262,"latitude":41.377491,"code":"UZ","popdens":74.80586987,"travel":6749000},{"country":"Vanuatu","cases":3,"lnCases":1.098612289,"longitude":166.959158,"latitude":-15.376706,"code":"VU","popdens":24.00984413,"travel":256000},{"country":"Venezuela","cases":169074,"lnCases":12.03809177,"longitude":-66.58973,"latitude":6.42375,"code":"VE","popdens":32.73079191,"travel":0},{"country":"Vietnam","cases":2648,"lnCases":7.881559917,"longitude":108.277199,"latitude":14.058324,"code":"VN","popdens":308.1252459,"travel":18009000},{"country":"Yemen","cases":4975,"lnCases":8.51218065,"longitude":48.516388,"latitude":15.552727,"code":"YE","popdens":53.97785291,"travel":0},{"country":"Zambia","cases":89071,"lnCases":11.39718908,"longitude":27.849332,"latitude":-13.133897,"code":"ZM","popdens":23.3414789,"travel":1266000},{"country":"Zimbabwe","cases":36966,"lnCases":10.51775385,"longitude":29.154857,"latitude":-19.015438,"code":"ZW","popdens":37.32459093,"travel":2294000}]},"projection":{"type":"equalEarth"},"transform":[{"lookup":"code","from":{"data":{"url":"https://gicentre.github.io/data/geoTutorials/world-110m.json","format":{"type":"topojson","feature":"countries1"}},"key":"properties.Alpha-2"},"as":"geo"},{"filter":"isValid(datum.geo)"},{"filter":"datum.travel &gt;= minTravelSlider_min &amp;&amp; maxTravelSlider_max &gt;= datum.travel"},{"filter":"datum.popdens &gt;= minDensSlider_min &amp;&amp; maxDensSlider_max &gt;= datum.popdens"}],"selection":{"maxTravelSlider":{"type":"single","init":{"max":300000000},"bind":{"max":{"input":"range","name":"Max Arrivals","max":300000000}}},"minTravelSlider":{"type":"single","init":{"min":0},"bind":{"min":{"input":"range","name":"Min Arrivals","max":10000000}}},"maxDensSlider":{"type":"single","init":{"max":600},"bind":{"max":{"input":"range","name":"Max Density","max":600}}},"minDensSlider":{"type":"single","init":{"min":0},"bind":{"min":{"input":"range","name":"Min Density","max":100}}}},"encoding":{"shape":{"field":"geo","type":"geojson"},"color":{"field":"lnCases","type":"quantitative","legend":{"orient":"bottom-left","title":"ln(Cases)"},"scale":{"scheme":"turbo"}},"tooltip":[{"field":"country"},{"field":"cases","type":"quantitative"},{"field":"popdens","type":"quantitative"},{"field":"travel","type":"quantitative"}]},"mark":{"type":"geoshape","stroke":"grey","strokeOpacity":0.5}}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

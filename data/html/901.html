@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","params":[{"name":"scale","value":3600,"bind":{"input":"range","name":"Zoom","min":3500,"max":15000,"step":100}},{"name":"cenLambda","value":-3,"bind":{"input":"range","name":"Left/Right","min":-4,"max":4,"step":1}},{"name":"cenPhi","value":57,"bind":{"input":"range","name":"Up/Down","min":55,"max":60,"step":1}},{"name":"ageSelect","value":"Overview","bind":{"input":"select","name":"Age: ","options":["Overview","Aged 16 to 24 years","Aged 25 to 34 years","Aged 35 to 49 years","Aged 50 to 64 years","Aged 65 years and over"]}}],"hconcat":[{"width":500,"height":500,"data":{"url":"https://zcflu.github.io/data/industries.csv","format":{"parse":{"industryCode":"number","ageCode":"number","observation":"number"}}},"params":[{"name":"indSelect","select":"point","value":{"type":"Overview"},"bind":{"input":"select","name":"Industry Type: ","options":["Overview","Agriculture","Manufacturing","Construction","Hospitality &amp; Retail","Transport &amp; Communication","Finance &amp; Professional Services","Public Services &amp; Education"]}}],"transform":[{"lookup":"authorityCode","from":{"data":{"url":"https://gicentre.github.io/data/census21/ewLAs.json","format":{"type":"topojson","feature":"las"}},"key":"properties.code"},"as":"geo"},{"calculate":"datum.industryCode == 1 ? 'Agriculture' : datum.industryCode == 2 ? 'Manufacturing' : datum.industryCode == 3 ? 'Construction' : datum.industryCode == 4 ? 'Hospitality &amp; Retail' : datum.industryCode == 5 ? 'Transport &amp; Communication' : datum.industryCode == 6 ? 'Finance &amp; Professional Services' : datum.industryCode == 7 ? 'Public Services &amp; Education' :  datum.industryName","as":"shortIndustryName"},{"filter":"datum.industryCode&gt;0 &amp;&amp; datum.industryCode &lt;8"},{"filter":"ageSelect == 'Overview' ? true : datum.age == ageSelect "},{"filter":"indSelect.type == 'Overview' ? true : datum.shortIndustryName == indSelect.type "},{"joinaggregate":[{"op":"sum","field":"observation","as":"industryAmount"}],"groupby":["authorityName"]}],"encoding":{"shape":{"field":"geo","type":"geojson"},"color":{"field":"industryAmount","title":"Number Of People / Observations","type":"quantitative","scale":{"scheme":{"expr":"\n                        ( indSelect.type == 'Agriculture' ? 'greens'\n                        : indSelect.type == 'Manufacturing' ? 'oranges'\n                        : indSelect.type == 'Construction' ? 'reds'\n                        : indSelect.type == 'Hospitality &amp; Retail' ? 'teals'\n                        : indSelect.type == 'Transport &amp; Communication' ? 'blues'\n                        : indSelect.type == 'Finance &amp; Professional Services' ? 'greys'\n                        : indSelect.type == 'Public Services &amp; Education' ? 'purples'\n                        : 'viridis') "},"type":"sqrt"}},"tooltip":[{"field":"authorityName","title":"Authority "},{"field":"industryAmount","title":"Amount "}]},"projection":{"type":"transverseMercator","rotate":{"expr":"[2,0,0]"},"scale":{"expr":"scale"},"center":{"expr":"[cenLambda,cenPhi]"}},"mark":{"type":"geoshape","stroke":"white"},"title":{"text":"Industries in the UK"}},{"width":500,"height":200,"data":{"url":"https://zcflu.github.io/data/industries.csv","format":{"parse":{"industryCode":"number","ageCode":"number","observation":"number"}}},"transform":[{"filter":"datum.industryCode &gt;0 &amp;&amp; datum.ageCode &gt;1 &amp;&amp; datum.industryCode &lt;8"},{"calculate":"datum.industryCode == 1 ? 'Agriculture' : datum.industryCode == 2 ? 'Manufacturing' : datum.industryCode == 3 ? 'Construction' : datum.industryCode == 4 ? 'Hospitality &amp; Retail' : datum.industryCode == 5 ? 'Transport &amp; Communication' : datum.industryCode == 6 ? 'Finance &amp; Professional Services' : datum.industryCode == 7 ? 'Public Services &amp; Education' :  datum.industryName","as":"shortIndustryName"},{"joinaggregate":[{"op":"sum","field":"observation","as":"sumObservation"}],"groupby":["shortIndustryName","age"]}],"encoding":{"x":{"field":"shortIndustryName","type":"nominal","axis":{"title":""}},"y":{"field":"observation","aggregate":"sum","type":"quantitative","title":"Observation","axis":{"title":""}},"color":{"field":"age","title":"Age"},"opacity":{"condition":{"test":"indSelect.type != 'Overview'? datum.shortIndustryName == indSelect.type : true","value":1},"value":0.5},"tooltip":[{"field":"shortIndustryName","title":"Industry Name"},{"field":"sumObservation","title":"Number of People"}]},"mark":"bar","title":{"text":"Employment by Age and Industry"},"config":{"view":{"stroke":null},"axis":{"domain":false,"labelAngle":10,"labelPadding":10}}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","params":[{"name":"scale","value":3600,"bind":{"input":"range","name":"Zoom","min":3500,"max":15000,"step":100}},{"name":"cenLambda","value":-3,"bind":{"input":"range","name":"Left/Right","min":-4,"max":4,"step":1}},{"name":"cenPhi","value":53,"bind":{"input":"range","name":"Up/Down","min":50,"max":55,"step":1}},{"name":"ageSelect","value":"Overview","bind":{"input":"select","name":"Age: ","options":["Overview","Aged 16 to 24 years","Aged 25 to 34 years","Aged 35 to 49 years","Aged 50 to 64 years","Aged 65 years and over"]}},{"name":"privateOrPublic","select":"point","value":{"type":"Overview"},"bind":{"input":"radio","name":"Private or Public: ","options":["Overview","Private Transport","Public Transport"]}}],"hconcat":[{"width":500,"height":500,"data":{"url":"https://zcflu.github.io/data/travelmethods.csv","format":{"parse":{"methodCode":"number","ageCode":"number","observation":"number"}}},"params":[{"name":"scale","value":3600,"bind":{"input":"range","name":"Zoom","min":3500,"max":15000,"step":100}},{"name":"cenLambda","value":-3,"bind":{"input":"range","name":"Left/Right","min":-4,"max":4,"step":1}},{"name":"cenPhi","value":53,"bind":{"input":"range","name":"Up/Down","min":50,"max":55,"step":1}},{"name":"ageSelect","value":"Overview","bind":{"input":"select","name":"Age: ","options":["Overview","Aged 16 to 24 years","Aged 25 to 34 years","Aged 35 to 49 years","Aged 50 to 64 years","Aged 65 years and over"]}},{"name":"privateOrPublic","select":"point","value":{"type":"Overview"},"bind":{"input":"radio","name":"Private or Public: ","options":["Overview","Private Transport","Public Transport"]}}],"transform":[{"lookup":"authorityCode","from":{"data":{"url":"https://gicentre.github.io/data/census21/ewLAs.json","format":{"type":"topojson","feature":"las"}},"key":"properties.code"},"as":"geo"},{"calculate":"datum.methodCode == 10 ? 'Public Transport' : datum.methodCode == 9 ? 'Public Transport' : datum.methodCode == 8 ? 'Private Transport' : datum.methodCode == 1 ? 'Stay Home' : datum.methodCode == 2 ? 'Public Transport' : datum.methodCode == 3 ? 'Public Transport' : datum.methodCode == 4 ? 'Public Transport' : datum.methodCode == 5 ? 'Public Transport' : datum.methodCode == 6 ? 'Private Transport' : datum.methodCode == 7 ? 'Private Transport' :  datum.methodCode","as":"pubOrPri"},{"filter":"datum.methodCode&lt;11 &amp;&amp; datum.pubOrPri != 'Stay Home'"},{"filter":"ageSelect == 'Overview' ? true : datum.age == ageSelect "},{"filter":"privateOrPublic.type == 'Overview' ? true : datum.pubOrPri == privateOrPublic.type "},{"joinaggregate":[{"op":"sum","field":"methodobservation","as":"sumObservation"}],"groupby":["authorityName","pubOrPri"]}],"encoding":{"shape":{"field":"geo","type":"geojson"},"color":{"field":"sumObservation","title":"Number Of People / Observations","type":"quantitative","scale":{"scheme":{"expr":"\n                    ( privateOrPublic.type == 'Public Transport' ? 'blues'\n                    : privateOrPublic.type == 'Private Transport' ? 'oranges'\n                    : 'viridis') "},"type":"sqrt"}},"tooltip":[{"field":"authorityName","title":"Authority "},{"field":"sumObservation","title":"Amount "}]},"projection":{"type":"transverseMercator","rotate":{"expr":"[2,0,0]"},"scale":{"expr":"scale"},"center":{"expr":"[cenLambda,cenPhi]"}},"mark":{"type":"geoshape","stroke":"white"},"title":{"text":"Travel in the UK"}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":500,"height":250,"data":{"url":"https://zcflu.github.io/data/travelmethods.csv","format":{"parse":{"methodCode":"number","ageCode":"number","observation":"number"}}},"transform":[{"filter":"datum.methodCode&lt;11"},{"filter":"datum.ageCode&gt;1"},{"joinaggregate":[{"op":"sum","field":"methodobservation","as":"sumObservation"}],"groupby":["methodName","age"]}],"encoding":{"x":{"field":"age","type":"nominal","title":""},"y":{"field":"sumObservation","type":"quantitative","title":""},"color":{"condition":{"param":"ageSelection","empty":false,"field":"methodName","title":"Travel Method","scale":{"scheme":{"name":"category10","extent":[0,1]}}},"value":"black"},"opacity":{"condition":{"param":"ageSelection","empty":false,"value":1},"value":0.1}},"config":{"view":{"stroke":null},"axis":{"domain":false,"labelAngle":10,"labelPadding":10}},"params":[{"name":"ageSelection","select":{"type":"point","fields":["methodName"]},"bind":"legend"},{"name":"mySelection","select":{"type":"interval","encodings":["y"]},"bind":"scales"}],"mark":"line","title":{"text":"Popular Travel Methods (interative legend)"}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega/v5.json","width":600,"height":600,"data":[{"name":"sankeyData","values":[{"tMethod":"Work mainly at or from home","tiName":"Agriculture","Observation":255135,"indCode":1},{"tMethod":"Work mainly at or from home","tiName":"Manufacturing","Observation":491467,"indCode":2},{"tMethod":"Work mainly at or from home","tiName":"Construction","Observation":366701,"indCode":3},{"tMethod":"Work mainly at or from home","tiName":"Hopistality &amp; Retail","Observation":928665,"indCode":4},{"tMethod":"Work mainly at or from home","tiName":"Transport &amp; Communication","Observation":1215650,"indCode":5},{"tMethod":"Work mainly at or from home","tiName":"Finance &amp; Professional Services","Observation":2597201,"indCode":6},{"tMethod":"Work mainly at or from home","tiName":"Public Services &amp; Education","Observation":2348426,"indCode":7},{"tMethod":"Underground, metro, light rail, tram","tiName":"Agriculture","Observation":2285,"indCode":1},{"tMethod":"Underground, metro, light rail, tram","tiName":"Manufacturing","Observation":12605,"indCode":2},{"tMethod":"Underground, metro, light rail, tram","tiName":"Construction","Observation":69929,"indCode":3},{"tMethod":"Underground, metro, light rail, tram","tiName":"Hopistality &amp; Retail","Observation":120243,"indCode":4},{"tMethod":"Underground, metro, light rail, tram","tiName":"Transport &amp; Communication","Observation":37077,"indCode":5},{"tMethod":"Underground, metro, light rail, tram","tiName":"Finance &amp; Professional Services","Observation":104106,"indCode":6},{"tMethod":"Underground, metro, light rail, tram","tiName":"Public Services &amp; Education","Observation":130737,"indCode":7},{"tMethod":"Train","tiName":"Agriculture","Observation":4777,"indCode":1},{"tMethod":"Train","tiName":"Manufacturing","Observation":18011,"indCode":2},{"tMethod":"Train","tiName":"Construction","Observation":58036,"indCode":3},{"tMethod":"Train","tiName":"Hopistality &amp; Retail","Observation":107041,"indCode":4},{"tMethod":"Train","tiName":"Transport &amp; Communication","Observation":49837,"indCode":5},{"tMethod":"Train","tiName":"Finance &amp; Professional Services","Observation":101951,"indCode":6},{"tMethod":"Train","tiName":"Public Services &amp; Education","Observation":163259,"indCode":7},{"tMethod":"Bus, minibus or coach","tiName":"Agriculture","Observation":7390,"indCode":1},{"tMethod":"Bus, minibus or coach","tiName":"Manufacturing","Observation":56932,"indCode":2},{"tMethod":"Bus, minibus or coach","tiName":"Construction","Observation":42660,"indCode":3},{"tMethod":"Bus, minibus or coach","tiName":"Hopistality &amp; Retail","Observation":397182,"indCode":4},{"tMethod":"Bus, minibus or coach","tiName":"Transport &amp; Communication","Observation":69975,"indCode":5},{"tMethod":"Bus, minibus or coach","tiName":"Finance &amp; Professional Services","Observation":157789,"indCode":6},{"tMethod":"Bus, minibus or coach","tiName":"Public Services &amp; Education","Observation":382997,"indCode":7},{"tMethod":"Taxi","tiName":"Agriculture","Observation":1333,"indCode":1},{"tMethod":"Taxi","tiName":"Manufacturing","Observation":12411,"indCode":2},{"tMethod":"Taxi","tiName":"Construction","Observation":4512,"indCode":3},{"tMethod":"Taxi","tiName":"Hopistality &amp; Retail","Observation":52716,"indCode":4},{"tMethod":"Taxi","tiName":"Transport &amp; Communication","Observation":39418,"indCode":5},{"tMethod":"Taxi","tiName":"Finance &amp; Professional Services","Observation":17945,"indCode":6},{"tMethod":"Taxi","tiName":"Public Services &amp; Education","Observation":64618,"indCode":7},{"tMethod":"Motorcycle, scooter or moped","tiName":"Agriculture","Observation":3212,"indCode":1},{"tMethod":"Motorcycle, scooter or moped","tiName":"Manufacturing","Observation":15337,"indCode":2},{"tMethod":"Motorcycle, scooter or moped","tiName":"Construction","Observation":12699,"indCode":3},{"tMethod":"Motorcycle, scooter or moped","tiName":"Hopistality &amp; Retail","Observation":38107,"indCode":4},{"tMethod":"Motorcycle, scooter or moped","tiName":"Transport &amp; Communication","Observation":15413,"indCode":5},{"tMethod":"Motorcycle, scooter or moped","tiName":"Finance &amp; Professional Services","Observation":13264,"indCode":6},{"tMethod":"Motorcycle, scooter or moped","tiName":"Public Services &amp; Education","Observation":25259,"indCode":7},{"tMethod":"Driving a car or van","tiName":"Agriculture","Observation":304861,"indCode":1},{"tMethod":"Driving a car or van","tiName":"Manufacturing","Observation":1125609,"indCode":2},{"tMethod":"Driving a car or van","tiName":"Construction","Observation":1592232,"indCode":3},{"tMethod":"Driving a car or van","tiName":"Hopistality &amp; Retail","Observation":2574416,"indCode":4},{"tMethod":"Driving a car or van","tiName":"Transport &amp; Communication","Observation":1012981,"indCode":5},{"tMethod":"Driving a car or van","tiName":"Finance &amp; Professional Services","Observation":1356002,"indCode":6},{"tMethod":"Driving a car or van","tiName":"Public Services &amp; Education","Observation":4070475,"indCode":7},{"tMethod":"Passenger in a car or van","tiName":"Agriculture","Observation":19203,"indCode":1},{"tMethod":"Passenger in a car or van","tiName":"Manufacturing","Observation":109210,"indCode":2},{"tMethod":"Passenger in a car or van","tiName":"Construction","Observation":161074,"indCode":3},{"tMethod":"Passenger in a car or van","tiName":"Hopistality &amp; Retail","Observation":334021,"indCode":4},{"tMethod":"Passenger in a car or van","tiName":"Transport &amp; Communication","Observation":58189,"indCode":5},{"tMethod":"Passenger in a car or van","tiName":"Finance &amp; Professional Services","Observation":106696,"indCode":6},{"tMethod":"Passenger in a car or van","tiName":"Public Services &amp; Education","Observation":259291,"indCode":7},{"tMethod":"Bicycle","tiName":"Agriculture","Observation":9837,"indCode":1},{"tMethod":"Bicycle","tiName":"Manufacturing","Observation":63952,"indCode":2},{"tMethod":"Bicycle","tiName":"Construction","Observation":29612,"indCode":3},{"tMethod":"Bicycle","tiName":"Hopistality &amp; Retail","Observation":148974,"indCode":4},{"tMethod":"Bicycle","tiName":"Transport &amp; Communication","Observation":46837,"indCode":5},{"tMethod":"Bicycle","tiName":"Finance &amp; Professional Services","Observation":68866,"indCode":6},{"tMethod":"Bicycle","tiName":"Public Services &amp; Education","Observation":175155,"indCode":7},{"tMethod":"On foot","tiName":"Agriculture","Observation":25361,"indCode":1},{"tMethod":"On foot","tiName":"Manufacturing","Observation":118500,"indCode":2},{"tMethod":"On foot","tiName":"Construction","Observation":45371,"indCode":3},{"tMethod":"On foot","tiName":"Hopistality &amp; Retail","Observation":748697,"indCode":4},{"tMethod":"On foot","tiName":"Transport &amp; Communication","Observation":82822,"indCode":5},{"tMethod":"On foot","tiName":"Finance &amp; Professional Services","Observation":202961,"indCode":6},{"tMethod":"On foot","tiName":"Public Services &amp; Education","Observation":783560,"indCode":7}],"transform":[{"type":"formula","expr":"datum['tiName']","as":"stk1","initonly":false},{"type":"formula","expr":"datum['tMethod']","as":"stk2","initonly":false},{"type":"formula","expr":"datum['Observation']","as":"size","initonly":false}]},{"name":"nodes","source":"sankeyData","transform":[{"type":"filter","expr":"!groupSelector || groupSelector.stk1 == datum.stk1 || groupSelector.stk2 == datum.stk2"},{"type":"formula","expr":"datum.stk1+datum.stk2","as":"key","initonly":false},{"type":"fold","fields":["stk1","stk2"],"as":["stack","grpId"]},{"type":"formula","expr":"datum.stack == 'stk1' ? datum.stk1+' '+datum.stk2 : datum.stk2+' '+datum.stk1","as":"sortField","initonly":false},{"type":"stack","field":"size","sort":{"field":["sortField"],"order":["descending"]},"groupby":["stack"]},{"type":"formula","expr":"(datum.y0+datum.y1)/2","as":"yc","initonly":false}]},{"name":"groups","source":"nodes","transform":[{"type":"aggregate","fields":["size"],"ops":["sum"],"groupby":["stack","grpId"],"as":["total"]},{"type":"stack","field":"total","sort":{"field":["grpId"],"order":["descending"]},"groupby":["stack"]},{"type":"formula","expr":"scale('yScale', datum.y0)","as":"scaledY0","initonly":false},{"type":"formula","expr":"scale('yScale', datum.y1)","as":"scaledY1","initonly":false},{"type":"formula","expr":"datum.stack == 'stk1'","as":"rightLabel","initonly":false},{"type":"formula","expr":"datum.total/domain('yScale')[1]","as":"percentage","initonly":false}]},{"name":"destinationNodes","source":"nodes","transform":[{"type":"filter","expr":"datum.stack == 'stk2'"}]},{"name":"edges","source":"nodes","transform":[{"type":"filter","expr":"datum.stack == 'stk1'"},{"type":"lookup","from":"destinationNodes","key":"key","fields":["key"],"as":["target"]},{"type":"linkpath","orient":"horizontal","shape":"diagonal","sourceX":{"expr":"scale('xScale', 'stk1') + bandwidth('xScale')"},"sourceY":{"expr":"scale('yScale', datum.yc)"},"targetX":{"expr":"scale('xScale', 'stk2')"},"targetY":{"expr":"scale('yScale', datum.target.yc)"}},{"type":"formula","expr":"range('yScale')[0]-scale('yScale', datum.size)","as":"strokeWidth","initonly":false},{"type":"formula","expr":"datum.size/domain('yScale')[1]","as":"percentage","initonly":false}]}],"signals":[{"name":"groupHover","value":"{}","on":[{"events":"@groupMark:mouseover","update":"{stk1:datum.stack=='stk1' &amp;&amp; datum.grpId, stk2:datum.stack=='stk2' &amp;&amp; datum.grpId}"},{"events":"mouseout","update":"{}"}]},{"name":"groupSelector","value":false,"on":[{"events":"@groupMark:click!","update":"{stack:datum.stack, stk1:datum.stack=='stk1' &amp;&amp; datum.grpId, stk2:datum.stack=='stk2' &amp;&amp; datum.grpId}"},{"events":[{"type":"click","markname":"groupReset"},{"type":"dblclick"}],"update":"false"}]}],"scales":[{"name":"xScale","type":"band","domain":["stk1","stk2"],"range":"width","paddingInner":0.95,"paddingOuter":0.05},{"name":"yScale","type":"linear","domain":{"data":"nodes","field":"y1"},"range":"height"},{"name":"cScale","type":"ordinal","range":"category"},{"name":"stackNames","type":"ordinal","domain":["stk1","stk2"],"range":["Industry","Travel Method"]}],"axes":[{"scale":"xScale","orient":"top","domain":false,"ticks":false,"labelPadding":10,"encode":{"labels":{"update":{"text":{"scale":"stackNames","field":"value"}}}}},{"scale":"yScale","orient":"left","domain":false,"ticks":false,"labels":false}],"marks":[{"type":"rect","from":{"data":"nodes"},"encode":{"enter":{"width":{"scale":"xScale","band":1},"x":{"scale":"xScale","field":"stack"},"y":{"scale":"yScale","field":"y0"},"y2":{"scale":"yScale","field":"y1"},"fill":{"scale":"cScale","field":"grpId"},"stroke":{"value":"black"},"strokeWidth":{"value":0.2}}}},{"type":"rect","name":"groupMark","from":{"data":"groups"},"encode":{"enter":{"fillOpacity":{"value":0},"fill":{"value":"white"},"width":{"scale":"xScale","band":1},"stroke":{"value":"white"},"strokeWidth":{"value":2},"cornerRadius":{"value":2}},"update":{"x":{"scale":"xScale","field":"stack"},"y":{"field":"scaledY0"},"y2":{"field":"scaledY1"},"tooltip":{"signal":"datum.grpId + '   ' + format(datum.total, ',.0f') + '   (' + format(datum.percentage, '.1%') + ')'"}},"hover":{"strokeOpacity":{"value":1}}}},{"type":"path","name":"edgeMark","from":{"data":"edges"},"clip":true,"encode":{"update":{"stroke":[{"test":"groupSelector &amp;&amp; groupSelector.stack=='stk1'","scale":"cScale","field":"stk2"},{"scale":"cScale","field":"grpId"}],"strokeWidth":{"field":"strokeWidth"},"path":{"field":"path"},"strokeOpacity":{"signal":"!groupSelector &amp;&amp; (groupHover.stk1 == datum.stk1 || groupHover.stk2 == datum.stk2) ? 0.9 : 0.3"},"zindex":{"signal":"!groupSelector &amp;&amp; (groupHover.stk1 == datum.stk1 || groupHover.stk2 == datum.stk2) ? 1 : 0"},"tooltip":{"signal":"datum.stk1 + ' → ' + datum.stk2 + '    ' + format(datum.size, ',.0f') + '   (' + format(datum.percentage, '.1%') + ')'"}},"hover":{"strokeOpacity":{"value":1}}}},{"type":"text","from":{"data":"groups"},"interactive":false,"encode":{"update":{"x":{"signal":"scale('xScale', datum.stack) + (datum.rightLabel ? bandwidth('xScale') + 8 : -8)"},"y":{"signal":"(datum.scaledY0 + datum.scaledY1)/2"},"align":{"signal":"datum.rightLabel ? 'left' : 'right'"},"baseline":{"value":"middle"},"fontWeight":{"value":"bold"},"text":{"signal":"abs(datum.scaledY0-datum.scaledY1) &gt; 13 ? datum.grpId : ''"}}}}]}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>courseworkPG — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","config":{"view":{"stroke":""},"axis":{"ticks":false,"domain":false}},"data":{"values":[{"year":"1992","age":"1617","level":307072},{"year":"1992","age":"1824","level":1768698},{"year":"1992","age":"2534","level":2899774},{"year":"1992","age":"3549","level":4213614},{"year":"1992","age":"5064","level":2105311},{"year":"1992","age":"65","level":163874},{"year":"1993","age":"1617","level":281299},{"year":"1993","age":"1824","level":1672662},{"year":"1993","age":"2534","level":2958741},{"year":"1993","age":"3549","level":4254277},{"year":"1993","age":"5064","level":2164518},{"year":"1993","age":"65","level":166456},{"year":"1994","age":"1617","level":288746},{"year":"1994","age":"1824","level":1585576},{"year":"1994","age":"2534","level":3012666},{"year":"1994","age":"3549","level":4285383},{"year":"1994","age":"5064","level":2237114},{"year":"1994","age":"65","level":157309},{"year":"1995","age":"1617","level":322093},{"year":"1995","age":"1824","level":1573023},{"year":"1995","age":"2534","level":3062607},{"year":"1995","age":"3549","level":4388568},{"year":"1995","age":"5064","level":2298146},{"year":"1995","age":"65","level":165238},{"year":"1996","age":"1617","level":349093},{"year":"1996","age":"1824","level":1538317},{"year":"1996","age":"2534","level":3115443},{"year":"1996","age":"3549","level":4454042},{"year":"1996","age":"5064","level":2326954},{"year":"1996","age":"65","level":150213},{"year":"1997","age":"1617","level":365653},{"year":"1997","age":"1824","level":1536895},{"year":"1997","age":"2534","level":3123668},{"year":"1997","age":"3549","level":4468546},{"year":"1997","age":"5064","level":2441830},{"year":"1997","age":"65","level":166653},{"year":"1998","age":"1617","level":351838},{"year":"1998","age":"1824","level":1533971},{"year":"1998","age":"2534","level":3113978},{"year":"1998","age":"3549","level":4546709},{"year":"1998","age":"5064","level":2589157},{"year":"1998","age":"65","level":167697},{"year":"1999","age":"1617","level":338450},{"year":"1999","age":"1824","level":1552552},{"year":"1999","age":"2534","level":3118405},{"year":"1999","age":"3549","level":4636314},{"year":"1999","age":"5064","level":2659890},{"year":"1999","age":"65","level":173003},{"year":"2000","age":"1617","level":330083},{"year":"2000","age":"1824","level":1542040},{"year":"2000","age":"2534","level":3083865},{"year":"2000","age":"3549","level":4736212},{"year":"2000","age":"5064","level":2747955},{"year":"2000","age":"65","level":163134},{"year":"2001","age":"1617","level":330667},{"year":"2001","age":"1824","level":1601675},{"year":"2001","age":"2534","level":2985452},{"year":"2001","age":"3549","level":4802096},{"year":"2001","age":"5064","level":2849789},{"year":"2001","age":"65","level":180006},{"year":"2002","age":"1617","level":340370},{"year":"2002","age":"1824","level":1622409},{"year":"2002","age":"2534","level":2925115},{"year":"2002","age":"3549","level":4899965},{"year":"2002","age":"5064","level":2907133},{"year":"2002","age":"65","level":178710},{"year":"2003","age":"1617","level":336502},{"year":"2003","age":"1824","level":1662934},{"year":"2003","age":"2534","level":2898817},{"year":"2003","age":"3549","level":4955374},{"year":"2003","age":"5064","level":2973783},{"year":"2003","age":"65","level":200686},{"year":"2004","age":"1617","level":327915},{"year":"2004","age":"1824","level":1690351},{"year":"2004","age":"2534","level":2897092},{"year":"2004","age":"3549","level":5031928},{"year":"2004","age":"5064","level":3043839},{"year":"2004","age":"65","level":201961},{"year":"2005","age":"1617","level":287613},{"year":"2005","age":"1824","level":1672685},{"year":"2005","age":"2534","level":2897817},{"year":"2005","age":"3549","level":5138724},{"year":"2005","age":"5064","level":3090375},{"year":"2005","age":"65","level":219808},{"year":"2006","age":"1617","level":297171},{"year":"2006","age":"1824","level":1734909},{"year":"2006","age":"2534","level":2882816},{"year":"2006","age":"3549","level":5133091},{"year":"2006","age":"5064","level":3176167},{"year":"2006","age":"65","level":239077},{"year":"2007","age":"1617","level":286150},{"year":"2007","age":"1824","level":1743155},{"year":"2007","age":"2534","level":2912418},{"year":"2007","age":"3549","level":5198228},{"year":"2007","age":"5064","level":3241706},{"year":"2007","age":"65","level":246708},{"year":"2008","age":"1617","level":244873},{"year":"2008","age":"1824","level":1717283},{"year":"2008","age":"2534","level":2956588},{"year":"2008","age":"3549","level":5189854},{"year":"2008","age":"5064","level":3291920},{"year":"2008","age":"65","level":258037},{"year":"2009","age":"1617","level":231274},{"year":"2009","age":"1824","level":1639757},{"year":"2009","age":"2534","level":2945420},{"year":"2009","age":"3549","level":5209999},{"year":"2009","age":"5064","level":3325361},{"year":"2009","age":"65","level":313350},{"year":"2010","age":"1617","level":192913},{"year":"2010","age":"1824","level":1597743},{"year":"2010","age":"2534","level":2996151},{"year":"2010","age":"3549","level":5134129},{"year":"2010","age":"5064","level":3373212},{"year":"2010","age":"65","level":350818},{"year":"2011","age":"1617","level":189886},{"year":"2011","age":"1824","level":1616043},{"year":"2011","age":"2534","level":3011523},{"year":"2011","age":"3549","level":5088691},{"year":"2011","age":"5064","level":3454023},{"year":"2011","age":"65","level":350020},{"year":"2012","age":"1617","level":189261},{"year":"2012","age":"1824","level":1656637},{"year":"2012","age":"2534","level":3069826},{"year":"2012","age":"3549","level":5076348},{"year":"2012","age":"5064","level":3590572},{"year":"2012","age":"65","level":379784},{"year":"2013","age":"1617","level":179855},{"year":"2013","age":"1824","level":1650965},{"year":"2013","age":"2534","level":3160925},{"year":"2013","age":"3549","level":5035759},{"year":"2013","age":"5064","level":3703606},{"year":"2013","age":"65","level":426330},{"year":"2014","age":"1617","level":198833},{"year":"2014","age":"1824","level":1676808},{"year":"2014","age":"2534","level":3229744},{"year":"2014","age":"3549","level":5127577},{"year":"2014","age":"5064","level":3828823},{"year":"2014","age":"65","level":441493},{"year":"2015","age":"1617","level":190067},{"year":"2015","age":"1824","level":1732580},{"year":"2015","age":"2534","level":3287251},{"year":"2015","age":"3549","level":5073272},{"year":"2015","age":"5064","level":3960512},{"year":"2015","age":"65","level":462138},{"year":"2016","age":"1617","level":196687},{"year":"2016","age":"1824","level":1748125},{"year":"2016","age":"2534","level":3337593},{"year":"2016","age":"3549","level":5081133},{"year":"2016","age":"5064","level":4100565},{"year":"2016","age":"65","level":480345},{"year":"2017","age":"1617","level":176794},{"year":"2017","age":"1824","level":1688918},{"year":"2017","age":"2534","level":3417656},{"year":"2017","age":"3549","level":5133106},{"year":"2017","age":"5064","level":4246775},{"year":"2017","age":"65","level":455854},{"year":"2018","age":"1617","level":160681},{"year":"2018","age":"1824","level":1687014},{"year":"2018","age":"2534","level":3471772},{"year":"2018","age":"3549","level":5138391},{"year":"2018","age":"5064","level":4357345},{"year":"2018","age":"65","level":492390}]},"hconcat":[{"width":600,"height":370.82818294190355,"layer":[{"width":600,"height":370.82818294190355,"transform":[{"filter":{"selection":"legendSel"}}],"encoding":{"x":{"field":"year","type":"temporal","axis":{"title":"","grid":false}},"y":{"field":"level","type":"quantitative","axis":{"title":""}},"color":{"field":"age","type":"nominal","scale":{"domain":["1617","1824","2534","3549","5064","65"],"range":["rgb(132,88,78)","rgb(59,118,175)","rgb(81,157,62)","rgb(141,106,184)","rgb(239,133,55)","rgb(213,126,190)"]},"legend":null},"tooltip":[{"field":"year","type":"temporal","format":"%Y"},{"field":"level","type":"quantitative"},{"field":"age","type":"nominal"}]},"mark":{"type":"line","interpolate":"monotone"}},{"transform":[{"filter":{"selection":"legendSel"}}],"data":{"values":[{"year":"2010","annotation":"Pension age rises from 60","level":3700000,"age":"5064"},{"year":"1995","annotation":"Pensions Act 1995","level":2500000,"age":"5064"},{"year":"1998","annotation":"Tuition fees £1000","level":1700000,"age":"1824"},{"year":"2004","annotation":"Tuition fees £3000","level":1800000,"age":"1824"},{"year":"2010","annotation":"Tuition fees £9000","level":1800000,"age":"1824"},{"year":"2011","annotation":"No compulsory retirement at 65 / pension age to rise to 66","level":480000,"age":"65"},{"year":"2018","annotation":"pension age 65","level":4500000,"age":"5064"},{"year":"2010","annotation":"15 hrs free early education","level":3100000,"age":"2534"}]},"encoding":{"x":{"field":"year","type":"temporal"},"y":{"field":"level","type":"quantitative"},"color":{"field":"age","type":"nominal","scale":{"domain":["1617","1824","2534","3549","5064","65"],"range":["rgb(132,88,78)","rgb(59,118,175)","rgb(81,157,62)","rgb(141,106,184)","rgb(239,133,55)","rgb(213,126,190)"]},"legend":null},"text":{"field":"annotation","type":"nominal"}},"mark":{"type":"text","dy":-5}},{"transform":[{"filter":{"selection":"legendSel"}}],"data":{"values":[{"year":"2010","annotation":"Pension age rises from 60","level":3700000,"age":"5064"},{"year":"1995","annotation":"Pensions Act 1995","level":2500000,"age":"5064"},{"year":"1998","annotation":"Tuition fees £1000","level":1700000,"age":"1824"},{"year":"2004","annotation":"Tuition fees £3000","level":1800000,"age":"1824"},{"year":"2010","annotation":"Tuition fees £9000","level":1800000,"age":"1824"},{"year":"2011","annotation":"No compulsory retirement at 65 / pension age to rise to 66","level":480000,"age":"65"},{"year":"2018","annotation":"pension age 65","level":4500000,"age":"5064"},{"year":"2010","annotation":"15 hrs free early education","level":3100000,"age":"2534"}]},"encoding":{"x":{"field":"year","type":"temporal"},"y":{"field":"level","type":"quantitative"},"y2":{"value":"height"}},"mark":{"type":"rule","color":"gray","opacity":0.7}}]},{"selection":{"legendSel":{"type":"multi","fields":["age"]}},"encoding":{"y":{"field":"age","type":"nominal","axis":{"title":"","domain":false,"ticks":false}},"color":{"condition":{"selection":"legendSel","field":"age","type":"nominal","scale":{"domain":["1617","1824","2534","3549","5064","65"],"range":["rgb(132,88,78)","rgb(59,118,175)","rgb(81,157,62)","rgb(141,106,184)","rgb(239,133,55)","rgb(213,126,190)"]},"legend":null},"value":"lightgrey"}},"mark":{"type":"square","size":120,"opacity":1}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","width":600,"height":370.82818294190355,"config":{"view":{"stroke":""},"axis":{"ticks":false,"domain":false}},"data":{"values":[{"year":"1992","age":"1617","rate":47},{"year":"1992","age":"1824","rate":63},{"year":"1992","age":"2534","rate":64},{"year":"1992","age":"3549","rate":73},{"year":"1992","age":"5064","rate":47},{"year":"1992","age":"65","rate":3},{"year":"1993","age":"1617","rate":44},{"year":"1993","age":"1824","rate":61},{"year":"1993","age":"2534","rate":65},{"year":"1993","age":"3549","rate":73},{"year":"1993","age":"5064","rate":48},{"year":"1993","age":"65","rate":3},{"year":"1994","age":"1617","rate":45},{"year":"1994","age":"1824","rate":60},{"year":"1994","age":"2534","rate":66},{"year":"1994","age":"3549","rate":72},{"year":"1994","age":"5064","rate":49},{"year":"1994","age":"65","rate":3},{"year":"1995","age":"1617","rate":47},{"year":"1995","age":"1824","rate":62},{"year":"1995","age":"2534","rate":67},{"year":"1995","age":"3549","rate":73},{"year":"1995","age":"5064","rate":50},{"year":"1995","age":"65","rate":3},{"year":"1996","age":"1617","rate":49},{"year":"1996","age":"1824","rate":63},{"year":"1996","age":"2534","rate":68},{"year":"1996","age":"3549","rate":74},{"year":"1996","age":"5064","rate":49},{"year":"1996","age":"65","rate":3},{"year":"1997","age":"1617","rate":51},{"year":"1997","age":"1824","rate":64},{"year":"1997","age":"2534","rate":69},{"year":"1997","age":"3549","rate":74},{"year":"1997","age":"5064","rate":50},{"year":"1997","age":"65","rate":3},{"year":"1998","age":"1617","rate":50},{"year":"1998","age":"1824","rate":64},{"year":"1998","age":"2534","rate":70},{"year":"1998","age":"3549","rate":75},{"year":"1998","age":"5064","rate":52},{"year":"1998","age":"65","rate":3},{"year":"1999","age":"1617","rate":48},{"year":"1999","age":"1824","rate":64},{"year":"1999","age":"2534","rate":71},{"year":"1999","age":"3549","rate":75},{"year":"1999","age":"5064","rate":52},{"year":"1999","age":"65","rate":3},{"year":"2000","age":"1617","rate":46},{"year":"2000","age":"1824","rate":63},{"year":"2000","age":"2534","rate":72},{"year":"2000","age":"3549","rate":75},{"year":"2000","age":"5064","rate":53},{"year":"2000","age":"65","rate":3},{"year":"2001","age":"1617","rate":45},{"year":"2001","age":"1824","rate":65},{"year":"2001","age":"2534","rate":71},{"year":"2001","age":"3549","rate":75},{"year":"2001","age":"5064","rate":55},{"year":"2001","age":"65","rate":4},{"year":"2002","age":"1617","rate":46},{"year":"2002","age":"1824","rate":64},{"year":"2002","age":"2534","rate":71},{"year":"2002","age":"3549","rate":76},{"year":"2002","age":"5064","rate":55},{"year":"2002","age":"65","rate":3},{"year":"2003","age":"1617","rate":45},{"year":"2003","age":"1824","rate":64},{"year":"2003","age":"2534","rate":72},{"year":"2003","age":"3549","rate":76},{"year":"2003","age":"5064","rate":56},{"year":"2003","age":"65","rate":4},{"year":"2004","age":"1617","rate":43},{"year":"2004","age":"1824","rate":64},{"year":"2004","age":"2534","rate":72},{"year":"2004","age":"3549","rate":76},{"year":"2004","age":"5064","rate":57},{"year":"2004","age":"65","rate":4},{"year":"2005","age":"1617","rate":38},{"year":"2005","age":"1824","rate":61},{"year":"2005","age":"2534","rate":72},{"year":"2005","age":"3549","rate":76},{"year":"2005","age":"5064","rate":57},{"year":"2005","age":"65","rate":4},{"year":"2006","age":"1617","rate":39},{"year":"2006","age":"1824","rate":63},{"year":"2006","age":"2534","rate":72},{"year":"2006","age":"3549","rate":76},{"year":"2006","age":"5064","rate":58},{"year":"2006","age":"65","rate":5},{"year":"2007","age":"1617","rate":37},{"year":"2007","age":"1824","rate":62},{"year":"2007","age":"2534","rate":72},{"year":"2007","age":"3549","rate":76},{"year":"2007","age":"5064","rate":58},{"year":"2007","age":"65","rate":5},{"year":"2008","age":"1617","rate":32},{"year":"2008","age":"1824","rate":60},{"year":"2008","age":"2534","rate":73},{"year":"2008","age":"3549","rate":76},{"year":"2008","age":"5064","rate":58},{"year":"2008","age":"65","rate":5},{"year":"2009","age":"1617","rate":30},{"year":"2009","age":"1824","rate":57},{"year":"2009","age":"2534","rate":72},{"year":"2009","age":"3549","rate":76},{"year":"2009","age":"5064","rate":58},{"year":"2009","age":"65","rate":6},{"year":"2010","age":"1617","rate":26},{"year":"2010","age":"1824","rate":55},{"year":"2010","age":"2534","rate":72},{"year":"2010","age":"3549","rate":76},{"year":"2010","age":"5064","rate":58},{"year":"2010","age":"65","rate":6},{"year":"2011","age":"1617","rate":26},{"year":"2011","age":"1824","rate":56},{"year":"2011","age":"2534","rate":71},{"year":"2011","age":"3549","rate":76},{"year":"2011","age":"5064","rate":59},{"year":"2011","age":"65","rate":6},{"year":"2012","age":"1617","rate":26},{"year":"2012","age":"1824","rate":57},{"year":"2012","age":"2534","rate":71},{"year":"2012","age":"3549","rate":76},{"year":"2012","age":"5064","rate":61},{"year":"2012","age":"65","rate":7},{"year":"2013","age":"1617","rate":24},{"year":"2013","age":"1824","rate":58},{"year":"2013","age":"2534","rate":73},{"year":"2013","age":"3549","rate":76},{"year":"2013","age":"5064","rate":63},{"year":"2013","age":"65","rate":7},{"year":"2014","age":"1617","rate":27},{"year":"2014","age":"1824","rate":59},{"year":"2014","age":"2534","rate":74},{"year":"2014","age":"3549","rate":78},{"year":"2014","age":"5064","rate":64},{"year":"2014","age":"65","rate":7},{"year":"2015","age":"1617","rate":26},{"year":"2015","age":"1824","rate":61},{"year":"2015","age":"2534","rate":75},{"year":"2015","age":"3549","rate":78},{"year":"2015","age":"5064","rate":65},{"year":"2015","age":"65","rate":8},{"year":"2016","age":"1617","rate":28},{"year":"2016","age":"1824","rate":63},{"year":"2016","age":"2534","rate":75},{"year":"2016","age":"3549","rate":78},{"year":"2016","age":"5064","rate":66},{"year":"2016","age":"65","rate":8},{"year":"2017","age":"1617","rate":26},{"year":"2017","age":"1824","rate":61},{"year":"2017","age":"2534","rate":77},{"year":"2017","age":"3549","rate":79},{"year":"2017","age":"5064","rate":67},{"year":"2017","age":"65","rate":7},{"year":"2018","age":"1617","rate":24},{"year":"2018","age":"1824","rate":62},{"year":"2018","age":"2534","rate":78},{"year":"2018","age":"3549","rate":80},{"year":"2018","age":"5064","rate":68},{"year":"2018","age":"65","rate":8}]},"layer":[{"encoding":{"x":{"field":"year","type":"temporal","axis":{"title":"","grid":false}},"y":{"field":"rate","type":"quantitative","axis":{"title":"%"}},"color":{"field":"age","type":"nominal","scale":{"domain":["1617","1824","2534","3549","5064","65"],"range":["rgb(132,88,78)","rgb(59,118,175)","rgb(81,157,62)","rgb(141,106,184)","rgb(239,133,55)","rgb(213,126,190)"]},"legend":{"title":null}},"tooltip":[{"field":"year","type":"temporal","format":"%Y"},{"field":"rate","type":"quantitative"},{"field":"age","type":"nominal"}]},"layer":[{"mark":{"type":"line","interpolate":"monotone"}},{"mark":"point","selection":{"myTooltip":{"type":"single","nearest":true,"on":"mouseover","encodings":["x"],"empty":"none"}},"encoding":{"opacity":{"condition":{"selection":"myTooltip","value":1},"value":0}}}]},{"transform":[{"filter":{"selection":"myTooltip"}}],"layer":[{"mark":{"type":"rule","color":"gray"},"encoding":{"x":{"field":"year","type":"temporal"}}},{"mark":{"type":"text","align":"left","dx":5,"dy":-5},"encoding":{"x":{"field":"year","type":"temporal"},"y":{"field":"rate","type":"quantitative"},"text":{"field":"rate","type":"quantitative"},"color":{"field":"age","type":"nominal","legend":{"title":null}}}}]}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","width":600,"height":370.82818294190355,"data":{"values":[{"year":"2017","age":"20","births":20358},{"year":"2017","age":"2024","births":97506},{"year":"2017","age":"2529","births":190028},{"year":"2017","age":"3034","births":216787},{"year":"2017","age":"3539","births":125114},{"year":"2017","age":"4044","births":26956},{"year":"2017","age":"45","births":2357},{"year":"2016","age":"20","births":22465},{"year":"2016","age":"2024","births":102607},{"year":"2016","age":"2529","births":196132},{"year":"2016","age":"3034","births":220129},{"year":"2016","age":"3539","births":125205},{"year":"2016","age":"4044","births":27447},{"year":"2016","age":"45","births":2286},{"year":"2015","age":"20","births":23948},{"year":"2015","age":"2024","births":108111},{"year":"2015","age":"2529","births":198183},{"year":"2015","age":"3034","births":217755},{"year":"2015","age":"3539","births":120614},{"year":"2015","age":"4044","births":27065},{"year":"2015","age":"45","births":2176},{"year":"2014","age":"20","births":25977},{"year":"2014","age":"2024","births":112615},{"year":"2014","age":"2529","births":196818},{"year":"2014","age":"3034","births":215642},{"year":"2014","age":"3539","births":115171},{"year":"2014","age":"4044","births":27021},{"year":"2014","age":"45","births":1989},{"year":"2013","age":"20","births":29136},{"year":"2013","age":"2024","births":119719},{"year":"2013","age":"2529","births":196693},{"year":"2013","age":"3034","births":212306},{"year":"2013","age":"3539","births":111500},{"year":"2013","age":"4044","births":27148},{"year":"2013","age":"45","births":2010},{"year":"2012","age":"20","births":33815},{"year":"2012","age":"2024","births":132456},{"year":"2012","age":"2529","births":202370},{"year":"2012","age":"3034","births":216242},{"year":"2012","age":"3539","births":114797},{"year":"2012","age":"4044","births":28019},{"year":"2012","age":"45","births":1975},{"year":"2011","age":"20","births":36435},{"year":"2011","age":"2024","births":134946},{"year":"2011","age":"2529","births":200587},{"year":"2011","age":"3034","births":207151},{"year":"2011","age":"3539","births":115444},{"year":"2011","age":"4044","births":27518},{"year":"2011","age":"45","births":1832},{"year":"2010","age":"20","births":40591},{"year":"2010","age":"2024","births":137312},{"year":"2010","age":"2529","births":199233},{"year":"2010","age":"3034","births":202457},{"year":"2010","age":"3539","births":115841},{"year":"2010","age":"4044","births":25973},{"year":"2010","age":"45","births":1758},{"year":"2009","age":"20","births":43243},{"year":"2009","age":"2024","births":136012},{"year":"2009","age":"2529","births":194129},{"year":"2009","age":"3034","births":191600},{"year":"2009","age":"3539","births":114288},{"year":"2009","age":"4044","births":25357},{"year":"2009","age":"45","births":1619},{"year":"2008","age":"20","births":44691},{"year":"2008","age":"2024","births":135971},{"year":"2008","age":"2529","births":192960},{"year":"2008","age":"3034","births":192450},{"year":"2008","age":"3539","births":116220},{"year":"2008","age":"4044","births":24991},{"year":"2008","age":"45","births":1428},{"year":"2007","age":"20","births":44805},{"year":"2007","age":"2024","births":130784},{"year":"2007","age":"2529","births":182570},{"year":"2007","age":"3034","births":191124},{"year":"2007","age":"3539","births":115380},{"year":"2007","age":"4044","births":24041},{"year":"2007","age":"45","births":1309},{"year":"2006","age":"20","births":45509},{"year":"2006","age":"2024","births":127828},{"year":"2006","age":"2529","births":172642},{"year":"2006","age":"3034","births":189407},{"year":"2006","age":"3539","births":110509},{"year":"2006","age":"4044","births":22512},{"year":"2006","age":"45","births":1194},{"year":"2005","age":"20","births":44830},{"year":"2005","age":"2024","births":122145},{"year":"2005","age":"2529","births":164348},{"year":"2005","age":"3034","births":188153},{"year":"2005","age":"3539","births":104113},{"year":"2005","age":"4044","births":21155},{"year":"2005","age":"45","births":1091},{"year":"2004","age":"20","births":45094},{"year":"2004","age":"2024","births":121072},{"year":"2004","age":"2529","births":159984},{"year":"2004","age":"3034","births":190550},{"year":"2004","age":"3539","births":102228},{"year":"2004","age":"4044","births":19884},{"year":"2004","age":"45","births":909},{"year":"2003","age":"20","births":44236},{"year":"2003","age":"2024","births":116622},{"year":"2003","age":"2529","births":156931},{"year":"2003","age":"3034","births":187214},{"year":"2003","age":"3539","births":97386},{"year":"2003","age":"4044","births":18205},{"year":"2003","age":"45","births":875},{"year":"2002","age":"20","births":43467},{"year":"2002","age":"2024","births":110959},{"year":"2002","age":"2529","births":153379},{"year":"2002","age":"3034","births":180532},{"year":"2002","age":"3539","births":90449},{"year":"2002","age":"4044","births":16441},{"year":"2002","age":"45","births":895},{"year":"2001","age":"20","births":44189},{"year":"2001","age":"2024","births":108844},{"year":"2001","age":"2529","births":159926},{"year":"2001","age":"3034","births":178920},{"year":"2001","age":"3539","births":86495},{"year":"2001","age":"4044","births":15499},{"year":"2001","age":"45","births":761},{"year":"2000","age":"20","births":45846},{"year":"2000","age":"2024","births":107741},{"year":"2000","age":"2529","births":170701},{"year":"2000","age":"3034","births":180113},{"year":"2000","age":"3539","births":84974},{"year":"2000","age":"4044","births":14403},{"year":"2000","age":"45","births":663},{"year":"1999","age":"20","births":48375},{"year":"1999","age":"2024","births":110722},{"year":"1999","age":"2529","births":181931},{"year":"1999","age":"3034","births":185311},{"year":"1999","age":"3539","births":81281},{"year":"1999","age":"4044","births":13617},{"year":"1999","age":"45","births":635},{"year":"1998","age":"20","births":48285},{"year":"1998","age":"2024","births":113537},{"year":"1998","age":"2529","births":193144},{"year":"1998","age":"3034","births":188499},{"year":"1998","age":"3539","births":78881},{"year":"1998","age":"4044","births":12980},{"year":"1998","age":"45","births":575},{"year":"1997","age":"20","births":46372},{"year":"1997","age":"2024","births":118589},{"year":"1997","age":"2529","births":202792},{"year":"1997","age":"3034","births":187528},{"year":"1997","age":"3539","births":74900},{"year":"1997","age":"4044","births":12332},{"year":"1997","age":"45","births":582},{"year":"1996","age":"20","births":44667},{"year":"1996","age":"2024","births":125732},{"year":"1996","age":"2529","births":211103},{"year":"1996","age":"3034","births":186377},{"year":"1996","age":"3539","births":69503},{"year":"1996","age":"4044","births":11516},{"year":"1996","age":"45","births":587},{"year":"1995","age":"20","births":41938},{"year":"1995","age":"2024","births":130744},{"year":"1995","age":"2529","births":217418},{"year":"1995","age":"3034","births":181202},{"year":"1995","age":"3539","births":65517},{"year":"1995","age":"4044","births":10779},{"year":"1995","age":"45","births":540},{"year":"1994","age":"20","births":42026},{"year":"1994","age":"2024","births":140240},{"year":"1994","age":"2529","births":229102},{"year":"1994","age":"3034","births":179568},{"year":"1994","age":"3539","births":63061},{"year":"1994","age":"4044","births":10241},{"year":"1994","age":"45","births":488},{"year":"1993","age":"20","births":45121},{"year":"1993","age":"2024","births":151975},{"year":"1993","age":"2529","births":235961},{"year":"1993","age":"3034","births":171061},{"year":"1993","age":"3539","births":58824},{"year":"1993","age":"4044","births":9986},{"year":"1993","age":"45","births":539},{"year":"1992","age":"20","births":47861},{"year":"1992","age":"2024","births":163311},{"year":"1992","age":"2529","births":244798},{"year":"1992","age":"3034","births":166839},{"year":"1992","age":"3539","births":56650},{"year":"1992","age":"4044","births":9696},{"year":"1992","age":"45","births":501}]},"encoding":{"x":{"field":"year","type":"temporal","axis":{"title":"","grid":false}},"y":{"field":"births","type":"quantitative","axis":{"title":""}},"tooltip":[{"field":"year","type":"temporal","format":"%Y"},{"field":"births","type":"quantitative"},{"field":"age","type":"ordinal"}],"color":{"field":"age","type":"ordinal","scale":{"scheme":"purplebluegreen"},"legend":{"title":null}},"opacity":{"condition":{"selection":"mySelection","value":1},"value":0.1}},"selection":{"mySelection":{"type":"multi"}},"config":{"view":{"stroke":""},"axis":{"ticks":false,"domain":false}},"mark":{"type":"area","line":[],"interpolate":"monotone","fillOpacity":1.3}}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"GCSE Achievement, Male and Female"},"data":{"url":"https://fredalcantara.github.io/data/Core_modules_result.csv"},"hconcat":[{"height":200,"width":300,"transform":[{"filter":{"param":"legendSel"}}],"encoding":{"x":{"field":"Year","type":"temporal","axis":{"title":"Year","ticks":false,"domain":false,"labelAngle":300}},"y":{"field":"CorHigher","type":"quantitative","axis":{"title":"% of grade 4 (C) and above","values":[]}},"color":{"field":"Gender","scale":{"domain":["Female","Male"],"range":["rgb(2231, 84, 128)","rgb(0, 0, 255)"]},"title":"Gender"},"column":{"field":"Subject","header":{"title":"Core Subjects"}},"tooltip":[{"field":"Year","type":"temporal","format":"%Y"},{"field":"CorHigher","title":"Cumulative percentage outcome, achieving grade 4 or higher"}]},"mark":{"type":"line","point":true},"params":[{"name":"zoom","select":"interval","bind":"scales"}]},{"params":[{"name":"legendSel","select":{"type":"point","encodings":["color"]}}],"encoding":{"y":{"field":"Gender","axis":{"title":"Gender","domain":false,"ticks":true}},"color":{"field":"Gender","scale":{"domain":["Female","Male"],"range":["rgb(2231, 84, 128)","rgb(0, 0, 255)"]},"legend":null}},"mark":{"type":"square","size":300,"opacity":20}}],"config":{"title":{"font":"Roboto Slab","fontSize":22,"anchor":"middle"},"view":{"stroke":null},"axis":{"ticks":false,"domain":false}}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","data":{"url":"https://fredalcantara.github.io/data/Elective_modules.csv"},"hconcat":[{"height":200,"width":300,"transform":[{"filter":{"param":"legendSel"}}],"encoding":{"x":{"field":"Year","type":"temporal","axis":{"title":"Year","ticks":false,"domain":false,"labelAngle":300}},"y":{"field":"CorHigher","type":"quantitative","axis":{"title":"% of grades 4 (C) and above","values":[]}},"color":{"field":"Gender","scale":{"domain":["Female","Male"],"range":["rgb(2231, 84, 128)","rgb(0, 0, 255)"]},"title":"Gender"},"column":{"field":"Subject","header":{"title":"Elective Subjects"}},"tooltip":[{"field":"Year","type":"temporal","format":"%Y"},{"field":"CorHigher","title":"Cumulative percentage outcome, achieving grade 4 or higher"}]},"mark":{"type":"line","point":true},"params":[{"name":"zoom","select":"interval","bind":"scales"}]},{"params":[{"name":"legendSel","select":{"type":"point","encodings":["color"]}}],"encoding":{"y":{"field":"Gender","axis":{"title":"Gender","domain":false,"ticks":true}},"color":{"field":"Gender","scale":{"domain":["Female","Male"],"range":["rgb(2231, 84, 128)","rgb(0, 0, 255)"]},"legend":null}},"mark":{"type":"square","size":300,"opacity":20}}],"config":{"title":{"font":"Roboto Slab","fontSize":22,"anchor":"start"},"view":{"stroke":null},"axis":{"ticks":false,"domain":false}}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Number of Certificates, All subjects"},"data":{"url":"https://fredalcantara.github.io/data/candidates.csv"},"layer":[{"encoding":{"x":{"field":"Year"},"y":{"field":"Candidates","aggregate":"sum","title":"Certificates"}},"mark":{"type":"bar","tooltip":{"content":"encoding"},"opacity":0.2,"color":"black"}},{"width":{"step":25},"height":500,"encoding":{"x":{"field":"Year","axis":{"title":"Year","ticks":false,"domain":false,"labelAngle":300}},"xOffset":{"field":"Gender"},"y":{"field":"Candidates","aggregate":"sum","axis":{"title":"","ticks":false,"domain":false,"labelAngle":300}},"color":{"field":"Gender","scale":{"domain":["Female","Male"],"range":["rgb(2231, 84, 128)","rgb(0, 0, 255)"]},"title":"Gender"},"tooltip":[{"field":"Gender","type":"nominal"},{"field":"Candidates","title":"Certificates"}]},"mark":"bar"}],"config":{"title":{"font":"Roboto Slab","fontSize":22,"anchor":"middle"}}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Overall Attainment, London boroughs"},"data":{"values":[{"GSSCode":"E09000002","Attainment8":49.7,"Year":2016,"Area":"Barking and Dagenham","Pupils":2201},{"GSSCode":"E09000003","Attainment8":56.1,"Year":2016,"Area":"Barnet","Pupils":3647},{"GSSCode":"E09000004","Attainment8":52.2,"Year":2016,"Area":"Bexley","Pupils":3192},{"GSSCode":"E09000005","Attainment8":51.5,"Year":2016,"Area":"Brent","Pupils":3035},{"GSSCode":"E09000006","Attainment8":53.7,"Year":2016,"Area":"Bromley","Pupils":3305},{"GSSCode":"E09000007","Attainment8":50.6,"Year":2016,"Area":"Camden","Pupils":1422},{"GSSCode":"E09000008","Attainment8":48.5,"Year":2016,"Area":"Croydon","Pupils":3844},{"GSSCode":"E09000009","Attainment8":50.9,"Year":2016,"Area":"Ealing","Pupils":2781},{"GSSCode":"E12000006","Attainment8":50.4,"Year":2016,"Area":"East","Pupils":61059},{"GSSCode":"E12000004","Attainment8":48.9,"Year":2016,"Area":"East Midlands","Pupils":47204},{"GSSCode":"E09000010","Attainment8":50.4,"Year":2016,"Area":"Enfield","Pupils":3579},{"GSSCode":"E92000001","Attainment8":50.1,"Year":2016,"Area":"England","Pupils":537808},{"GSSCode":"E09000011","Attainment8":49.6,"Year":2016,"Area":"Greenwich","Pupils":2204},{"GSSCode":"E09000012","Attainment8":52.5,"Year":2016,"Area":"Hackney","Pupils":2038},{"GSSCode":"E09000013","Attainment8":54.1,"Year":2016,"Area":"Hammersmith and Fulham","Pupils":1350},{"GSSCode":"E09000014","Attainment8":50.1,"Year":2016,"Area":"Haringey","Pupils":2231},{"GSSCode":"E09000015","Attainment8":53.1,"Year":2016,"Area":"Harrow","Pupils":2127},{"GSSCode":"E09000016","Attainment8":50,"Year":2016,"Area":"Havering","Pupils":2917},{"GSSCode":"E09000017","Attainment8":51.2,"Year":2016,"Area":"Hillingdon","Pupils":3136},{"GSSCode":"E09000018","Attainment8":51.1,"Year":2016,"Area":"Hounslow","Pupils":2667},{"GSSCode":"E13000001","Attainment8":51.3,"Year":2016,"Area":"Inner London","Pupils":25070},{"GSSCode":"E09000019","Attainment8":50.6,"Year":2016,"Area":"Islington","Pupils":1397},{"GSSCode":"E09000020","Attainment8":56.6,"Year":2016,"Area":"Kensington and Chelsea","Pupils":740},{"GSSCode":"E09000021","Attainment8":58.2,"Year":2016,"Area":"Kingston upon Thames","Pupils":1515},{"GSSCode":"E09000022","Attainment8":49.7,"Year":2016,"Area":"Lambeth","Pupils":1887},{"GSSCode":"E09000023","Attainment8":47.5,"Year":2016,"Area":"Lewisham","Pupils":2334},{"GSSCode":"E12000007","Attainment8":51.9,"Year":2016,"Area":"London","Pupils":76596},{"GSSCode":"E09000024","Attainment8":52.4,"Year":2016,"Area":"Merton","Pupils":1440},{"GSSCode":"E09000025","Attainment8":50.9,"Year":2016,"Area":"Newham","Pupils":3489},{"GSSCode":"E12000001","Attainment8":48.7,"Year":2016,"Area":"North East","Pupils":26076},{"GSSCode":"E12000002","Attainment8":49.4,"Year":2016,"Area":"North West","Pupils":74057},{"GSSCode":"E13000002","Attainment8":52.3,"Year":2016,"Area":"Outer London","Pupils":51526},{"GSSCode":"E09000026","Attainment8":53.9,"Year":2016,"Area":"Redbridge","Pupils":3363},{"GSSCode":"E09000027","Attainment8":54.6,"Year":2016,"Area":"Richmond upon Thames","Pupils":1367},{"GSSCode":"E12000008","Attainment8":51,"Year":2016,"Area":"South East","Pupils":85618},{"GSSCode":"E12000009","Attainment8":50.3,"Year":2016,"Area":"South West","Pupils":52421},{"GSSCode":"E09000028","Attainment8":52.9,"Year":2016,"Area":"Southwark","Pupils":2386},{"GSSCode":"E09000029","Attainment8":58.7,"Year":2016,"Area":"Sutton","Pupils":2667},{"GSSCode":"E09000030","Attainment8":50.2,"Year":2016,"Area":"Tower Hamlets","Pupils":2570},{"GSSCode":"E09000031","Attainment8":50.4,"Year":2016,"Area":"Waltham Forest","Pupils":2539},{"GSSCode":"E09000032","Attainment8":52.1,"Year":2016,"Area":"Wandsworth","Pupils":1660},{"GSSCode":"E12000005","Attainment8":49.2,"Year":2016,"Area":"West Midlands","Pupils":60215},{"GSSCode":"E09000033","Attainment8":54.5,"Year":2016,"Area":"Westminster","Pupils":1566},{"GSSCode":"E12000003","Attainment8":48.9,"Year":2016,"Area":"Yorkshire and the Humber","Pupils":54562},{"GSSCode":"E09000002","Attainment8":46.7,"Year":2017,"Area":"Barking and Dagenham","Pupils":2185},{"GSSCode":"E09000003","Attainment8":54.7,"Year":2017,"Area":"Barnet","Pupils":3528},{"GSSCode":"E09000004","Attainment8":49,"Year":2017,"Area":"Bexley","Pupils":3141},{"GSSCode":"E09000005","Attainment8":49,"Year":2017,"Area":"Brent","Pupils":2908},{"GSSCode":"E09000006","Attainment8":49.8,"Year":2017,"Area":"Bromley","Pupils":3258},{"GSSCode":"E09000007","Attainment8":48.3,"Year":2017,"Area":"Camden","Pupils":1513},{"GSSCode":"E09000008","Attainment8":45,"Year":2017,"Area":"Croydon","Pupils":3579},{"GSSCode":"E09000009","Attainment8":48.7,"Year":2017,"Area":"Ealing","Pupils":2722},{"GSSCode":"E12000006","Attainment8":46.7,"Year":2017,"Area":"East","Pupils":60153},{"GSSCode":"E12000004","Attainment8":45.4,"Year":2017,"Area":"East Midlands","Pupils":45492},{"GSSCode":"E09000010","Attainment8":46.2,"Year":2017,"Area":"Enfield","Pupils":3487},{"GSSCode":"E92000001","Attainment8":46.4,"Year":2017,"Area":"England","Pupils":524932},{"GSSCode":"E09000011","Attainment8":45.9,"Year":2017,"Area":"Greenwich","Pupils":2166},{"GSSCode":"E09000012","Attainment8":49.4,"Year":2017,"Area":"Hackney","Pupils":2002},{"GSSCode":"E09000013","Attainment8":50.9,"Year":2017,"Area":"Hammersmith and Fulham","Pupils":1313},{"GSSCode":"E09000014","Attainment8":46.5,"Year":2017,"Area":"Haringey","Pupils":2127},{"GSSCode":"E09000015","Attainment8":49.7,"Year":2017,"Area":"Harrow","Pupils":2049},{"GSSCode":"E09000016","Attainment8":47.5,"Year":2017,"Area":"Havering","Pupils":2794},{"GSSCode":"E09000017","Attainment8":47.1,"Year":2017,"Area":"Hillingdon","Pupils":3075},{"GSSCode":"E09000018","Attainment8":48,"Year":2017,"Area":"Hounslow","Pupils":2641},{"GSSCode":"E13000001","Attainment8":48.2,"Year":2017,"Area":"Inner London","Pupils":24971},{"GSSCode":"E09000019","Attainment8":45.6,"Year":2017,"Area":"Islington","Pupils":1377},{"GSSCode":"E09000020","Attainment8":55,"Year":2017,"Area":"Kensington and Chelsea","Pupils":739},{"GSSCode":"E09000021","Attainment8":55.5,"Year":2017,"Area":"Kingston upon Thames","Pupils":1517},{"GSSCode":"E09000022","Attainment8":44.3,"Year":2017,"Area":"Lambeth","Pupils":1949},{"GSSCode":"E09000023","Attainment8":44.2,"Year":2017,"Area":"Lewisham","Pupils":2247},{"GSSCode":"E12000007","Attainment8":48.9,"Year":2017,"Area":"London","Pupils":75518},{"GSSCode":"E09000024","Attainment8":50.2,"Year":2017,"Area":"Merton","Pupils":1420},{"GSSCode":"E09000025","Attainment8":48.4,"Year":2017,"Area":"Newham","Pupils":3523},{"GSSCode":"E12000001","Attainment8":44.6,"Year":2017,"Area":"North East","Pupils":25177},{"GSSCode":"E12000002","Attainment8":45.6,"Year":2017,"Area":"North West","Pupils":72289},{"GSSCode":"E13000002","Attainment8":49.2,"Year":2017,"Area":"Outer London","Pupils":50547},{"GSSCode":"E09000026","Attainment8":51.2,"Year":2017,"Area":"Redbridge","Pupils":3458},{"GSSCode":"E09000027","Attainment8":52.7,"Year":2017,"Area":"Richmond upon Thames","Pupils":1374},{"GSSCode":"E12000008","Attainment8":47.4,"Year":2017,"Area":"South East","Pupils":83903},{"GSSCode":"E12000009","Attainment8":46.2,"Year":2017,"Area":"South West","Pupils":50308},{"GSSCode":"E09000028","Attainment8":50.5,"Year":2017,"Area":"Southwark","Pupils":2328},{"GSSCode":"E09000029","Attainment8":56.2,"Year":2017,"Area":"Sutton","Pupils":2759},{"GSSCode":"E09000030","Attainment8":47.2,"Year":2017,"Area":"Tower Hamlets","Pupils":2623},{"GSSCode":"E09000031","Attainment8":45.5,"Year":2017,"Area":"Waltham Forest","Pupils":2486},{"GSSCode":"E09000032","Attainment8":49.5,"Year":2017,"Area":"Wandsworth","Pupils":1695},{"GSSCode":"E12000005","Attainment8":45.4,"Year":2017,"Area":"West Midlands","Pupils":58919},{"GSSCode":"E09000033","Attainment8":52.6,"Year":2017,"Area":"Westminster","Pupils":1535},{"GSSCode":"E12000003","Attainment8":45.4,"Year":2017,"Area":"Yorkshire and the Humber","Pupils":53173},{"GSSCode":"E09000002","Attainment8":46.1,"Year":2018,"Area":"Barking and Dagenham","Pupils":2199},{"GSSCode":"E09000003","Attainment8":56,"Year":2018,"Area":"Barnet","Pupils":3810},{"GSSCode":"E09000004","Attainment8":49.6,"Year":2018,"Area":"Bexley","Pupils":3032},{"GSSCode":"E09000005","Attainment8":49.9,"Year":2018,"Area":"Brent","Pupils":2858},{"GSSCode":"E09000006","Attainment8":50.3,"Year":2018,"Area":"Bromley","Pupils":3214},{"GSSCode":"E09000007","Attainment8":48,"Year":2018,"Area":"Camden","Pupils":1533},{"GSSCode":"E09000008","Attainment8":45.8,"Year":2018,"Area":"Croydon","Pupils":3452},{"GSSCode":"E09000009","Attainment8":50,"Year":2018,"Area":"Ealing","Pupils":2853},{"GSSCode":"E12000006","Attainment8":47,"Year":2018,"Area":"East","Pupils":59100},{"GSSCode":"E12000004","Attainment8":45.5,"Year":2018,"Area":"East Midlands","Pupils":45234},{"GSSCode":"E09000010","Attainment8":46.3,"Year":2018,"Area":"Enfield","Pupils":3414},{"GSSCode":"E92000001","Attainment8":44.5,"Year":2018,"Area":"England","Pupils":583617},{"GSSCode":"E09000011","Attainment8":44.5,"Year":2018,"Area":"Greenwich","Pupils":2269},{"GSSCode":"E09000012","Attainment8":49,"Year":2018,"Area":"Hackney","Pupils":2058},{"GSSCode":"E09000013","Attainment8":52.9,"Year":2018,"Area":"Hammersmith and Fulham","Pupils":1291},{"GSSCode":"E09000014","Attainment8":46.3,"Year":2018,"Area":"Haringey","Pupils":2190},{"GSSCode":"E09000015","Attainment8":50.7,"Year":2018,"Area":"Harrow","Pupils":2044},{"GSSCode":"E09000016","Attainment8":46.9,"Year":2018,"Area":"Havering","Pupils":2774},{"GSSCode":"E09000017","Attainment8":47.8,"Year":2018,"Area":"Hillingdon","Pupils":3064},{"GSSCode":"E09000018","Attainment8":49.4,"Year":2018,"Area":"Hounslow","Pupils":2666},{"GSSCode":"E13000001","Attainment8":48.3,"Year":2018,"Area":"Inner London","Pupils":25466},{"GSSCode":"E09000019","Attainment8":46.3,"Year":2018,"Area":"Islington","Pupils":1404},{"GSSCode":"E09000020","Attainment8":51.6,"Year":2018,"Area":"Kensington and Chelsea","Pupils":718},{"GSSCode":"E09000021","Attainment8":57.8,"Year":2018,"Area":"Kingston upon Thames","Pupils":1515},{"GSSCode":"E09000022","Attainment8":44.6,"Year":2018,"Area":"Lambeth","Pupils":2114},{"GSSCode":"E09000023","Attainment8":44.9,"Year":2018,"Area":"Lewisham","Pupils":2104},{"GSSCode":"E12000007","Attainment8":49.4,"Year":2018,"Area":"London","Pupils":76224},{"GSSCode":"E09000024","Attainment8":49.7,"Year":2018,"Area":"Merton","Pupils":1404},{"GSSCode":"E09000025","Attainment8":48.7,"Year":2018,"Area":"Newham","Pupils":3745},{"GSSCode":"E12000001","Attainment8":44.9,"Year":2018,"Area":"North East","Pupils":24838},{"GSSCode":"E12000002","Attainment8":45.7,"Year":2018,"Area":"North West","Pupils":71555},{"GSSCode":"E13000002","Attainment8":49.9,"Year":2018,"Area":"Outer London","Pupils":50758},{"GSSCode":"E09000026","Attainment8":53.1,"Year":2018,"Area":"Redbridge","Pupils":3508},{"GSSCode":"E09000027","Attainment8":51.7,"Year":2018,"Area":"Richmond upon Thames","Pupils":1479},{"GSSCode":"E12000008","Attainment8":47.8,"Year":2018,"Area":"South East","Pupils":82803},{"GSSCode":"E12000009","Attainment8":46.7,"Year":2018,"Area":"South West","Pupils":49425},{"GSSCode":"E09000028","Attainment8":50.2,"Year":2018,"Area":"Southwark","Pupils":2386},{"GSSCode":"E09000029","Attainment8":58.1,"Year":2018,"Area":"Sutton","Pupils":2719},{"GSSCode":"E09000030","Attainment8":46.8,"Year":2018,"Area":"Tower Hamlets","Pupils":2721},{"GSSCode":"E09000031","Attainment8":46.1,"Year":2018,"Area":"Waltham Forest","Pupils":2484},{"GSSCode":"E09000032","Attainment8":50.8,"Year":2018,"Area":"Wandsworth","Pupils":1707},{"GSSCode":"E12000005","Attainment8":45.2,"Year":2018,"Area":"West Midlands","Pupils":58845},{"GSSCode":"E09000033","Attainment8":52.9,"Year":2018,"Area":"Westminster","Pupils":1495},{"GSSCode":"E12000003","Attainment8":45.1,"Year":2018,"Area":"Yorkshire and the Humber","Pupils":53178},{"GSSCode":"E09000002","Attainment8":46.4,"Year":2019,"Area":"Barking and Dagenham","Pupils":2353},{"GSSCode":"E09000003","Attainment8":57.1,"Year":2019,"Area":"Barnet","Pupils":3804},{"GSSCode":"E09000004","Attainment8":49.6,"Year":2019,"Area":"Bexley","Pupils":3115},{"GSSCode":"E09000005","Attainment8":50.2,"Year":2019,"Area":"Brent","Pupils":3038},{"GSSCode":"E09000006","Attainment8":50.8,"Year":2019,"Area":"Bromley","Pupils":3312},{"GSSCode":"E09000007","Attainment8":48.6,"Year":2019,"Area":"Camden","Pupils":1571},{"GSSCode":"E09000008","Attainment8":45.5,"Year":2019,"Area":"Croydon","Pupils":3640},{"GSSCode":"E09000009","Attainment8":50.9,"Year":2019,"Area":"Ealing","Pupils":2956},{"GSSCode":"E12000006","Attainment8":47,"Year":2019,"Area":"East","Pupils":60993},{"GSSCode":"E12000004","Attainment8":45.8,"Year":2019,"Area":"East Midlands","Pupils":47019},{"GSSCode":"E09000010","Attainment8":46.5,"Year":2019,"Area":"Enfield","Pupils":3606},{"GSSCode":"E92000001","Attainment8":46.8,"Year":2019,"Area":"England","Pupils":540006},{"GSSCode":"E09000011","Attainment8":45.3,"Year":2019,"Area":"Greenwich","Pupils":2364},{"GSSCode":"E09000012","Attainment8":49.2,"Year":2019,"Area":"Hackney","Pupils":2230},{"GSSCode":"E09000013","Attainment8":53.9,"Year":2019,"Area":"Hammersmith and Fulham","Pupils":1326},{"GSSCode":"E09000014","Attainment8":46.9,"Year":2019,"Area":"Haringey","Pupils":2336},{"GSSCode":"E09000015","Attainment8":50.9,"Year":2019,"Area":"Harrow","Pupils":2210},{"GSSCode":"E09000016","Attainment8":48.5,"Year":2019,"Area":"Havering","Pupils":2829},{"GSSCode":"E09000017","Attainment8":47.7,"Year":2019,"Area":"Hillingdon","Pupils":3203},{"GSSCode":"E09000018","Attainment8":49.3,"Year":2019,"Area":"Hounslow","Pupils":2731},{"GSSCode":"E13000001","Attainment8":48.4,"Year":2019,"Area":"Inner London","Pupils":26861},{"GSSCode":"E09000019","Attainment8":45.8,"Year":2019,"Area":"Islington","Pupils":1465},{"GSSCode":"E09000020","Attainment8":53.6,"Year":2019,"Area":"Kensington and Chelsea","Pupils":867},{"GSSCode":"E09000021","Attainment8":56.9,"Year":2019,"Area":"Kingston upon Thames","Pupils":1550},{"GSSCode":"E09000022","Attainment8":44.1,"Year":2019,"Area":"Lambeth","Pupils":2189},{"GSSCode":"E09000023","Attainment8":43.7,"Year":2019,"Area":"Lewisham","Pupils":2187},{"GSSCode":"E12000007","Attainment8":49.7,"Year":2019,"Area":"London","Pupils":79701},{"GSSCode":"E09000024","Attainment8":51.1,"Year":2019,"Area":"Merton","Pupils":1455},{"GSSCode":"E09000025","Attainment8":48.8,"Year":2019,"Area":"Newham","Pupils":3933},{"GSSCode":"E12000001","Attainment8":44.7,"Year":2019,"Area":"North East","Pupils":25455},{"GSSCode":"E12000002","Attainment8":45.5,"Year":2019,"Area":"North West","Pupils":74006},{"GSSCode":"E13000002","Attainment8":50.4,"Year":2019,"Area":"Outer London","Pupils":52840},{"GSSCode":"E09000026","Attainment8":54,"Year":2019,"Area":"Redbridge","Pupils":3687},{"GSSCode":"E09000027","Attainment8":54.1,"Year":2019,"Area":"Richmond upon Thames","Pupils":1586},{"GSSCode":"E12000008","Attainment8":48,"Year":2019,"Area":"South East","Pupils":85952},{"GSSCode":"E12000009","Attainment8":46.7,"Year":2019,"Area":"South West","Pupils":51455},{"GSSCode":"E09000028","Attainment8":49.5,"Year":2019,"Area":"Southwark","Pupils":2509},{"GSSCode":"E09000029","Attainment8":58.6,"Year":2019,"Area":"Sutton","Pupils":2796},{"GSSCode":"E09000030","Attainment8":48.4,"Year":2019,"Area":"Tower Hamlets","Pupils":2808},{"GSSCode":"E09000031","Attainment8":46.2,"Year":2019,"Area":"Waltham Forest","Pupils":2605},{"GSSCode":"E09000032","Attainment8":49.4,"Year":2019,"Area":"Wandsworth","Pupils":1785},{"GSSCode":"E12000005","Attainment8":45.6,"Year":2019,"Area":"West Midlands","Pupils":60984},{"GSSCode":"E09000033","Attainment8":53.4,"Year":2019,"Area":"Westminster","Pupils":1655},{"GSSCode":"E12000003","Attainment8":45.4,"Year":2019,"Area":"Yorkshire and the Humber","Pupils":54441},{"GSSCode":"E09000002","Attainment8":49.7,"Year":2020,"Area":"Barking and Dagenham","Pupils":2525},{"GSSCode":"E09000003","Attainment8":60.1,"Year":2020,"Area":"Barnet","Pupils":4010},{"GSSCode":"E09000004","Attainment8":53.5,"Year":2020,"Area":"Bexley","Pupils":3150},{"GSSCode":"E09000005","Attainment8":53.1,"Year":2020,"Area":"Brent","Pupils":3078},{"GSSCode":"E09000006","Attainment8":54.5,"Year":2020,"Area":"Bromley","Pupils":3411},{"GSSCode":"E09000007","Attainment8":52.2,"Year":2020,"Area":"Camden","Pupils":1573},{"GSSCode":"E09000008","Attainment8":48.9,"Year":2020,"Area":"Croydon","Pupils":3755},{"GSSCode":"E09000009","Attainment8":53.5,"Year":2020,"Area":"Ealing","Pupils":3043},{"GSSCode":"E12000006","Attainment8":50.3,"Year":2020,"Area":"East","Pupils":63682},{"GSSCode":"E12000004","Attainment8":49.1,"Year":2020,"Area":"East Midlands","Pupils":48542},{"GSSCode":"E09000010","Attainment8":49.8,"Year":2020,"Area":"Enfield","Pupils":3767},{"GSSCode":"E92000001","Attainment8":50.2,"Year":2020,"Area":"England","Pupils":561994},{"GSSCode":"E09000011","Attainment8":50.2,"Year":2020,"Area":"Greenwich","Pupils":2448},{"GSSCode":"E09000012","Attainment8":53.2,"Year":2020,"Area":"Hackney","Pupils":2286},{"GSSCode":"E09000013","Attainment8":56.1,"Year":2020,"Area":"Hammersmith and Fulham","Pupils":1458},{"GSSCode":"E09000014","Attainment8":51.4,"Year":2020,"Area":"Haringey","Pupils":2484},{"GSSCode":"E09000015","Attainment8":53.4,"Year":2020,"Area":"Harrow","Pupils":2334},{"GSSCode":"E09000016","Attainment8":51.9,"Year":2020,"Area":"Havering","Pupils":2842},{"GSSCode":"E09000017","Attainment8":52.1,"Year":2020,"Area":"Hillingdon","Pupils":3301},{"GSSCode":"E09000018","Attainment8":52.6,"Year":2020,"Area":"Hounslow","Pupils":2916},{"GSSCode":"E13000001","Attainment8":52.3,"Year":2020,"Area":"Inner London","Pupils":28132},{"GSSCode":"E09000019","Attainment8":49.7,"Year":2020,"Area":"Islington","Pupils":1471},{"GSSCode":"E09000020","Attainment8":58,"Year":2020,"Area":"Kensington and Chelsea","Pupils":899},{"GSSCode":"E09000021","Attainment8":58.9,"Year":2020,"Area":"Kingston upon Thames","Pupils":1767},{"GSSCode":"E09000022","Attainment8":49.3,"Year":2020,"Area":"Lambeth","Pupils":2250},{"GSSCode":"E09000023","Attainment8":48.4,"Year":2020,"Area":"Lewisham","Pupils":2305},{"GSSCode":"E12000007","Attainment8":53.2,"Year":2020,"Area":"London","Pupils":83129},{"GSSCode":"E09000024","Attainment8":53.1,"Year":2020,"Area":"Merton","Pupils":1555},{"GSSCode":"E09000025","Attainment8":53.1,"Year":2020,"Area":"Newham","Pupils":4079},{"GSSCode":"E12000001","Attainment8":48.4,"Year":2020,"Area":"North East","Pupils":26395},{"GSSCode":"E12000002","Attainment8":49,"Year":2020,"Area":"North West","Pupils":77572},{"GSSCode":"E13000002","Attainment8":53.6,"Year":2020,"Area":"Outer London","Pupils":54997},{"GSSCode":"E09000026","Attainment8":56,"Year":2020,"Area":"Redbridge","Pupils":3815},{"GSSCode":"E09000027","Attainment8":57.5,"Year":2020,"Area":"Richmond upon Thames","Pupils":1667},{"GSSCode":"E12000008","Attainment8":51.4,"Year":2020,"Area":"South East","Pupils":88737},{"GSSCode":"E12000009","Attainment8":50.4,"Year":2020,"Area":"South West","Pupils":52331},{"GSSCode":"E09000028","Attainment8":53.7,"Year":2020,"Area":"Southwark","Pupils":2659},{"GSSCode":"E09000029","Attainment8":61.3,"Year":2020,"Area":"Sutton","Pupils":2920},{"GSSCode":"E09000030","Attainment8":50.1,"Year":2020,"Area":"Tower Hamlets","Pupils":3082},{"GSSCode":"E09000031","Attainment8":50,"Year":2020,"Area":"Waltham Forest","Pupils":2693},{"GSSCode":"E09000032","Attainment8":52.7,"Year":2020,"Area":"Wandsworth","Pupils":1865},{"GSSCode":"E12000005","Attainment8":49,"Year":2020,"Area":"West Midlands","Pupils":64062},{"GSSCode":"E09000033","Attainment8":57.1,"Year":2020,"Area":"Westminster","Pupils":1721},{"GSSCode":"E12000003","Attainment8":48.3,"Year":2020,"Area":"Yorkshire and the Humber","Pupils":57544},{"GSSCode":"E09000002","Attainment8":50.5,"Year":2021,"Area":"Barking and Dagenham","Pupils":2805},{"GSSCode":"E09000003","Attainment8":60.8,"Year":2021,"Area":"Barnet","Pupils":4100},{"GSSCode":"E09000004","Attainment8":54,"Year":2021,"Area":"Bexley","Pupils":3262},{"GSSCode":"E09000005","Attainment8":53.7,"Year":2021,"Area":"Brent","Pupils":3160},{"GSSCode":"E09000006","Attainment8":55.2,"Year":2021,"Area":"Bromley","Pupils":3356},{"GSSCode":"E09000007","Attainment8":53.1,"Year":2021,"Area":"Camden","Pupils":1644},{"GSSCode":"E09000008","Attainment8":50,"Year":2021,"Area":"Croydon","Pupils":3831},{"GSSCode":"E09000009","Attainment8":53.6,"Year":2021,"Area":"Ealing","Pupils":3276},{"GSSCode":"E12000006","Attainment8":51,"Year":2021,"Area":"East","Pupils":64647},{"GSSCode":"E12000004","Attainment8":49.6,"Year":2021,"Area":"East Midlands","Pupils":49843},{"GSSCode":"E09000010","Attainment8":51.1,"Year":2021,"Area":"Enfield","Pupils":3783},{"GSSCode":"E92000001","Attainment8":50.9,"Year":2021,"Area":"England","Pupils":575863},{"GSSCode":"E09000011","Attainment8":51.2,"Year":2021,"Area":"Greenwich","Pupils":2695},{"GSSCode":"E09000012","Attainment8":54,"Year":2021,"Area":"Hackney","Pupils":2331},{"GSSCode":"E09000013","Attainment8":58.1,"Year":2021,"Area":"Hammersmith and Fulham","Pupils":1458},{"GSSCode":"E09000014","Attainment8":51.4,"Year":2021,"Area":"Haringey","Pupils":2514},{"GSSCode":"E09000015","Attainment8":54.8,"Year":2021,"Area":"Harrow","Pupils":2521},{"GSSCode":"E09000016","Attainment8":52.2,"Year":2021,"Area":"Havering","Pupils":2882},{"GSSCode":"E09000017","Attainment8":52.8,"Year":2021,"Area":"Hillingdon","Pupils":3420},{"GSSCode":"E09000018","Attainment8":53.9,"Year":2021,"Area":"Hounslow","Pupils":2916},{"GSSCode":"E13000001","Attainment8":53.4,"Year":2021,"Area":"Inner London","Pupils":28891},{"GSSCode":"E09000019","Attainment8":52.2,"Year":2021,"Area":"Islington","Pupils":1493},{"GSSCode":"E09000020","Attainment8":57.9,"Year":2021,"Area":"Kensington and Chelsea","Pupils":896},{"GSSCode":"E09000021","Attainment8":61.4,"Year":2021,"Area":"Kingston upon Thames","Pupils":1828},{"GSSCode":"E09000022","Attainment8":51.3,"Year":2021,"Area":"Lambeth","Pupils":2264},{"GSSCode":"E09000023","Attainment8":49.1,"Year":2021,"Area":"Lewisham","Pupils":2340},{"GSSCode":"E12000007","Attainment8":54.1,"Year":2021,"Area":"London","Pupils":85646},{"GSSCode":"E09000024","Attainment8":53.2,"Year":2021,"Area":"Merton","Pupils":1555},{"GSSCode":"E09000025","Attainment8":54.5,"Year":2021,"Area":"Newham","Pupils":4311},{"GSSCode":"E12000001","Attainment8":49.2,"Year":2021,"Area":"North East","Pupils":27055},{"GSSCode":"E12000002","Attainment8":49.6,"Year":2021,"Area":"North West","Pupils":79949},{"GSSCode":"E13000002","Attainment8":54.5,"Year":2021,"Area":"Outer London","Pupils":56755},{"GSSCode":"E09000026","Attainment8":56.8,"Year":2021,"Area":"Redbridge","Pupils":3874},{"GSSCode":"E09000027","Attainment8":58.1,"Year":2021,"Area":"Richmond upon Thames","Pupils":1736},{"GSSCode":"E12000008","Attainment8":52.1,"Year":2021,"Area":"South East","Pupils":90615},{"GSSCode":"E12000009","Attainment8":51.4,"Year":2021,"Area":"South West","Pupils":53700},{"GSSCode":"E09000028","Attainment8":55,"Year":2021,"Area":"Southwark","Pupils":3002},{"GSSCode":"E09000029","Attainment8":62,"Year":2021,"Area":"Sutton","Pupils":3048},{"GSSCode":"E09000030","Attainment8":51.7,"Year":2021,"Area":"Tower Hamlets","Pupils":2967},{"GSSCode":"E09000031","Attainment8":51.5,"Year":2021,"Area":"Waltham Forest","Pupils":2707},{"GSSCode":"E09000032","Attainment8":52.2,"Year":2021,"Area":"Wandsworth","Pupils":1919},{"GSSCode":"E12000005","Attainment8":49.5,"Year":2021,"Area":"West Midlands","Pupils":65625},{"GSSCode":"E09000033","Attainment8":57.6,"Year":2021,"Area":"Westminster","Pupils":1752},{"GSSCode":"E12000003","Attainment8":49.1,"Year":2021,"Area":"Yorkshire and the Humber","Pupils":58783}]},"params":[{"name":"timeSlider","value":{"Year":2016},"select":"point","bind":{"input":"range","name":"Year","min":2016,"max":2021,"step":1}}],"transform":[{"lookup":"GSSCode","from":{"data":{"url":"https://fredalcantara.github.io/data/londonBoroughs.json","format":{"type":"topojson","feature":"boroughs"}},"key":"properties.GSSCode"},"as":"geo"},{"filter":"isValid(datum.geo)"},{"filter":{"param":"timeSlider"}}],"width":800,"height":500,"encoding":{"shape":{"field":"geo","type":"geojson"},"color":{"field":"Attainment8","type":"quantitative","title":"Attainment 8 Score","scale":{"scheme":"bluegreen"}},"tooltip":[{"field":"Area","title":"Borough"},{"field":"Attainment8","title":"Score"},{"field":"Pupils","title":"Candidates"}]},"mark":{"type":"geoshape","stroke":"black"},"config":{"title":{"font":"Roboto Slab","fontSize":22,"anchor":"middle"},"padding":50}}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

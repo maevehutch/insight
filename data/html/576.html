@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":700,"height":400,"data":{"url":"https://TahaJomehpour1.github.io/datavisdata/accoRegV5.csv"},"encoding":{"x":{"field":"areaName","type":"nominal"},"y":{"field":"popDensityAvg","type":"quantitative"},"color":{"field":"pop","type":"quantitative","scale":{"scheme":"reds"}},"tooltip":[{"field":"pop"}]},"mark":"bar"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p interactive="false" style="display: inline-block"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg class="marks" height="210" version="1.1" viewbox="0 0 396 210" width="396" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><rect fill="white" height="210" width="396"></rect><g fill="none" stroke-miterlimit="10" transform="translate(5,5)"><g aria-roledescription="group mark container" class="mark-group role-frame root" role="graphics-object"><g transform="translate(0,0)"><path aria-hidden="true" class="background" d="M0,0h200v200h-200Z"></path><g><g aria-roledescription="arc mark container" class="mark-arc role-mark marks" role="graphics-object"><path aria-label="value: 384395; areaName: Wales" aria-roledescription="arc mark" d="M-99.282,-11.961A100,100,0,0,0,-99.975,-2.244L0,0Z" fill="#ff9da6" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 431871; areaName: Wales" aria-roledescription="arc mark" d="M-97.381,-22.738A100,100,0,0,0,-99.282,-11.961L0,0Z" fill="#ff9da6" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 358035; areaName: Wales" aria-roledescription="arc mark" d="M-94.918,-31.472A100,100,0,0,0,-97.381,-22.738L0,0Z" fill="#ff9da6" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 126662; areaName: Wales" aria-roledescription="arc mark" d="M-93.859,-34.503A100,100,0,0,0,-94.918,-31.472L0,0Z" fill="#ff9da6" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 24451; areaName: Wales" aria-roledescription="arc mark" d="M-93.643,-35.084A100,100,0,0,0,-93.859,-34.503L0,0Z" fill="#ff9da6" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 6842; areaName: Wales" aria-roledescription="arc mark" d="M-93.582,-35.247A100,100,0,0,0,-93.643,-35.084L0,0Z" fill="#ff9da6" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 10489; areaName: Wales" aria-roledescription="arc mark" d="M-93.488,-35.496A100,100,0,0,0,-93.582,-35.247L0,0Z" fill="#ff9da6" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 4368; areaName: Wales" aria-roledescription="arc mark" d="M-93.449,-35.599A100,100,0,0,0,-93.488,-35.496L0,0Z" fill="#ff9da6" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 207943; areaName: North East" aria-roledescription="arc mark" d="M86.131,50.808A100,100,0,0,0,88.689,46.198L0,0Z" fill="#72b7b2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 470849; areaName: North East" aria-roledescription="arc mark" d="M79.468,60.703A100,100,0,0,0,86.131,50.808L0,0Z" fill="#72b7b2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 326453; areaName: North East" aria-roledescription="arc mark" d="M74.177,67.065A100,100,0,0,0,79.468,60.703L0,0Z" fill="#72b7b2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 133229; areaName: North East" aria-roledescription="arc mark" d="M71.87,69.532A100,100,0,0,0,74.177,67.065L0,0Z" fill="#72b7b2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 24511; areaName: North East" aria-roledescription="arc mark" d="M71.437,69.977A100,100,0,0,0,71.87,69.532L0,0Z" fill="#72b7b2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 4982; areaName: North East" aria-roledescription="arc mark" d="M71.348,70.067A100,100,0,0,0,71.437,69.977L0,0Z" fill="#72b7b2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 6299; areaName: North East" aria-roledescription="arc mark" d="M71.236,70.181A100,100,0,0,0,71.348,70.067L0,0Z" fill="#72b7b2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 1414; areaName: North East" aria-roledescription="arc mark" d="M71.211,70.207A100,100,0,0,0,71.236,70.181L0,0Z" fill="#72b7b2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 599838; areaName: North West" aria-roledescription="arc mark" d="M59.754,80.184A100,100,0,0,0,71.211,70.207L0,0Z" fill="#54a24b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 1160271; areaName: North West" aria-roledescription="arc mark" d="M33.939,94.065A100,100,0,0,0,59.754,80.184L0,0Z" fill="#54a24b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 886330; areaName: North West" aria-roledescription="arc mark" d="M12.126,99.262A100,100,0,0,0,33.939,94.065L0,0Z" fill="#54a24b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 394015; areaName: North West" aria-roledescription="arc mark" d="M2.166,99.977A100,100,0,0,0,12.126,99.262L0,0Z" fill="#54a24b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 59053; areaName: North West" aria-roledescription="arc mark" d="M0.67,99.998A100,100,0,0,0,2.166,99.977L0,0Z" fill="#54a24b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 22246; areaName: North West" aria-roledescription="arc mark" d="M0.106,100A100,100,0,0,0,0.67,99.998L0,0Z" fill="#54a24b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 22714; areaName: North West" aria-roledescription="arc mark" d="M-0.47,99.999A100,100,0,0,0,0.106,100L0,0Z" fill="#54a24b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 8937; areaName: North West" aria-roledescription="arc mark" d="M-0.697,99.998A100,100,0,0,0,-0.47,99.999L0,0Z" fill="#54a24b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 504504; areaName: Yorkshire and The Humber" aria-roledescription="arc mark" d="M-44.661,-89.473A100,100,0,0,0,-55.709,-83.045L0,0Z" fill="#bab0ac" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 877373; areaName: Yorkshire and The Humber" aria-roledescription="arc mark" d="M-23.823,-97.121A100,100,0,0,0,-44.661,-89.473L0,0Z" fill="#bab0ac" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 607775; areaName: Yorkshire and The Humber" aria-roledescription="arc mark" d="M-8.635,-99.627A100,100,0,0,0,-23.823,-97.121L0,0Z" fill="#bab0ac" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 257824; areaName: Yorkshire and The Humber" aria-roledescription="arc mark" d="M-2.109,-99.978A100,100,0,0,0,-8.635,-99.627L0,0Z" fill="#bab0ac" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 39602; areaName: Yorkshire and The Humber" aria-roledescription="arc mark" d="M-1.105,-99.994A100,100,0,0,0,-2.109,-99.978L0,0Z" fill="#bab0ac" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 20729; areaName: Yorkshire and The Humber" aria-roledescription="arc mark" d="M-0.579,-99.998A100,100,0,0,0,-1.105,-99.994L0,0Z" fill="#bab0ac" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 17066; areaName: Yorkshire and The Humber" aria-roledescription="arc mark" d="M-0.147,-100A100,100,0,0,0,-0.579,-99.998L0,0Z" fill="#bab0ac" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 5785; areaName: Yorkshire and The Humber" aria-roledescription="arc mark" d="M0,-100A100,100,0,0,0,-0.147,-100L0,0Z" fill="#bab0ac" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 676024; areaName: East Midlands" aria-roledescription="arc mark" d="M17.055,-98.535A100,100,0,0,0,0,-100L0,0Z" fill="#4c78a8" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 727740; areaName: East Midlands" aria-roledescription="arc mark" d="M34.843,-93.734A100,100,0,0,0,17.055,-98.535L0,0Z" fill="#4c78a8" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 392641; areaName: East Midlands" aria-roledescription="arc mark" d="M43.985,-89.807A100,100,0,0,0,34.843,-93.734L0,0Z" fill="#4c78a8" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 180578; areaName: East Midlands" aria-roledescription="arc mark" d="M48.049,-87.7A100,100,0,0,0,43.985,-89.807L0,0Z" fill="#4c78a8" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 24983; areaName: East Midlands" aria-roledescription="arc mark" d="M48.604,-87.394A100,100,0,0,0,48.049,-87.7L0,0Z" fill="#4c78a8" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 12543; areaName: East Midlands" aria-roledescription="arc mark" d="M48.881,-87.239A100,100,0,0,0,48.604,-87.394L0,0Z" fill="#4c78a8" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 13204; areaName: East Midlands" aria-roledescription="arc mark" d="M49.173,-87.075A100,100,0,0,0,48.881,-87.239L0,0Z" fill="#4c78a8" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 9618; areaName: East Midlands" aria-roledescription="arc mark" d="M49.385,-86.954A100,100,0,0,0,49.173,-87.075L0,0Z" fill="#4c78a8" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 595850; areaName: West Midlands" aria-roledescription="arc mark" d="M-87.027,-49.257A100,100,0,0,0,-93.449,-35.599L0,0Z" fill="#9d755d" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 913115; areaName: West Midlands" aria-roledescription="arc mark" d="M-73.405,-67.91A100,100,0,0,0,-87.027,-49.257L0,0Z" fill="#9d755d" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 523411; areaName: West Midlands" aria-roledescription="arc mark" d="M-63.774,-77.025A100,100,0,0,0,-73.405,-67.91L0,0Z" fill="#9d755d" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 318415; areaName: West Midlands" aria-roledescription="arc mark" d="M-57.355,-81.917A100,100,0,0,0,-63.774,-77.025L0,0Z" fill="#9d755d" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 36940; areaName: West Midlands" aria-roledescription="arc mark" d="M-56.586,-82.45A100,100,0,0,0,-57.355,-81.917L0,0Z" fill="#9d755d" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 13671; areaName: West Midlands" aria-roledescription="arc mark" d="M-56.299,-82.646A100,100,0,0,0,-56.586,-82.45L0,0Z" fill="#9d755d" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 18368; areaName: West Midlands" aria-roledescription="arc mark" d="M-55.914,-82.907A100,100,0,0,0,-56.299,-82.646L0,0Z" fill="#9d755d" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 9723; areaName: West Midlands" aria-roledescription="arc mark" d="M-55.709,-83.045A100,100,0,0,0,-55.914,-82.907L0,0Z" fill="#9d755d" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 776812; areaName: East of England" aria-roledescription="arc mark" d="M65.445,-75.61A100,100,0,0,0,49.385,-86.954L0,0Z" fill="#f58518" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 816068; areaName: East of England" aria-roledescription="arc mark" d="M79.582,-60.554A100,100,0,0,0,65.445,-75.61L0,0Z" fill="#f58518" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 557954; areaName: East of England" aria-roledescription="arc mark" d="M87.324,-48.729A100,100,0,0,0,79.582,-60.554L0,0Z" fill="#f58518" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 381093; areaName: East of England" aria-roledescription="arc mark" d="M91.617,-40.078A100,100,0,0,0,87.324,-48.729L0,0Z" fill="#f58518" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 45269; areaName: East of England" aria-roledescription="arc mark" d="M92.071,-39.024A100,100,0,0,0,91.617,-40.078L0,0Z" fill="#f58518" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 17147; areaName: East of England" aria-roledescription="arc mark" d="M92.24,-38.624A100,100,0,0,0,92.071,-39.024L0,0Z" fill="#f58518" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 18298; areaName: East of England" aria-roledescription="arc mark" d="M92.418,-38.195A100,100,0,0,0,92.24,-38.624L0,0Z" fill="#f58518" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 16141; areaName: East of England" aria-roledescription="arc mark" d="M92.574,-37.817A100,100,0,0,0,92.418,-38.195L0,0Z" fill="#f58518" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 208078; areaName: London" aria-roledescription="arc mark" d="M94.439,-32.883A100,100,0,0,0,92.574,-37.817L0,0Z" fill="#e45756" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 636084; areaName: London" aria-roledescription="arc mark" d="M98.494,-17.292A100,100,0,0,0,94.439,-32.883L0,0Z" fill="#e45756" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 727673; areaName: London" aria-roledescription="arc mark" d="M99.994,1.069A100,100,0,0,0,98.494,-17.292L0,0Z" fill="#e45756" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 1380137; areaName: London" aria-roledescription="arc mark" d="M93.569,35.282A100,100,0,0,0,99.994,1.069L0,0Z" fill="#e45756" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 378564; areaName: London" aria-roledescription="arc mark" d="M89.757,44.087A100,100,0,0,0,93.569,35.282L0,0Z" fill="#e45756" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 41112; areaName: London" aria-roledescription="arc mark" d="M89.293,45.02A100,100,0,0,0,89.757,44.087L0,0Z" fill="#e45756" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 47836; areaName: London" aria-roledescription="arc mark" d="M88.74,46.099A100,100,0,0,0,89.293,45.02L0,0Z" fill="#e45756" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 4406; areaName: London" aria-roledescription="arc mark" d="M88.689,46.198A100,100,0,0,0,88.74,46.099L0,0Z" fill="#e45756" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 1065035; areaName: South East" aria-roledescription="arc mark" d="M-27.346,96.188A100,100,0,0,0,-0.697,99.998L0,0Z" fill="#eeca3b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 1082651; areaName: South East" aria-roledescription="arc mark" d="M-52.393,85.176A100,100,0,0,0,-27.346,96.188L0,0Z" fill="#eeca3b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 812592; areaName: South East" aria-roledescription="arc mark" d="M-68.709,72.657A100,100,0,0,0,-52.393,85.176L0,0Z" fill="#eeca3b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 640091; areaName: South East" aria-roledescription="arc mark" d="M-79.545,60.601A100,100,0,0,0,-68.709,72.657L0,0Z" fill="#eeca3b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 118927; areaName: South East" aria-roledescription="arc mark" d="M-81.336,58.176A100,100,0,0,0,-79.545,60.601L0,0Z" fill="#eeca3b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 30739; areaName: South East" aria-roledescription="arc mark" d="M-81.787,57.54A100,100,0,0,0,-81.336,58.176L0,0Z" fill="#eeca3b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 32687; areaName: South East" aria-roledescription="arc mark" d="M-82.261,56.86A100,100,0,0,0,-81.787,57.54L0,0Z" fill="#eeca3b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 25243; areaName: South East" aria-roledescription="arc mark" d="M-82.623,56.333A100,100,0,0,0,-82.261,56.86L0,0Z" fill="#eeca3b" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 734775; areaName: South West" aria-roledescription="arc mark" d="M-91.627,40.056A100,100,0,0,0,-82.623,56.333L0,0Z" fill="#b279a2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 694153; areaName: South West" aria-roledescription="arc mark" d="M-97.225,23.395A100,100,0,0,0,-91.627,40.056L0,0Z" fill="#b279a2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 546603; areaName: South West" aria-roledescription="arc mark" d="M-99.524,9.741A100,100,0,0,0,-97.225,23.395L0,0Z" fill="#b279a2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 314386; areaName: South West" aria-roledescription="arc mark" d="M-99.984,1.785A100,100,0,0,0,-99.524,9.741L0,0Z" fill="#b279a2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 93304; areaName: South West" aria-roledescription="arc mark" d="M-99.998,-0.58A100,100,0,0,0,-99.984,1.785L0,0Z" fill="#b279a2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 25536; areaName: South West" aria-roledescription="arc mark" d="M-99.992,-1.227A100,100,0,0,0,-99.998,-0.58L0,0Z" fill="#b279a2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 21495; areaName: South West" aria-roledescription="arc mark" d="M-99.984,-1.772A100,100,0,0,0,-99.992,-1.227L0,0Z" fill="#b279a2" role="graphics-symbol" transform="translate(100,100)"></path><path aria-label="value: 18628; areaName: South West" aria-roledescription="arc mark" d="M-99.975,-2.244A100,100,0,0,0,-99.984,-1.772L0,0Z" fill="#b279a2" role="graphics-symbol" transform="translate(100,100)"></path></g><g aria-label="Symbol legend titled 'areaName' for fill color with 10 values: East Midlands, East of England, London, North East, North West, ending with Yorkshire and The Humber" aria-roledescription="legend" class="mark-group role-legend" role="graphics-symbol"><g transform="translate(218,0)"><path aria-hidden="true" class="background" d="M0,0h168v144h-168Z" pointer-events="none"></path><g><g class="mark-group role-legend-entry"><g transform="translate(0,16)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g aria-roledescription="group mark container" class="mark-group role-scope" role="graphics-object"><g transform="translate(0,0)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#4c78a8" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">East Midlands</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,13)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#f58518" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">East of England</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,26)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#e45756" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">London</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,39)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#72b7b2" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">North East</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,52)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#54a24b" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">North West</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,65)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#eeca3b" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">South East</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,78)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#b279a2" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">South West</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,91)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#ff9da6" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">Wales</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,104)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#9d755d" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">West Midlands</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g><g transform="translate(0,117)"><path aria-hidden="true" class="background" d="M0,0h168v11h-168Z" opacity="1" pointer-events="none"></path><g><g class="mark-symbol role-legend-symbol" pointer-events="none"><path d="M5,0A5,5,0,1,1,-5,0A5,5,0,1,1,5,0" fill="#bab0ac" opacity="1" stroke-width="1.5" transform="translate(6,6)"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="start" transform="translate(16,9)">Yorkshire and The …</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g class="mark-text role-legend-title" pointer-events="none"><text fill="#000" font-family="sans-serif" font-size="11px" font-weight="bold" opacity="1" text-anchor="start" transform="translate(0,9)">areaName</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g></g><path aria-hidden="true" class="foreground" d="" display="none"></path></g></g></g></svg></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","height":120,"width":500,"data":{"url":"https://TahaJomehpour1.github.io/datavisdata/accoRegV5.csv"},"mark":"bar","encoding":{"x":{"field":"category","type":"nominal","title":"category"},"y":{"field":"value","aggregate":"sum","title":"Number of Accomodation"},"row":{"field":"areaName"},"color":{"field":"pop","type":"quantitative","scale":{"scheme":"yellowgreenblue"}},"tooltip":[{"field":"value"},{"field":"avgPerReg"},{"field":"avgPerCat"}]}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":650,"height":300,"data":{"url":"https://TahaJomehpour1.github.io/datavisdata/avgPriceAllP.csv"},"params":[{"name":"scaling","select":{"type":"interval","encodings":["x"]},"bind":"scales"},{"name":"label","select":{"type":"point","nearest":true,"on":"mouseover","encodings":["x"]}}],"encoding":{"x":{"field":"period","type":"temporal","title":""},"y":{"field":"avgPrice","type":"quantitative"},"color":{"field":"region","scale":{"scheme":"category10"}}},"mark":{"type":"line","interpolate":"monotone"}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":600,"height":500,"data":{"url":"https://TahaJomehpour1.github.io/datavisdata/avgPriceAllP.csv"},"params":[{"name":"myBrush","select":"interval"}],"encoding":{"x":{"field":"Sales volume","type":"quantitative"},"y":{"field":"avgPrice","type":"quantitative"},"shape":{"field":"region"},"color":{"condition":{"param":"myBrush","field":"region","scale":{"scheme":"category10"}},"value":"grey"}},"mark":{"type":"point","filled":true,"size":160,"opacity":0.6}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":700,"height":350,"data":{"url":"https://TahaJomehpour1.github.io/datavisdata/accoRegV5.csv"},"encoding":{"x":{"field":"areaName","type":"nominal"},"y":{"field":"value","type":"quantitative"},"color":{"field":"category","scale":{"scheme":"rainbow"}},"tooltip":[{"field":"category"},{"field":"value"},{"field":"avgPerReg"},{"field":"avgPerCat"}]},"mark":"bar"}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

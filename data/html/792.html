@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Coursework_WD — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><style>
+/* narrative schema: /Users/maevehutchinson/Documents/PhD/datavis-module-project/scripts_v3/unzipped-data-all/20-21/INM402_PRD2_A_2020-21-Coursework submission-1782245/Will Dee_3553343_assignsubmission_file_/DV Coursework - William Dee/narrative-schemas/project.yml */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+legend {
+  font-size:0.9em; font-style: italic;
+}
+
+.questions fieldset {
+  background: #f3f3f3;
+}
+
+.questions {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.annotation {
+  font-size: 1.2em;
+  font-family: caveat, cursive !important;
+}
+
+.task fieldset {
+  background: #fffafa;
+  border-color: #a66;
+}
+
+.whoami {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+</style><style>@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/caveat/v18/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIWpZA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/fjallaone/v15/Yq6R-LCAWCX3-6Ky7FAFrOF6lw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDr3icaFF3w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDrdyAaFF3w.ttf) format('truetype');
+}
+#litvis {
+  font-family: "Merriweather", serif;
+  font-size: 11pt;
+  font-weight: 400;
+  line-height: 1.45;
+}
+#litvis h1,
+#litvis h2,
+#litvis h3,
+#litvis h4,
+#litvis h5,
+#litvis h6 {
+  font-family: "Fjalla One", sans-serif;
+}
+#litvis blockquote {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-size: 12.1pt;
+  background-color: #f6f6f6;
+  margin-right: 2em;
+}
+#litvis blockquote h1,
+#litvis blockquote h2,
+#litvis blockquote h3,
+#litvis blockquote h4,
+#litvis blockquote h5,
+#litvis blockquote h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+}
+#litvis code,
+#litvis pre {
+  background-color: rgba(255, 255, 255, 0);
+}
+#litvis li {
+  margin: 0.5em 0;
+}
+#litvis pre {
+  border: solid 1px #ccc;
+  border-radius: 8px;
+}
+#litvis div[data-role="litvisOutput"] > span {
+  font-family: iosevka, monospace;
+  font-weight: bold;
+  font-size: 17.6pt;
+  display: block;
+  margin-bottom: 0.75em;
+  border-style: none none none solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding-left: 0.5em;
+}
+#litvis input[type="radio"],
+#litvis input[type="checkbox"],
+#litvis input[type="select"],
+#litvis input[type="range"] {
+  margin-left: 1em;
+}
+#litvis input[type="range"] {
+  min-width: 120px;
+  max-width: 120px;
+}
+</style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div class="visualization" ns-role="label-child"><h2 ns-role="label-child">1. The Visualizations</h2><span class="annotation" ns-role="label-child"></span>
+</div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v4.json","config":{"view":{"stroke":""}},"title":{"text":"People Taken from Africa by the Atlantic Slave Trade","anchor":"middle","orient":"top","fontSize":20,"offset":5,"font":"Fjalla One","subtitle":"Accountability According to Slaving Ship Owner","subtitleFontSize":12,"subtitleColor":"grey","subtitleFontStyle":"italic"},"width":530,"height":500,"projection":{"type":"naturalEarth1","scale":520,"center":[14,-5]},"layer":[{"data":{"url":"https://williamdee1.github.io/web/africa.json","format":{"type":"topojson","feature":"countries"}},"mark":{"type":"geoshape","fill":"#ddd","stroke":"#fff"}},{"data":{"url":"https://williamdee1.github.io/web/purch_by_main_nations.csv"},"encoding":{"longitude":{"field":"purch_long"},"latitude":{"field":"purch_lat"},"size":{"field":"slaves_embarked","type":"quantitative","scale":{"domain":[0,50000]},"legend":null},"order":{"field":"slaves_embarked","sort":"descending"},"tooltip":[{"field":"main_place_slave_purch"},{"field":"slaves_embarked","format":","},{"field":"Ship Registration"}],"color":{"field":"Ship Registration","scale":{"domain":["France","Great Britain","Portugal","Spain","USA","Netherlands","Other"],"range":["#4a60b5","#9c2a2a","#549459","#dbd567","#a66a8b","#ad7423","grey"]}}},"selection":{"mySelection":{"type":"single","fields":["time_per"],"bind":{"time_per":{"input":"range","name":"50 Year Period Ending ","min":1550,"max":1900,"step":50}},"init":{"time_per":1550}},"nationSelection":{"type":"multi","on":"click","fields":["Ship Registration"],"bind":{"legend":"click"}}},"mark":"circle","transform":[{"filter":"datum.time_per == mySelection_time_per"},{"filter":{"selection":"nationSelection"}}]},{"data":{"values":[{"purch_long":-18,"annotation":"People say that slaves were taken from Africa. This is not true:","purch_lat":-26},{"purch_long":-18,"annotation":"People were taken from Africa... and were made into slaves.","purch_lat":-28}]},"encoding":{"longitude":{"field":"purch_long"},"latitude":{"field":"purch_lat"},"text":{"field":"annotation"}},"mark":{"type":"text","dy":-5,"fontSize":14,"align":"left","font":"Fjalla One","fontWeight":"bold","color":"#42403c"}},{"data":{"values":[{"purch_long":-18,"annotation":"- Abdullah Ibrahim","purch_lat":-30}]},"encoding":{"longitude":{"field":"purch_long"},"latitude":{"field":"purch_lat"},"text":{"field":"annotation"}},"mark":{"type":"text","dy":-5,"fontSize":10,"align":"left","font":"Fjalla One","color":"grey","fontStyle":"italic"}},{"data":{"url":"https://williamdee1.github.io/web/total_lives_lost.csv"},"encoding":{"longitude":{"field":"purch_long"},"latitude":{"field":"purch_lat"},"text":{"field":"annotation"}},"mark":{"type":"text","dy":-5,"fontSize":20,"align":"center","font":"Fjalla One","fontWeight":"bold","color":"#42403c"},"transform":[{"filter":"datum.time_per == mySelection_time_per"},{"filter":{"selection":"nationSelection"}}]},{"data":{"url":"https://williamdee1.github.io/web/cum_total_annot.csv"},"encoding":{"longitude":{"field":"purch_long"},"latitude":{"field":"purch_lat"},"text":{"field":"annotation"}},"mark":{"type":"text","dy":-5,"fontSize":12,"align":"left","font":"Fjalla One","color":"grey","fontStyle":"italic"},"transform":[{"filter":"datum.time_per == mySelection_time_per"},{"filter":{"selection":"nationSelection"}}]}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v4.json","config":{"view":{"stroke":""}},"title":{"text":"Completed Atlantic Voyages","anchor":"middle","orient":"top","fontSize":16,"offset":0,"font":"Fjalla One"},"width":510,"height":400,"layer":[{"data":{"values":[{"start":"1813","end":"1875"}]},"encoding":{"x":{"field":"start","timeUnit":{"unit":"year"}},"x2":{"field":"end","timeUnit":{"unit":"year"}}},"mark":{"type":"rect","opacity":0.5,"color":"#d6d4c5"}},{"data":{"url":"https://williamdee1.github.io/web/completed_voyages.csv"},"selection":{"mySelection":{"type":"multi","on":"click","fields":["country_reg_ship"],"bind":{"legend":"click"}}},"encoding":{"x":{"field":"decade_end","timeUnit":{"unit":"year"},"axis":{"title":"","grid":false,"ticks":false,"domain":false,"labelColor":"grey","labelFontSize":12,"labelPadding":5}},"y":{"field":"count","type":"quantitative","axis":{"title":"","grid":false,"ticks":false,"domain":false,"labelColor":"grey","labelSeparation":50}},"color":{"field":"country_reg_ship","title":"Ship Registration","scale":{"domain":["France","Great Britain","Portugal","Spain","USA","Netherlands","Other"],"range":["#4a60b5","#9c2a2a","#549459","#dbd567","#a66a8b","#ad7423","grey"]}},"opacity":{"condition":{"selection":"mySelection","value":1},"value":0.2}},"mark":{"type":"bar","width":10}},{"data":{"values":[{"decade_end":"1550","annotation":"“The only thing necessary for the triumph of evil","count":1800},{"decade_end":"1550","annotation":"is for good men to do nothing.”","count":1700}]},"encoding":{"x":{"field":"decade_end","timeUnit":{"unit":"year"}},"y":{"field":"count","type":"quantitative"},"text":{"field":"annotation"}},"mark":{"type":"text","dy":-5,"fontSize":12,"align":"left","font":"Fjalla One","fontWeight":"bold","color":"#42403c"}},{"data":{"values":[{"decade_end":"1550","annotation":"- Edmund Burke","count":1600},{"decade_end":"1817","annotation":"Abolition Legislation","count":2400}]},"encoding":{"x":{"field":"decade_end","timeUnit":{"unit":"year"}},"y":{"field":"count","type":"quantitative"},"text":{"field":"annotation"}},"mark":{"type":"text","dy":-5,"fontSize":10,"align":"left","font":"Fjalla One","color":"grey","fontStyle":"italic"}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v4.json","config":{"view":{"stroke":""}},"title":{"text":"Incomplete Atlantic Voyages","anchor":"middle","orient":"top","fontSize":16,"offset":0,"font":"Fjalla One"},"width":525,"height":67,"layer":[{"data":{"values":[{"start":"1813","end":"1875"}]},"encoding":{"x":{"field":"start","timeUnit":{"unit":"year"}},"x2":{"field":"end","timeUnit":{"unit":"year"}}},"mark":{"type":"rect","opacity":0.5,"color":"#d6d4c5"}},{"data":{"url":"https://williamdee1.github.io/web/incomplete_voyages.csv"},"selection":{"mySelection":{"type":"multi","on":"click","fields":["fate"],"bind":{"legend":"click"}}},"encoding":{"x":{"field":"decade_end","timeUnit":{"unit":"year"},"axis":{"title":"","grid":false,"ticks":false,"domain":false,"labelColor":"grey","labelFontSize":12,"labelPadding":5}},"y":{"field":"count","type":"quantitative","axis":{"title":"","grid":false,"ticks":false,"domain":false,"labelColor":"grey","labelSeparation":50}},"color":{"field":"fate","title":["Fate - Captured","or Sunk By"],"scale":{"domain":["French","British","Natural hazard","Piracy","US","African","Other Captor"],"range":["#0072bb","#9c2a2a","#63b89a","black","pink","purple","grey"]}},"opacity":{"condition":{"selection":"mySelection","value":1},"value":0.2}},"mark":{"type":"bar","width":10}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p interactive="false" style="display: inline-block"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg class="marks" height="147" version="1.1" viewbox="0 0 558 147" width="558" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><rect fill="white" height="147" width="558"></rect><g fill="none" stroke-miterlimit="10" transform="translate(63,26)"><g aria-roledescription="group mark container" class="mark-group role-frame root" role="graphics-object"><g transform="translate(0,0)"><path aria-hidden="true" class="background" d="M0,0h490v100h-490Z" stroke=""></path><g><g aria-label="X-axis for a time scale with values from 1529 to 1875" aria-roledescription="axis" class="mark-group role-axis" role="graphics-symbol"><g transform="translate(0.5,100.5)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-text role-axis-label" pointer-events="none"><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(15.575434927440318,14)">1540</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="0" text-anchor="middle" transform="translate(43.899694858969205,14)">1560</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(72.22395479049808,14)">1580</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="0" text-anchor="middle" transform="translate(100.54821472202697,14)">1600</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(128.87247465355586,14)">1620</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="0" text-anchor="middle" transform="translate(157.19673458508476,14)">1640</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(185.52099451661363,14)">1660</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="0" text-anchor="middle" transform="translate(213.8452544481425,14)">1680</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(242.1695143796714,14)">1700</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="0" text-anchor="middle" transform="translate(270.48989693133285,14)">1720</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(298.81415686286175,14)">1740</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="0" text-anchor="middle" transform="translate(327.1384167943906,14)">1760</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(355.4626767259195,14)">1780</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="0" text-anchor="middle" transform="translate(383.7869366574484,14)">1800</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(412.10731920910985,14)">1820</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="0" text-anchor="middle" transform="translate(440.43157914063875,14)">1840</text><text fill="grey" font-family="sans-serif" font-size="12px" opacity="1" text-anchor="middle" transform="translate(468.7558357063865,14)">1860</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g aria-label="Y-axis for a linear scale with values from 0 to 100,000" aria-roledescription="axis" class="mark-group role-axis" role="graphics-symbol"><g transform="translate(0.5,0.5)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-text role-axis-label" pointer-events="none"><text fill="grey" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-2,103)">0</text><text fill="grey" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-2,53)">50,000</text><text fill="grey" font-family="sans-serif" font-size="10px" opacity="1" text-anchor="end" transform="translate(-2,3)">100,000</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g><g aria-roledescription="rect mark container" class="mark-rect role-mark layer_0_marks" role="graphics-object"><path aria-label="start (year): 1812; end (year): 1875" aria-roledescription="rect mark" d="M400.77761523649826,0h89.22238476350174v100h-89.22238476350174Z" fill="#d6d4c5" opacity="0.5" role="graphics-symbol"></path></g><g aria-roledescription="rect mark container" class="mark-rect role-mark layer_1_marks" role="graphics-object"><path aria-label="decade_end (year): 1529; lives_lost: 722" aria-roledescription="bar" d="M-4.292378174195206,99.278h10v0.7219999999999942h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1539; lives_lost: 648" aria-roledescription="bar" d="M9.867813101635525,99.35199999999999h10v0.6480000000000103h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1549; lives_lost: 5463" aria-roledescription="bar" d="M24.03188175733368,94.537h10v5.462999999999994h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1559; lives_lost: 2880" aria-roledescription="bar" d="M38.192073033164405,97.11999999999999h10v2.8800000000000097h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1569; lives_lost: 4179" aria-roledescription="bar" d="M52.35614168886256,95.821h10v4.179000000000002h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1579; lives_lost: 7059" aria-roledescription="bar" d="M66.51633296469329,92.941h10v7.0589999999999975h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1589; lives_lost: 14373" aria-roledescription="bar" d="M80.68040162039145,85.627h10v14.373000000000005h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1599; lives_lost: 25653" aria-roledescription="bar" d="M94.84059289622218,74.34700000000001h10v25.65299999999999h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1609; lives_lost: 17299" aria-roledescription="bar" d="M109.00466155192034,82.70100000000001h10v17.298999999999992h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1619; lives_lost: 18205" aria-roledescription="bar" d="M123.16485282775108,81.795h10v18.205h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1629; lives_lost: 20100" aria-roledescription="bar" d="M137.32892148344922,79.89999999999999h10v20.10000000000001h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1639; lives_lost: 17731" aria-roledescription="bar" d="M151.48911275927995,82.269h10v17.730999999999995h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1649; lives_lost: 9766" aria-roledescription="bar" d="M165.6531814149781,90.23400000000001h10v9.765999999999991h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1659; lives_lost: 12045" aria-roledescription="bar" d="M179.81337269080885,87.95500000000001h10v12.044999999999987h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1669; lives_lost: 17698" aria-roledescription="bar" d="M193.977441346507,82.30199999999999h10v17.698000000000008h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1679; lives_lost: 23137" aria-roledescription="bar" d="M208.13763262233772,76.863h10v23.137h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1689; lives_lost: 34808" aria-roledescription="bar" d="M222.30170127803586,65.19200000000001h10v34.80799999999999h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1699; lives_lost: 38791" aria-roledescription="bar" d="M236.4618925538666,61.209h10v38.791h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1709; lives_lost: 45930" aria-roledescription="bar" d="M250.62208382969735,54.06999999999999h10v45.93000000000001h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1719; lives_lost: 58459" aria-roledescription="bar" d="M264.7822751055281,41.541h10v58.459h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1729; lives_lost: 72864" aria-roledescription="bar" d="M278.9463437612262,27.136000000000003h10v72.864h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1739; lives_lost: 80730" aria-roledescription="bar" d="M293.106535037057,19.27h10v80.73h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1749; lives_lost: 73308" aria-roledescription="bar" d="M307.2706036927551,26.692000000000004h10v73.30799999999999h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1759; lives_lost: 75687" aria-roledescription="bar" d="M321.4307949685858,24.312999999999995h10v75.68700000000001h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1769; lives_lost: 98660" aria-roledescription="bar" d="M335.59486362428396,1.3399999999999967h10v98.66h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1779; lives_lost: 79473" aria-roledescription="bar" d="M349.7550549001147,20.526999999999994h10v79.47300000000001h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1790; lives_lost: 81986" aria-roledescription="bar" d="M365.3343672074225,18.013999999999996h10v81.986h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1799; lives_lost: 68698" aria-roledescription="bar" d="M378.07931483164356,31.301999999999996h10v68.69800000000001h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1809; lives_lost: 84775" aria-roledescription="bar" d="M392.2395061074743,15.225h10v84.775h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1819; lives_lost: 78632" aria-roledescription="bar" d="M406.399697383305,21.368h10v78.632h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1829; lives_lost: 81174" aria-roledescription="bar" d="M420.5637660390032,18.825999999999997h10v81.174h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1839; lives_lost: 56414" aria-roledescription="bar" d="M434.72395731483397,43.586000000000006h10v56.413999999999994h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1850; lives_lost: 49224" aria-roledescription="bar" d="M450.30326625636053,50.775999999999996h10v49.224000000000004h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1860; lives_lost: 29260" aria-roledescription="bar" d="M464.465396222125,70.74000000000001h10v29.25999999999999h-10Z" fill="#42403c" role="graphics-symbol"></path><path aria-label="decade_end (year): 1870; lives_lost: 8397" aria-roledescription="bar" d="M478.62752618788943,91.603h10v8.397000000000006h-10Z" fill="#42403c" role="graphics-symbol"></path></g><g aria-roledescription="text mark container" class="mark-text role-mark layer_2_marks" role="graphics-object"><text aria-label="decade_end (year): 1549; lives_lost: 75000; annotation: Over 1 in 10 slaves died during the voyage." aria-roledescription="text mark" fill="#42403c" font-family="Fjalla One" font-size="10px" role="graphics-symbol" text-anchor="start" transform="translate(28.324259931528886,23)">Over 1 in 10 slaves died during the voyage.</text><text aria-label="decade_end (year): 1549; lives_lost: 60000; annotation: The main causes were starvation, suicide and disease." aria-roledescription="text mark" fill="#42403c" font-family="Fjalla One" font-size="10px" role="graphics-symbol" text-anchor="start" transform="translate(28.324259931528886,38)">The main causes were starvation, suicide and disease.</text></g><g class="mark-group role-title"><g transform="translate(245,-21)"><path aria-hidden="true" class="background" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g aria-label="Title text 'Lives Lost at Sea'" aria-roledescription="title" class="mark-text role-title-text" pointer-events="none" role="graphics-symbol"><text fill="#000" font-family="Fjalla One" font-size="16px" font-weight="bold" opacity="1" text-anchor="middle" transform="translate(0,13)">Lives Lost at Sea</text></g></g><path aria-hidden="true" class="foreground" d="" display="none" pointer-events="none"></path></g></g></g><path aria-hidden="true" class="foreground" d="" display="none"></path></g></g></g></svg></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v4.json","config":{"view":{"stroke":""}},"title":{"text":"Main Factors Influencing Lives Lost at Sea Per Voyage","anchor":"middle","orient":"top","fontSize":16,"offset":10,"font":"Fjalla One"},"width":650,"data":{"url":"https://williamdee1.github.io/web/deaths_at_sea.csv"},"encoding":{"x":{"field":"diff_from_av","type":"quantitative","axis":{"grid":false,"title":"","orient":"top","ticks":false,"labelExpr":"if(datum.value==0,'Av. Deaths',format(datum.value,'+d'))"},"scale":{"domain":[-35,35]}},"y":{"field":"annotation","axis":null,"type":"ordinal","sort":{"field":"diff_from_av","op":"mean","order":"ascending"}}},"transform":[{"filter":{"selection":"mySelection"}}],"layer":[{"encoding":{"color":{"field":"diff_from_av","type":"quantitative","legend":null,"scale":{"scheme":"redblue","domainMin":35,"domainMax":-35}}},"mark":"bar","selection":{"mySelection":{"type":"single","fields":["category"],"init":{"category":"Century"},"bind":{"category":{"input":"select","name":"Impact Categories ","options":["Century","Journey Length","Ship Owner","Slaves Disembarked","Slaves Purchased"]}}}}},{"encoding":{"text":{"field":"annotation","type":"nominal"},"color":{"condition":{"test":"datum.diff_from_av &gt; 10","value":"white"},"value":"black"}},"mark":{"type":"text","align":"right","xOffset":-4}}]}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

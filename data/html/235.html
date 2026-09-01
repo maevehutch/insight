@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>courseworkUG — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","config":{"view":{"stroke":""}},"width":600,"height":600,"layer":[{"data":{"values":[{"offence":"Criminal Damage and Arson","reoffence":"Criminal Damage and Arson","count":132},{"offence":"Criminal Damage and Arson","reoffence":"Drug","count":257},{"offence":"Criminal Damage and Arson","reoffence":"Fraud","count":25},{"offence":"Criminal Damage and Arson","reoffence":"Miscellaneous Crimes Against Society","count":317},{"offence":"Criminal Damage and Arson","reoffence":"Other","count":6},{"offence":"Criminal Damage and Arson","reoffence":"Possession of Weapons","count":149},{"offence":"Criminal Damage and Arson","reoffence":"Public Order","count":286},{"offence":"Criminal Damage and Arson","reoffence":"Robbery","count":35},{"offence":"Criminal Damage and Arson","reoffence":"Sexual","count":16},{"offence":"Criminal Damage and Arson","reoffence":"Summary Motoring","count":308},{"offence":"Criminal Damage and Arson","reoffence":"Summary Non-motoring","count":1969},{"offence":"Criminal Damage and Arson","reoffence":"Theft","count":946},{"offence":"Criminal Damage and Arson","reoffence":"Violence Against the Person","count":369},{"offence":"Drug","reoffence":"Criminal Damage and Arson","count":191},{"offence":"Drug","reoffence":"Drug","count":13432},{"offence":"Drug","reoffence":"Fraud","count":633},{"offence":"Drug","reoffence":"Miscellaneous Crimes Against Society","count":4589},{"offence":"Drug","reoffence":"Other","count":33},{"offence":"Drug","reoffence":"Possession of Weapons","count":1712},{"offence":"Drug","reoffence":"Public Order","count":1654},{"offence":"Drug","reoffence":"Robbery","count":290},{"offence":"Drug","reoffence":"Sexual","count":115},{"offence":"Drug","reoffence":"Summary Motoring","count":8368},{"offence":"Drug","reoffence":"Summary Non-motoring","count":12341},{"offence":"Drug","reoffence":"Theft","count":11617},{"offence":"Drug","reoffence":"Violence Against the Person","count":1956},{"offence":"Fraud","reoffence":"Criminal Damage and Arson","count":12},{"offence":"Fraud","reoffence":"Drug","count":496},{"offence":"Fraud","reoffence":"Fraud","count":1102},{"offence":"Fraud","reoffence":"Miscellaneous Crimes Against Society","count":563},{"offence":"Fraud","reoffence":"Other","count":3},{"offence":"Fraud","reoffence":"Possession of Weapons","count":102},{"offence":"Fraud","reoffence":"Public Order","count":267},{"offence":"Fraud","reoffence":"Robbery","count":46},{"offence":"Fraud","reoffence":"Sexual","count":47},{"offence":"Fraud","reoffence":"Summary Motoring","count":835},{"offence":"Fraud","reoffence":"Summary Non-motoring","count":1306},{"offence":"Fraud","reoffence":"Theft","count":2576},{"offence":"Fraud","reoffence":"Violence Against the Person","count":186},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Criminal Damage and Arson","count":169},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Drug","count":3888},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Fraud","count":1229},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Miscellaneous Crimes Against Society","count":6211},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Other","count":86},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Possession of Weapons","count":1086},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Public Order","count":2359},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Robbery","count":346},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Sexual","count":135},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Summary Motoring","count":7147},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Summary Non-motoring","count":12555},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Theft","count":18051},{"offence":"Miscellaneous Crimes Against Society","reoffence":"Violence Against the Person","count":2186},{"offence":"Other","reoffence":"Criminal Damage and Arson","count":1},{"offence":"Other","reoffence":"Drug","count":19},{"offence":"Other","reoffence":"Fraud","count":6},{"offence":"Other","reoffence":"Miscellaneous Crimes Against Society","count":50},{"offence":"Other","reoffence":"Other","count":28},{"offence":"Other","reoffence":"Possession of Weapons","count":1},{"offence":"Other","reoffence":"Public Order","count":8},{"offence":"Other","reoffence":"Summary Motoring","count":13},{"offence":"Other","reoffence":"Summary Non-motoring","count":74},{"offence":"Other","reoffence":"Theft","count":169},{"offence":"Other","reoffence":"Violence Against the Person","count":63},{"offence":"Possession of Weapons","reoffence":"Criminal Damage and Arson","count":95},{"offence":"Possession of Weapons","reoffence":"Drug","count":2554},{"offence":"Possession of Weapons","reoffence":"Fraud","count":272},{"offence":"Possession of Weapons","reoffence":"Miscellaneous Crimes Against Society","count":1898},{"offence":"Possession of Weapons","reoffence":"Other","count":60},{"offence":"Possession of Weapons","reoffence":"Possession of Weapons","count":1351},{"offence":"Possession of Weapons","reoffence":"Public Order","count":876},{"offence":"Possession of Weapons","reoffence":"Robbery","count":196},{"offence":"Possession of Weapons","reoffence":"Sexual","count":74},{"offence":"Possession of Weapons","reoffence":"Summary Motoring","count":1947},{"offence":"Possession of Weapons","reoffence":"Summary Non-motoring","count":7287},{"offence":"Possession of Weapons","reoffence":"Theft","count":7261},{"offence":"Possession of Weapons","reoffence":"Violence Against the Person","count":1129},{"offence":"Public Order","reoffence":"Criminal Damage and Arson","count":197},{"offence":"Public Order","reoffence":"Drug","count":2253},{"offence":"Public Order","reoffence":"Fraud","count":567},{"offence":"Public Order","reoffence":"Miscellaneous Crimes Against Society","count":3393},{"offence":"Public Order","reoffence":"Other","count":121},{"offence":"Public Order","reoffence":"Possession of Weapons","count":867},{"offence":"Public Order","reoffence":"Public Order","count":23149},{"offence":"Public Order","reoffence":"Robbery","count":221},{"offence":"Public Order","reoffence":"Sexual","count":368},{"offence":"Public Order","reoffence":"Summary Motoring","count":2240},{"offence":"Public Order","reoffence":"Summary Non-motoring","count":17293},{"offence":"Public Order","reoffence":"Theft","count":11901},{"offence":"Public Order","reoffence":"Violence Against the Person","count":3123},{"offence":"Robbery","reoffence":"Criminal Damage and Arson","count":25},{"offence":"Robbery","reoffence":"Drug","count":496},{"offence":"Robbery","reoffence":"Fraud","count":80},{"offence":"Robbery","reoffence":"Miscellaneous Crimes Against Society","count":401},{"offence":"Robbery","reoffence":"Other","count":6},{"offence":"Robbery","reoffence":"Possession of Weapons","count":251},{"offence":"Robbery","reoffence":"Public Order","count":193},{"offence":"Robbery","reoffence":"Robbery","count":226},{"offence":"Robbery","reoffence":"Sexual","count":26},{"offence":"Robbery","reoffence":"Summary Motoring","count":562},{"offence":"Robbery","reoffence":"Summary Non-motoring","count":1344},{"offence":"Robbery","reoffence":"Theft","count":1442},{"offence":"Robbery","reoffence":"Violence Against the Person","count":237},{"offence":"Sexual","reoffence":"Criminal Damage and Arson","count":11},{"offence":"Sexual","reoffence":"Drug","count":199},{"offence":"Sexual","reoffence":"Fraud","count":21},{"offence":"Sexual","reoffence":"Miscellaneous Crimes Against Society","count":262},{"offence":"Sexual","reoffence":"Other","count":8},{"offence":"Sexual","reoffence":"Possession of Weapons","count":57},{"offence":"Sexual","reoffence":"Public Order","count":1704},{"offence":"Sexual","reoffence":"Robbery","count":11},{"offence":"Sexual","reoffence":"Sexual","count":431},{"offence":"Sexual","reoffence":"Summary Motoring","count":149},{"offence":"Sexual","reoffence":"Summary Non-motoring","count":1285},{"offence":"Sexual","reoffence":"Theft","count":437},{"offence":"Sexual","reoffence":"Violence Against the Person","count":206},{"offence":"Summary Motoring","reoffence":"Criminal Damage and Arson","count":114},{"offence":"Summary Motoring","reoffence":"Drug","count":4035},{"offence":"Summary Motoring","reoffence":"Fraud","count":710},{"offence":"Summary Motoring","reoffence":"Miscellaneous Crimes Against Society","count":3402},{"offence":"Summary Motoring","reoffence":"Other","count":48},{"offence":"Summary Motoring","reoffence":"Possession of Weapons","count":782},{"offence":"Summary Motoring","reoffence":"Public Order","count":844},{"offence":"Summary Motoring","reoffence":"Robbery","count":125},{"offence":"Summary Motoring","reoffence":"Sexual","count":92},{"offence":"Summary Motoring","reoffence":"Summary Motoring","count":18799},{"offence":"Summary Motoring","reoffence":"Summary Non-motoring","count":9856},{"offence":"Summary Motoring","reoffence":"Theft","count":6266},{"offence":"Summary Motoring","reoffence":"Violence Against the Person","count":1619},{"offence":"Summary Non-motoring","reoffence":"Criminal Damage and Arson","count":1218},{"offence":"Summary Non-motoring","reoffence":"Drug","count":12639},{"offence":"Summary Non-motoring","reoffence":"Fraud","count":2000},{"offence":"Summary Non-motoring","reoffence":"Miscellaneous Crimes Against Society","count":15251},{"offence":"Summary Non-motoring","reoffence":"Other","count":302},{"offence":"Summary Non-motoring","reoffence":"Possession of Weapons","count":4467},{"offence":"Summary Non-motoring","reoffence":"Public Order","count":13552},{"offence":"Summary Non-motoring","reoffence":"Robbery","count":1058},{"offence":"Summary Non-motoring","reoffence":"Sexual","count":918},{"offence":"Summary Non-motoring","reoffence":"Summary Motoring","count":17105},{"offence":"Summary Non-motoring","reoffence":"Summary Non-motoring","count":97762},{"offence":"Summary Non-motoring","reoffence":"Theft","count":43973},{"offence":"Summary Non-motoring","reoffence":"Violence Against the Person","count":23574},{"offence":"Theft","reoffence":"Criminal Damage and Arson","count":838},{"offence":"Theft","reoffence":"Drug","count":18212},{"offence":"Theft","reoffence":"Fraud","count":7644},{"offence":"Theft","reoffence":"Miscellaneous Crimes Against Society","count":37125},{"offence":"Theft","reoffence":"Other","count":824},{"offence":"Theft","reoffence":"Possession of Weapons","count":6242},{"offence":"Theft","reoffence":"Public Order","count":11742},{"offence":"Theft","reoffence":"Robbery","count":2537},{"offence":"Theft","reoffence":"Sexual","count":482},{"offence":"Theft","reoffence":"Summary Motoring","count":18194},{"offence":"Theft","reoffence":"Summary Non-motoring","count":65650},{"offence":"Theft","reoffence":"Theft","count":314920},{"offence":"Theft","reoffence":"Violence Against the Person","count":6227},{"offence":"Violence Against the Person","reoffence":"Criminal Damage and Arson","count":241},{"offence":"Violence Against the Person","reoffence":"Drug","count":2697},{"offence":"Violence Against the Person","reoffence":"Fraud","count":470},{"offence":"Violence Against the Person","reoffence":"Miscellaneous Crimes Against Society","count":3124},{"offence":"Violence Against the Person","reoffence":"Other","count":129},{"offence":"Violence Against the Person","reoffence":"Possession of Weapons","count":1014},{"offence":"Violence Against the Person","reoffence":"Public Order","count":2696},{"offence":"Violence Against the Person","reoffence":"Robbery","count":290},{"offence":"Violence Against the Person","reoffence":"Sexual","count":266},{"offence":"Violence Against the Person","reoffence":"Summary Motoring","count":4652},{"offence":"Violence Against the Person","reoffence":"Summary Non-motoring","count":16651},{"offence":"Violence Against the Person","reoffence":"Theft","count":8093},{"offence":"Violence Against the Person","reoffence":"Violence Against the Person","count":15665}]},"transform":[{"lookup":"reoffence","from":{"data":{"values":[{"offence_type":"Criminal Damage and Arson","reoffences":4815,"rx":810,"ry":198},{"offence_type":"Drug","reoffences":56931,"rx":545,"ry":424},{"offence_type":"Fraud","reoffences":7541,"rx":209,"ry":986},{"offence_type":"Miscellaneous Crimes Against Society","reoffences":55448,"rx":123,"ry":813},{"offence_type":"Other","reoffences":432,"rx":715,"ry":485},{"offence_type":"Possession of Weapons","reoffences":25000,"rx":206,"ry":715},{"offence_type":"Public Order","reoffences":65693,"rx":304,"ry":57},{"offence_type":"Robbery","reoffences":5289,"rx":51,"ry":178},{"offence_type":"Sexual","reoffences":4781,"rx":781,"ry":550},{"offence_type":"Summary Motoring","reoffences":46692,"rx":572,"ry":357},{"offence_type":"Summary Non-motoring","reoffences":233819,"rx":873,"ry":698},{"offence_type":"Theft","reoffences":490637,"rx":467,"ry":349},{"offence_type":"Violence Against the Person","reoffences":55988,"rx":490,"ry":290}]},"key":"offence_type","fields":["rx","ry"]}},{"calculate":"datum.rx","as":"rx2"},{"calculate":"datum.ry","as":"ry2"},{"lookup":"offence","from":{"data":{"values":[{"offence_type":"Criminal Damage and Arson","reoffences":4815,"rx":810,"ry":198},{"offence_type":"Drug","reoffences":56931,"rx":545,"ry":424},{"offence_type":"Fraud","reoffences":7541,"rx":209,"ry":986},{"offence_type":"Miscellaneous Crimes Against Society","reoffences":55448,"rx":123,"ry":813},{"offence_type":"Other","reoffences":432,"rx":715,"ry":485},{"offence_type":"Possession of Weapons","reoffences":25000,"rx":206,"ry":715},{"offence_type":"Public Order","reoffences":65693,"rx":304,"ry":57},{"offence_type":"Robbery","reoffences":5289,"rx":51,"ry":178},{"offence_type":"Sexual","reoffences":4781,"rx":781,"ry":550},{"offence_type":"Summary Motoring","reoffences":46692,"rx":572,"ry":357},{"offence_type":"Summary Non-motoring","reoffences":233819,"rx":873,"ry":698},{"offence_type":"Theft","reoffences":490637,"rx":467,"ry":349},{"offence_type":"Violence Against the Person","reoffences":55988,"rx":490,"ry":290}]},"key":"offence_type","fields":["rx","ry"]}}],"encoding":{"x":{"field":"rx","type":"quantitative","axis":null},"y":{"field":"ry","type":"quantitative","axis":null},"x2":{"field":"rx2"},"y2":{"field":"ry2"},"strokeWidth":{"field":"count","type":"quantitative","scale":{"range":[0.1,15]}}},"mark":{"type":"rule","opacity":0.8}},{"data":{"values":[{"offence_type":"Criminal Damage and Arson","reoffences":4815,"rx":810,"ry":198},{"offence_type":"Drug","reoffences":56931,"rx":545,"ry":424},{"offence_type":"Fraud","reoffences":7541,"rx":209,"ry":986},{"offence_type":"Miscellaneous Crimes Against Society","reoffences":55448,"rx":123,"ry":813},{"offence_type":"Other","reoffences":432,"rx":715,"ry":485},{"offence_type":"Possession of Weapons","reoffences":25000,"rx":206,"ry":715},{"offence_type":"Public Order","reoffences":65693,"rx":304,"ry":57},{"offence_type":"Robbery","reoffences":5289,"rx":51,"ry":178},{"offence_type":"Sexual","reoffences":4781,"rx":781,"ry":550},{"offence_type":"Summary Motoring","reoffences":46692,"rx":572,"ry":357},{"offence_type":"Summary Non-motoring","reoffences":233819,"rx":873,"ry":698},{"offence_type":"Theft","reoffences":490637,"rx":467,"ry":349},{"offence_type":"Violence Against the Person","reoffences":55988,"rx":490,"ry":290}]},"encoding":{"x":{"field":"rx","type":"quantitative","axis":null},"y":{"field":"ry","type":"quantitative","axis":null},"size":{"field":"reoffences","type":"quantitative"},"tooltip":{"field":"offence_type","type":"nominal"}},"mark":{"type":"circle","color":"red"}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","width":500,"height":309.0169943749274,"data":{"values":[{"offence":"Criminal Damage and Arson","offenders":4156,"reoffenders":1214,"reoffences":4815,"percentage":0.292},{"offence":"Drug","offenders":69686,"reoffenders":18199,"reoffences":56931,"percentage":0.261},{"offence":"Fraud","offenders":15481,"reoffenders":1993,"reoffences":7541,"percentage":0.129},{"offence":"Miscellaneous Crimes Against Society","offenders":43494,"reoffenders":13396,"reoffences":55448,"percentage":0.308},{"offence":"Other","offenders":24,"reoffenders":16,"reoffences":105,"percentage":0.667},{"offence":"Possession of Weapons","offenders":19461,"reoffenders":6716,"reoffences":25000,"percentage":0.345},{"offence":"Public Order","offenders":28514,"reoffenders":12388,"reoffences":65693,"percentage":0.434},{"offence":"Robbery","offenders":5146,"reoffenders":1634,"reoffences":4737,"percentage":0.318},{"offence":"Sexual","offenders":10560,"reoffenders":1663,"reoffences":4781,"percentage":0.157},{"offence":"Motoring","offenders":82921,"reoffenders":13781,"reoffences":43281,"percentage":0.166},{"offence":"Theft","offenders":141797,"reoffenders":83472,"reoffences":490637,"percentage":0.589},{"offence":"Violence Against the Person","offenders":55738,"reoffenders":16872,"reoffences":55988,"percentage":0.303}]},"mark":"circle","encoding":{"x":{"field":"offenders","type":"quantitative","axis":{"title":""}},"y":{"field":"percentage","type":"quantitative","axis":{"ticks":false,"domain":false,"offset":5,"title":"percentage who reoffend"}},"size":{"field":"reoffences","type":"quantitative","scale":{"range":[0,6000],"type":"pow","exponent":1.2},"legend":null},"color":{"field":"offence","type":"nominal","scale":{"domain":["Criminal Damage and Arson","Drug","Fraud","Miscellaneous Crimes Against Society","Other","Possession of Weapons","Public Order","Robbery","Sexual","Motoring","Theft","Violence Against the Person"],"range":["rgb(166,206,227)","rgb(31,120,180)","rgb(178,223,138)","rgb(51,160,44)","rgb(251,154,153)","rgb(227,26,28)","rgb(253,191,111)","rgb(255,127,0)","rgb(202,178,214)","rgb(106,61,154)","rgb(244, 65, 235)","rgb(177,89,40)"]}},"tooltip":[{"field":"offence","type":"nominal"},{"field":"reoffences","type":"quantitative"}]}}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

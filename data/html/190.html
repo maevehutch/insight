@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>courseworkPG — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","title":"1) Hospital Admission Type by Age Group","width":350,"height":275,"data":{"values":[{"Age Group":"0 to 17","Admission Type":"Elective","Patient Discharges":17603},{"Age Group":"0 to 17","Admission Type":"Emergency","Patient Discharges":94130},{"Age Group":"0 to 17","Admission Type":"Newborn","Patient Discharges":224580},{"Age Group":"0 to 17","Admission Type":"Not Available","Patient Discharges":31},{"Age Group":"0 to 17","Admission Type":"Trauma","Patient Discharges":497},{"Age Group":"0 to 17","Admission Type":"Urgent","Patient Discharges":10794},{"Age Group":"18 to 29","Admission Type":"Elective","Patient Discharges":64812},{"Age Group":"18 to 29","Admission Type":"Emergency","Patient Discharges":138933},{"Age Group":"18 to 29","Admission Type":"Newborn","Patient Discharges":46},{"Age Group":"18 to 29","Admission Type":"Not Available","Patient Discharges":80},{"Age Group":"18 to 29","Admission Type":"Trauma","Patient Discharges":1152},{"Age Group":"18 to 29","Admission Type":"Urgent","Patient Discharges":38622},{"Age Group":"30 to 49","Admission Type":"Elective","Patient Discharges":124780},{"Age Group":"30 to 49","Admission Type":"Emergency","Patient Discharges":277865},{"Age Group":"30 to 49","Admission Type":"Newborn","Patient Discharges":79},{"Age Group":"30 to 49","Admission Type":"Not Available","Patient Discharges":106},{"Age Group":"30 to 49","Admission Type":"Trauma","Patient Discharges":1493},{"Age Group":"30 to 49","Admission Type":"Urgent","Patient Discharges":50608},{"Age Group":"50 to 69","Admission Type":"Elective","Patient Discharges":145326},{"Age Group":"50 to 69","Admission Type":"Emergency","Patient Discharges":467717},{"Age Group":"50 to 69","Admission Type":"Newborn","Patient Discharges":45},{"Age Group":"50 to 69","Admission Type":"Not Available","Patient Discharges":111},{"Age Group":"50 to 69","Admission Type":"Trauma","Patient Discharges":1741},{"Age Group":"50 to 69","Admission Type":"Urgent","Patient Discharges":39590},{"Age Group":"70 or Older","Admission Type":"Elective","Patient Discharges":88726},{"Age Group":"70 or Older","Admission Type":"Emergency","Patient Discharges":520316},{"Age Group":"70 or Older","Admission Type":"Newborn","Patient Discharges":29},{"Age Group":"70 or Older","Admission Type":"Not Available","Patient Discharges":107},{"Age Group":"70 or Older","Admission Type":"Trauma","Patient Discharges":1746},{"Age Group":"70 or Older","Admission Type":"Urgent","Patient Discharges":31764}]},"encoding":{"x":{"field":"Age Group","type":"nominal","axis":{"title":""},"scale":{"paddingInner":0.4}},"y":{"field":"Patient Discharges","type":"quantitative"},"color":{"field":"Admission Type","type":"nominal"}},"selection":{"mySelection":{"type":"single","fields":["Admission Type"],"nearest":true,"bind":{"Admission Type":{"input":"select","name":"Select Admission Type ","options":["Elective","Emergency","Newborn","Not Available","Trauma","Urgent"]}}}},"transform":[{"filter":{"selection":"mySelection"}}],"mark":"bar","config":{"axis":{"labelAngle":0}}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","title":"2) Major Diagnostic Category by Age Group","width":250,"height":650,"data":{"values":[{"Diagnostic Category":"Alcohol/Drug Use and Alcohol/Drug Induced Organic Mental Disorders","Age Group":"0 to 17","Count":214},{"Diagnostic Category":"Burns","Age Group":"0 to 17","Count":559},{"Diagnostic Category":"Blood, Blood Forming Organs and Immunological Disorders","Age Group":"0 to 17","Count":4356},{"Diagnostic Category":"Circulatory System","Age Group":"0 to 17","Count":2970},{"Diagnostic Category":"Digestive System","Age Group":"0 to 17","Count":14094},{"Diagnostic Category":"Eye","Age Group":"0 to 17","Count":573},{"Diagnostic Category":"Female Reproductive System","Age Group":"0 to 17","Count":575},{"Diagnostic Category":"Hepatobiliary System and Pancreas","Age Group":"0 to 17","Count":1105},{"Diagnostic Category":"Kidney and Urinary Tract","Age Group":"0 to 17","Count":3686},{"Diagnostic Category":"Male Reproductive System","Age Group":"0 to 17","Count":387},{"Diagnostic Category":"Musculoskeletal System and Conn Tissue","Age Group":"0 to 17","Count":6694},{"Diagnostic Category":"Nervous System","Age Group":"0 to 17","Count":12298},{"Diagnostic Category":"Respiratory System","Age Group":"0 to 17","Count":27928},{"Diagnostic Category":"Skin, Subcutaneous Tissue and Breast","Age Group":"0 to 17","Count":4594},{"Diagnostic Category":"Ear, Nose, Mouth, Throat and Craniofacial Diseases and Disorders","Age Group":"0 to 17","Count":7814},{"Diagnostic Category":"Endocrine, Nutritional and Metabolic Diseases and Disorders","Age Group":"0 to 17","Count":5195},{"Diagnostic Category":"Human Immunodeficiency Virus Infections","Age Group":"0 to 17","Count":13},{"Diagnostic Category":"Infectious and Parasitic Diseases, Systemic or Unspecified Sites","Age Group":"0 to 17","Count":5907},{"Diagnostic Category":"Lymphatic, Hematopoietic, Other Malignancies, Chemotherapy and Radiotherapy","Age Group":"0 to 17","Count":1984},{"Diagnostic Category":"Mental Diseases and Disorders","Age Group":"0 to 17","Count":10682},{"Diagnostic Category":"Multiple Significant Trauma","Age Group":"0 to 17","Count":264},{"Diagnostic Category":"Newborns and Other Neonates with Conditions Originating in the Perinatal Period","Age Group":"0 to 17","Count":229534},{"Diagnostic Category":"Poisonings, Toxic Effects, Other Injuries and Other Complications of Treatment","Age Group":"0 to 17","Count":2265},{"Diagnostic Category":"Pre-MDC or Ungroupable","Age Group":"0 to 17","Count":8},{"Diagnostic Category":"Pregnancy, Childbirth and the Puerperium","Age Group":"0 to 17","Count":2495},{"Diagnostic Category":"Rehabilitation, Aftercare, Other Factors Influencing Health Status and Other Health Service Contacts","Age Group":"0 to 17","Count":1441},{"Diagnostic Category":"Alcohol/Drug Use and Alcohol/Drug Induced Organic Mental Disorders","Age Group":"18 to 29","Count":13790},{"Diagnostic Category":"Burns","Age Group":"18 to 29","Count":253},{"Diagnostic Category":"Blood, Blood Forming Organs and Immunological Disorders","Age Group":"18 to 29","Count":5198},{"Diagnostic Category":"Circulatory System","Age Group":"18 to 29","Count":4199},{"Diagnostic Category":"Digestive System","Age Group":"18 to 29","Count":13147},{"Diagnostic Category":"Eye","Age Group":"18 to 29","Count":323},{"Diagnostic Category":"Female Reproductive System","Age Group":"18 to 29","Count":1837},{"Diagnostic Category":"Hepatobiliary System and Pancreas","Age Group":"18 to 29","Count":4821},{"Diagnostic Category":"Kidney and Urinary Tract","Age Group":"18 to 29","Count":4154},{"Diagnostic Category":"Male Reproductive System","Age Group":"18 to 29","Count":342},{"Diagnostic Category":"Musculoskeletal System and Conn Tissue","Age Group":"18 to 29","Count":6950},{"Diagnostic Category":"Nervous System","Age Group":"18 to 29","Count":8933},{"Diagnostic Category":"Respiratory System","Age Group":"18 to 29","Count":6269},{"Diagnostic Category":"Skin, Subcutaneous Tissue and Breast","Age Group":"18 to 29","Count":4719},{"Diagnostic Category":"Ear, Nose, Mouth, Throat and Craniofacial Diseases and Disorders","Age Group":"18 to 29","Count":2977},{"Diagnostic Category":"Endocrine, Nutritional and Metabolic Diseases and Disorders","Age Group":"18 to 29","Count":7381},{"Diagnostic Category":"Human Immunodeficiency Virus Infections","Age Group":"18 to 29","Count":465},{"Diagnostic Category":"Infectious and Parasitic Diseases, Systemic or Unspecified Sites","Age Group":"18 to 29","Count":5731},{"Diagnostic Category":"Lymphatic, Hematopoietic, Other Malignancies, Chemotherapy and Radiotherapy","Age Group":"18 to 29","Count":1475},{"Diagnostic Category":"Mental Diseases and Disorders","Age Group":"18 to 29","Count":29736},{"Diagnostic Category":"Multiple Significant Trauma","Age Group":"18 to 29","Count":893},{"Diagnostic Category":"Poisonings, Toxic Effects, Other Injuries and Other Complications of Treatment","Age Group":"18 to 29","Count":3706},{"Diagnostic Category":"Pre-MDC or Ungroupable","Age Group":"18 to 29","Count":4},{"Diagnostic Category":"Pregnancy, Childbirth and the Puerperium","Age Group":"18 to 29","Count":114970},{"Diagnostic Category":"Rehabilitation, Aftercare, Other Factors Influencing Health Status and Other Health Service Contacts","Age Group":"18 to 29","Count":1372},{"Diagnostic Category":"Alcohol/Drug Use and Alcohol/Drug Induced Organic Mental Disorders","Age Group":"30 to 49","Count":34660},{"Diagnostic Category":"Burns","Age Group":"30 to 49","Count":430},{"Diagnostic Category":"Blood, Blood Forming Organs and Immunological Disorders","Age Group":"30 to 49","Count":7201},{"Diagnostic Category":"Circulatory System","Age Group":"30 to 49","Count":27498},{"Diagnostic Category":"Digestive System","Age Group":"30 to 49","Count":34930},{"Diagnostic Category":"Eye","Age Group":"30 to 49","Count":734},{"Diagnostic Category":"Female Reproductive System","Age Group":"30 to 49","Count":11888},{"Diagnostic Category":"Hepatobiliary System and Pancreas","Age Group":"30 to 49","Count":16276},{"Diagnostic Category":"Kidney and Urinary Tract","Age Group":"30 to 49","Count":13192},{"Diagnostic Category":"Male Reproductive System","Age Group":"30 to 49","Count":813},{"Diagnostic Category":"Musculoskeletal System and Conn Tissue","Age Group":"30 to 49","Count":24852},{"Diagnostic Category":"Nervous System","Age Group":"30 to 49","Count":22386},{"Diagnostic Category":"Respiratory System","Age Group":"30 to 49","Count":18419},{"Diagnostic Category":"Skin, Subcutaneous Tissue and Breast","Age Group":"30 to 49","Count":13295},{"Diagnostic Category":"Ear, Nose, Mouth, Throat and Craniofacial Diseases and Disorders","Age Group":"30 to 49","Count":4618},{"Diagnostic Category":"Endocrine, Nutritional and Metabolic Diseases and Disorders","Age Group":"30 to 49","Count":19454},{"Diagnostic Category":"Human Immunodeficiency Virus Infections","Age Group":"30 to 49","Count":2396},{"Diagnostic Category":"Infectious and Parasitic Diseases, Systemic or Unspecified Sites","Age Group":"30 to 49","Count":16303},{"Diagnostic Category":"Lymphatic, Hematopoietic, Other Malignancies, Chemotherapy and Radiotherapy","Age Group":"30 to 49","Count":3164},{"Diagnostic Category":"Mental Diseases and Disorders","Age Group":"30 to 49","Count":38421},{"Diagnostic Category":"Multiple Significant Trauma","Age Group":"30 to 49","Count":931},{"Diagnostic Category":"Poisonings, Toxic Effects, Other Injuries and Other Complications of Treatment","Age Group":"30 to 49","Count":6573},{"Diagnostic Category":"Pre-MDC or Ungroupable","Age Group":"30 to 49","Count":2},{"Diagnostic Category":"Pregnancy, Childbirth and the Puerperium","Age Group":"30 to 49","Count":132667},{"Diagnostic Category":"Rehabilitation, Aftercare, Other Factors Influencing Health Status and Other Health Service Contacts","Age Group":"30 to 49","Count":3828},{"Diagnostic Category":"Alcohol/Drug Use and Alcohol/Drug Induced Organic Mental Disorders","Age Group":"50 to 69","Count":26073},{"Diagnostic Category":"Burns","Age Group":"50 to 69","Count":449},{"Diagnostic Category":"Blood, Blood Forming Organs and Immunological Disorders","Age Group":"50 to 69","Count":7680},{"Diagnostic Category":"Circulatory System","Age Group":"50 to 69","Count":113717},{"Diagnostic Category":"Digestive System","Age Group":"50 to 69","Count":67601},{"Diagnostic Category":"Eye","Age Group":"50 to 69","Count":1084},{"Diagnostic Category":"Female Reproductive System","Age Group":"50 to 69","Count":8084},{"Diagnostic Category":"Hepatobiliary System and Pancreas","Age Group":"50 to 69","Count":27138},{"Diagnostic Category":"Kidney and Urinary Tract","Age Group":"50 to 69","Count":33284},{"Diagnostic Category":"Male Reproductive System","Age Group":"50 to 69","Count":5443},{"Diagnostic Category":"Musculoskeletal System and Conn Tissue","Age Group":"50 to 69","Count":87878},{"Diagnostic Category":"Nervous System","Age Group":"50 to 69","Count":50649},{"Diagnostic Category":"Respiratory System","Age Group":"50 to 69","Count":64717},{"Diagnostic Category":"Skin, Subcutaneous Tissue and Breast","Age Group":"50 to 69","Count":21343},{"Diagnostic Category":"Ear, Nose, Mouth, Throat and Craniofacial Diseases and Disorders","Age Group":"50 to 69","Count":8407},{"Diagnostic Category":"Endocrine, Nutritional and Metabolic Diseases and Disorders","Age Group":"50 to 69","Count":24200},{"Diagnostic Category":"Human Immunodeficiency Virus Infections","Age Group":"50 to 69","Count":3280},{"Diagnostic Category":"Infectious and Parasitic Diseases, Systemic or Unspecified Sites","Age Group":"50 to 69","Count":44019},{"Diagnostic Category":"Lymphatic, Hematopoietic, Other Malignancies, Chemotherapy and Radiotherapy","Age Group":"50 to 69","Count":9258},{"Diagnostic Category":"Mental Diseases and Disorders","Age Group":"50 to 69","Count":28411},{"Diagnostic Category":"Multiple Significant Trauma","Age Group":"50 to 69","Count":1095},{"Diagnostic Category":"Poisonings, Toxic Effects, Other Injuries and Other Complications of Treatment","Age Group":"50 to 69","Count":9411},{"Diagnostic Category":"Pregnancy, Childbirth and the Puerperium","Age Group":"50 to 69","Count":78},{"Diagnostic Category":"Rehabilitation, Aftercare, Other Factors Influencing Health Status and Other Health Service Contacts","Age Group":"50 to 69","Count":11231},{"Diagnostic Category":"Alcohol/Drug Use and Alcohol/Drug Induced Organic Mental Disorders","Age Group":"70 or Older","Count":1282},{"Diagnostic Category":"Burns","Age Group":"70 or Older","Count":201},{"Diagnostic Category":"Blood, Blood Forming Organs and Immunological Disorders","Age Group":"70 or Older","Count":8714},{"Diagnostic Category":"Circulatory System","Age Group":"70 or Older","Count":144772},{"Diagnostic Category":"Digestive System","Age Group":"70 or Older","Count":66147},{"Diagnostic Category":"Eye","Age Group":"70 or Older","Count":881},{"Diagnostic Category":"Female Reproductive System","Age Group":"70 or Older","Count":2899},{"Diagnostic Category":"Hepatobiliary System and Pancreas","Age Group":"70 or Older","Count":15453},{"Diagnostic Category":"Kidney and Urinary Tract","Age Group":"70 or Older","Count":48414},{"Diagnostic Category":"Male Reproductive System","Age Group":"70 or Older","Count":3451},{"Diagnostic Category":"Musculoskeletal System and Conn Tissue","Age Group":"70 or Older","Count":78135},{"Diagnostic Category":"Nervous System","Age Group":"70 or Older","Count":56940},{"Diagnostic Category":"Respiratory System","Age Group":"70 or Older","Count":76600},{"Diagnostic Category":"Skin, Subcutaneous Tissue and Breast","Age Group":"70 or Older","Count":16576},{"Diagnostic Category":"Ear, Nose, Mouth, Throat and Craniofacial Diseases and Disorders","Age Group":"70 or Older","Count":7453},{"Diagnostic Category":"Endocrine, Nutritional and Metabolic Diseases and Disorders","Age Group":"70 or Older","Count":19624},{"Diagnostic Category":"Human Immunodeficiency Virus Infections","Age Group":"70 or Older","Count":282},{"Diagnostic Category":"Infectious and Parasitic Diseases, Systemic or Unspecified Sites","Age Group":"70 or Older","Count":62160},{"Diagnostic Category":"Lymphatic, Hematopoietic, Other Malignancies, Chemotherapy and Radiotherapy","Age Group":"70 or Older","Count":5967},{"Diagnostic Category":"Mental Diseases and Disorders","Age Group":"70 or Older","Count":7800},{"Diagnostic Category":"Multiple Significant Trauma","Age Group":"70 or Older","Count":1379},{"Diagnostic Category":"Poisonings, Toxic Effects, Other Injuries and Other Complications of Treatment","Age Group":"70 or Older","Count":4721},{"Diagnostic Category":"Rehabilitation, Aftercare, Other Factors Influencing Health Status and Other Health Service Contacts","Age Group":"70 or Older","Count":12837}]},"mark":"circle","config":{"axis":{"labelAngle":0,"labelLimit":150,"titlePadding":10}},"encoding":{"x":{"field":"Age Group","type":"ordinal","axis":{"title":""}},"y":{"field":"Diagnostic Category","type":"nominal","axis":{"title":"Major Diagnostic Category","labelAlign":"left","labelPadding":150}},"color":{"field":"Age Group","type":"ordinal"},"size":{"field":"Count","type":"quantitative","legend":{"title":"Patient Discharges"},"scale":{"range":[10,1200]}}}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","title":"3) Length of Stay by Age Group","width":250,"height":100,"data":{"values":[{"Age Group":"0 to 17","Length of Stay":1,"Count":53061},{"Age Group":"0 to 17","Length of Stay":2,"Count":151456},{"Age Group":"0 to 17","Length of Stay":3,"Count":72250},{"Age Group":"0 to 17","Length of Stay":4,"Count":22790},{"Age Group":"0 to 17","Length of Stay":5,"Count":9406},{"Age Group":"0 to 17","Length of Stay":6,"Count":6285},{"Age Group":"0 to 17","Length of Stay":7,"Count":5417},{"Age Group":"0 to 17","Length of Stay":8,"Count":3541},{"Age Group":"0 to 17","Length of Stay":9,"Count":2700},{"Age Group":"0 to 17","Length of Stay":10,"Count":2281},{"Age Group":"0 to 17","Length of Stay":11,"Count":1797},{"Age Group":"0 to 17","Length of Stay":12,"Count":1486},{"Age Group":"0 to 17","Length of Stay":13,"Count":1335},{"Age Group":"0 to 17","Length of Stay":14,"Count":1221},{"Age Group":"0 to 17","Length of Stay":15,"Count":923},{"Age Group":"0 to 17","Length of Stay":16,"Count":868},{"Age Group":"0 to 17","Length of Stay":17,"Count":694},{"Age Group":"0 to 17","Length of Stay":18,"Count":580},{"Age Group":"0 to 17","Length of Stay":19,"Count":521},{"Age Group":"0 to 17","Length of Stay":20,"Count":536},{"Age Group":"0 to 17","Length of Stay":21,"Count":529},{"Age Group":"0 to 17","Length of Stay":22,"Count":464},{"Age Group":"0 to 17","Length of Stay":23,"Count":374},{"Age Group":"0 to 17","Length of Stay":24,"Count":326},{"Age Group":"0 to 17","Length of Stay":25,"Count":300},{"Age Group":"0 to 17","Length of Stay":26,"Count":264},{"Age Group":"0 to 17","Length of Stay":27,"Count":284},{"Age Group":"0 to 17","Length of Stay":28,"Count":235},{"Age Group":"0 to 17","Length of Stay":29,"Count":247},{"Age Group":"0 to 17","Length of Stay":30,"Count":5464},{"Age Group":"18 to 29","Length of Stay":1,"Count":36997},{"Age Group":"18 to 29","Length of Stay":2,"Count":71966},{"Age Group":"18 to 29","Length of Stay":3,"Count":55523},{"Age Group":"18 to 29","Length of Stay":4,"Count":24795},{"Age Group":"18 to 29","Length of Stay":5,"Count":12623},{"Age Group":"18 to 29","Length of Stay":6,"Count":7569},{"Age Group":"18 to 29","Length of Stay":7,"Count":5725},{"Age Group":"18 to 29","Length of Stay":8,"Count":4181},{"Age Group":"18 to 29","Length of Stay":9,"Count":3079},{"Age Group":"18 to 29","Length of Stay":10,"Count":2363},{"Age Group":"18 to 29","Length of Stay":11,"Count":2035},{"Age Group":"18 to 29","Length of Stay":12,"Count":1700},{"Age Group":"18 to 29","Length of Stay":13,"Count":1650},{"Age Group":"18 to 29","Length of Stay":14,"Count":1779},{"Age Group":"18 to 29","Length of Stay":15,"Count":1176},{"Age Group":"18 to 29","Length of Stay":16,"Count":879},{"Age Group":"18 to 29","Length of Stay":17,"Count":745},{"Age Group":"18 to 29","Length of Stay":18,"Count":652},{"Age Group":"18 to 29","Length of Stay":19,"Count":636},{"Age Group":"18 to 29","Length of Stay":20,"Count":587},{"Age Group":"18 to 29","Length of Stay":21,"Count":707},{"Age Group":"18 to 29","Length of Stay":22,"Count":470},{"Age Group":"18 to 29","Length of Stay":23,"Count":420},{"Age Group":"18 to 29","Length of Stay":24,"Count":364},{"Age Group":"18 to 29","Length of Stay":25,"Count":311},{"Age Group":"18 to 29","Length of Stay":26,"Count":294},{"Age Group":"18 to 29","Length of Stay":27,"Count":345},{"Age Group":"18 to 29","Length of Stay":28,"Count":774},{"Age Group":"18 to 29","Length of Stay":29,"Count":237},{"Age Group":"18 to 29","Length of Stay":30,"Count":3063},{"Age Group":"30 to 49","Length of Stay":1,"Count":76052},{"Age Group":"30 to 49","Length of Stay":2,"Count":115571},{"Age Group":"30 to 49","Length of Stay":3,"Count":93508},{"Age Group":"30 to 49","Length of Stay":4,"Count":49383},{"Age Group":"30 to 49","Length of Stay":5,"Count":27670},{"Age Group":"30 to 49","Length of Stay":6,"Count":17180},{"Age Group":"30 to 49","Length of Stay":7,"Count":12907},{"Age Group":"30 to 49","Length of Stay":8,"Count":9327},{"Age Group":"30 to 49","Length of Stay":9,"Count":6892},{"Age Group":"30 to 49","Length of Stay":10,"Count":5418},{"Age Group":"30 to 49","Length of Stay":11,"Count":4524},{"Age Group":"30 to 49","Length of Stay":12,"Count":3729},{"Age Group":"30 to 49","Length of Stay":13,"Count":3495},{"Age Group":"30 to 49","Length of Stay":14,"Count":3894},{"Age Group":"30 to 49","Length of Stay":15,"Count":2581},{"Age Group":"30 to 49","Length of Stay":16,"Count":2091},{"Age Group":"30 to 49","Length of Stay":17,"Count":1724},{"Age Group":"30 to 49","Length of Stay":18,"Count":1438},{"Age Group":"30 to 49","Length of Stay":19,"Count":1394},{"Age Group":"30 to 49","Length of Stay":20,"Count":1377},{"Age Group":"30 to 49","Length of Stay":21,"Count":1599},{"Age Group":"30 to 49","Length of Stay":22,"Count":1017},{"Age Group":"30 to 49","Length of Stay":23,"Count":838},{"Age Group":"30 to 49","Length of Stay":24,"Count":760},{"Age Group":"30 to 49","Length of Stay":25,"Count":731},{"Age Group":"30 to 49","Length of Stay":26,"Count":613},{"Age Group":"30 to 49","Length of Stay":27,"Count":712},{"Age Group":"30 to 49","Length of Stay":28,"Count":1554},{"Age Group":"30 to 49","Length of Stay":29,"Count":510},{"Age Group":"30 to 49","Length of Stay":30,"Count":6442},{"Age Group":"50 to 69","Length of Stay":1,"Count":109091},{"Age Group":"50 to 69","Length of Stay":2,"Count":118098},{"Age Group":"50 to 69","Length of Stay":3,"Count":101294},{"Age Group":"50 to 69","Length of Stay":4,"Count":70974},{"Age Group":"50 to 69","Length of Stay":5,"Count":50882},{"Age Group":"50 to 69","Length of Stay":6,"Count":36641},{"Age Group":"50 to 69","Length of Stay":7,"Count":29724},{"Age Group":"50 to 69","Length of Stay":8,"Count":22030},{"Age Group":"50 to 69","Length of Stay":9,"Count":16370},{"Age Group":"50 to 69","Length of Stay":10,"Count":12758},{"Age Group":"50 to 69","Length of Stay":11,"Count":10343},{"Age Group":"50 to 69","Length of Stay":12,"Count":8560},{"Age Group":"50 to 69","Length of Stay":13,"Count":7758},{"Age Group":"50 to 69","Length of Stay":14,"Count":7637},{"Age Group":"50 to 69","Length of Stay":15,"Count":5757},{"Age Group":"50 to 69","Length of Stay":16,"Count":4562},{"Age Group":"50 to 69","Length of Stay":17,"Count":3911},{"Age Group":"50 to 69","Length of Stay":18,"Count":3387},{"Age Group":"50 to 69","Length of Stay":19,"Count":3051},{"Age Group":"50 to 69","Length of Stay":20,"Count":2924},{"Age Group":"50 to 69","Length of Stay":21,"Count":3082},{"Age Group":"50 to 69","Length of Stay":22,"Count":2247},{"Age Group":"50 to 69","Length of Stay":23,"Count":1844},{"Age Group":"50 to 69","Length of Stay":24,"Count":1588},{"Age Group":"50 to 69","Length of Stay":25,"Count":1476},{"Age Group":"50 to 69","Length of Stay":26,"Count":1321},{"Age Group":"50 to 69","Length of Stay":27,"Count":1297},{"Age Group":"50 to 69","Length of Stay":28,"Count":1669},{"Age Group":"50 to 69","Length of Stay":29,"Count":1015},{"Age Group":"50 to 69","Length of Stay":30,"Count":13239},{"Age Group":"70 or Older","Length of Stay":1,"Count":72659},{"Age Group":"70 or Older","Length of Stay":2,"Count":90046},{"Age Group":"70 or Older","Length of Stay":3,"Count":101550},{"Age Group":"70 or Older","Length of Stay":4,"Count":77309},{"Age Group":"70 or Older","Length of Stay":5,"Count":59455},{"Age Group":"70 or Older","Length of Stay":6,"Count":47174},{"Age Group":"70 or Older","Length of Stay":7,"Count":38418},{"Age Group":"70 or Older","Length of Stay":8,"Count":28287},{"Age Group":"70 or Older","Length of Stay":9,"Count":20827},{"Age Group":"70 or Older","Length of Stay":10,"Count":16471},{"Age Group":"70 or Older","Length of Stay":11,"Count":13257},{"Age Group":"70 or Older","Length of Stay":12,"Count":10689},{"Age Group":"70 or Older","Length of Stay":13,"Count":9217},{"Age Group":"70 or Older","Length of Stay":14,"Count":8348},{"Age Group":"70 or Older","Length of Stay":15,"Count":6650},{"Age Group":"70 or Older","Length of Stay":16,"Count":5279},{"Age Group":"70 or Older","Length of Stay":17,"Count":4387},{"Age Group":"70 or Older","Length of Stay":18,"Count":3557},{"Age Group":"70 or Older","Length of Stay":19,"Count":3112},{"Age Group":"70 or Older","Length of Stay":20,"Count":2811},{"Age Group":"70 or Older","Length of Stay":21,"Count":2770},{"Age Group":"70 or Older","Length of Stay":22,"Count":2149},{"Age Group":"70 or Older","Length of Stay":23,"Count":1771},{"Age Group":"70 or Older","Length of Stay":24,"Count":1501},{"Age Group":"70 or Older","Length of Stay":25,"Count":1325},{"Age Group":"70 or Older","Length of Stay":26,"Count":1081},{"Age Group":"70 or Older","Length of Stay":27,"Count":1130},{"Age Group":"70 or Older","Length of Stay":28,"Count":1125},{"Age Group":"70 or Older","Length of Stay":29,"Count":814},{"Age Group":"70 or Older","Length of Stay":30,"Count":9519}]},"encoding":{"x":{"field":"Length of Stay","type":"quantitative","title":"Length of Stay (in Days, 30 is 30 or more days)","scale":{"domain":[1,29]}},"y":{"field":"Count","type":"quantitative","axis":{"grid":false},"title":""},"row":{"field":"Age Group","type":"ordinal","header":{"title":""}},"color":{"field":"Age Group","type":"ordinal"}},"mark":"bar"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v3.json","title":"4) Median Charges for Patient Discharges by Age Group","width":400,"height":325,"data":{"values":[{"Age Group":"0 to 17","Primary Payment Type":"Blue Cross/Blue Shield","Charges":9394},{"Age Group":"0 to 17","Primary Payment Type":"Department of Corrections","Charges":14829},{"Age Group":"0 to 17","Primary Payment Type":"Federal/State/Local/VA","Charges":6935},{"Age Group":"0 to 17","Primary Payment Type":"Managed Care, Unspecified","Charges":7151},{"Age Group":"0 to 17","Primary Payment Type":"Medicaid","Charges":9850},{"Age Group":"0 to 17","Primary Payment Type":"Medicare","Charges":11751},{"Age Group":"0 to 17","Primary Payment Type":"Miscellaneous/Other","Charges":25847},{"Age Group":"0 to 17","Primary Payment Type":"Private Health Insurance","Charges":10399},{"Age Group":"0 to 17","Primary Payment Type":"Self-Pay","Charges":6044},{"Age Group":"0 to 17","Primary Payment Type":"Unknown","Charges":10391},{"Age Group":"18 to 29","Primary Payment Type":"Blue Cross/Blue Shield","Charges":17523},{"Age Group":"18 to 29","Primary Payment Type":"Department of Corrections","Charges":20784},{"Age Group":"18 to 29","Primary Payment Type":"Federal/State/Local/VA","Charges":13073},{"Age Group":"18 to 29","Primary Payment Type":"Managed Care, Unspecified","Charges":17417},{"Age Group":"18 to 29","Primary Payment Type":"Medicaid","Charges":17705},{"Age Group":"18 to 29","Primary Payment Type":"Medicare","Charges":22691},{"Age Group":"18 to 29","Primary Payment Type":"Miscellaneous/Other","Charges":31575},{"Age Group":"18 to 29","Primary Payment Type":"Private Health Insurance","Charges":20599},{"Age Group":"18 to 29","Primary Payment Type":"Self-Pay","Charges":15266},{"Age Group":"18 to 29","Primary Payment Type":"Unknown","Charges":15060},{"Age Group":"30 to 49","Primary Payment Type":"Blue Cross/Blue Shield","Charges":22344},{"Age Group":"30 to 49","Primary Payment Type":"Department of Corrections","Charges":22977},{"Age Group":"30 to 49","Primary Payment Type":"Federal/State/Local/VA","Charges":19387},{"Age Group":"30 to 49","Primary Payment Type":"Managed Care, Unspecified","Charges":22560},{"Age Group":"30 to 49","Primary Payment Type":"Medicaid","Charges":20278},{"Age Group":"30 to 49","Primary Payment Type":"Medicare","Charges":25864},{"Age Group":"30 to 49","Primary Payment Type":"Miscellaneous/Other","Charges":37086},{"Age Group":"30 to 49","Primary Payment Type":"Private Health Insurance","Charges":24608},{"Age Group":"30 to 49","Primary Payment Type":"Self-Pay","Charges":17912},{"Age Group":"30 to 49","Primary Payment Type":"Unknown","Charges":21729},{"Age Group":"50 to 69","Primary Payment Type":"Blue Cross/Blue Shield","Charges":34410},{"Age Group":"50 to 69","Primary Payment Type":"Department of Corrections","Charges":25165},{"Age Group":"50 to 69","Primary Payment Type":"Federal/State/Local/VA","Charges":28755},{"Age Group":"50 to 69","Primary Payment Type":"Managed Care, Unspecified","Charges":33126},{"Age Group":"50 to 69","Primary Payment Type":"Medicaid","Charges":28371},{"Age Group":"50 to 69","Primary Payment Type":"Medicare","Charges":34076},{"Age Group":"50 to 69","Primary Payment Type":"Miscellaneous/Other","Charges":40341},{"Age Group":"50 to 69","Primary Payment Type":"Private Health Insurance","Charges":37613},{"Age Group":"50 to 69","Primary Payment Type":"Self-Pay","Charges":23942},{"Age Group":"50 to 69","Primary Payment Type":"Unknown","Charges":27173},{"Age Group":"70 or Older","Primary Payment Type":"Blue Cross/Blue Shield","Charges":37631},{"Age Group":"70 or Older","Primary Payment Type":"Department of Corrections","Charges":30117},{"Age Group":"70 or Older","Primary Payment Type":"Federal/State/Local/VA","Charges":24040},{"Age Group":"70 or Older","Primary Payment Type":"Managed Care, Unspecified","Charges":22594},{"Age Group":"70 or Older","Primary Payment Type":"Medicaid","Charges":37178},{"Age Group":"70 or Older","Primary Payment Type":"Medicare","Charges":35321},{"Age Group":"70 or Older","Primary Payment Type":"Miscellaneous/Other","Charges":25583},{"Age Group":"70 or Older","Primary Payment Type":"Private Health Insurance","Charges":32586},{"Age Group":"70 or Older","Primary Payment Type":"Self-Pay","Charges":25043},{"Age Group":"70 or Older","Primary Payment Type":"Unknown","Charges":30590}]},"encoding":{"x":{"field":"Age Group","type":"ordinal","axis":{"title":""}},"y":{"field":"Charges","type":"quantitative","axis":{"title":"Charges (US $)","grid":false},"scale":{"domain":[5000,41000]}},"color":{"condition":{"selection":"mySelection","field":"Primary Payment Type","type":"nominal"},"value":"black"},"opacity":{"condition":{"selection":"mySelection","value":1},"value":0.1}},"mark":"line","selection":{"mySelection":{"type":"single","fields":["Primary Payment Type"],"nearest":true,"bind":{"Primary Payment Type":{"input":"select","name":"Select Primary Payment Type ","options":["Blue Cross/Blue Shield","Department of Corrections","Federal/State/Local/VA","Managed Care, Unspecified","Medicaid","Medicare","Miscellaneous/Other","Private Health Insurance","Self-Pay","Unknown"]}}}},"config":{"axis":{"labelAngle":0}}}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":300,"height":250,"data":{"url":"https://gicentre.github.io/data/census21/ewRegions.json","format":{"type":"topojson","feature":"regions"}},"transform":[{"lookup":"properties.code","from":{"data":{"values":[{"code":"E12000001","Population":142},{"code":"E12000002","Population":662},{"code":"E12000003","Population":590},{"code":"E12000004","Population":769},{"code":"E12000005","Population":620},{"code":"E12000006","Population":1092},{"code":"E12000007","Population":3392},{"code":"E12000008","Population":1838},{"code":"E12000009","Population":704},{"code":"W92000004","Population":206}]},"key":"code","fields":["Population"]}}],"encoding":{"color":{"field":"Population","type":"quantitative","title":"People born in Estonia","scale":{"scheme":"blues"}},"tooltip":[{"field":"properties.label","title":"Region"},{"field":"Population"}]},"mark":{"type":"geoshape","stroke":"white","fillOpacity":0.7}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":300,"height":250,"data":{"url":"https://gicentre.github.io/data/census21/ewRegions.json","format":{"type":"topojson","feature":"regions"}},"transform":[{"lookup":"properties.code","from":{"data":{"values":[{"code":"E12000001","Population":1042},{"code":"E12000002","Population":7296},{"code":"E12000003","Population":11656},{"code":"E12000004","Population":16156},{"code":"E12000005","Population":10240},{"code":"E12000006","Population":12233},{"code":"E12000007","Population":12531},{"code":"E12000008","Population":11402},{"code":"E12000009","Population":4809},{"code":"W92000004","Population":1219}]},"key":"code","fields":["Population"]}}],"encoding":{"color":{"field":"Population","type":"quantitative","title":"People born in Latvia","scale":{"scheme":"reds"}},"tooltip":[{"field":"properties.label","title":"Region"},{"field":"Population"}]},"mark":{"type":"geoshape","stroke":"white","fillOpacity":0.7}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":300,"height":250,"data":{"url":"https://gicentre.github.io/data/census21/ewRegions.json","format":{"type":"topojson","feature":"regions"}},"transform":[{"lookup":"properties.code","from":{"data":{"values":[{"Regions Code":"E12000001","Population":1942},{"Regions Code":"E12000002","Population":8949},{"Regions Code":"E12000003","Population":11616},{"Regions Code":"E12000004","Population":19532},{"Regions Code":"E12000005","Population":9647},{"Regions Code":"E12000006","Population":37896},{"Regions Code":"E12000007","Population":45378},{"Regions Code":"E12000008","Population":19071},{"Regions Code":"E12000009","Population":7565},{"Regions Code":"W92000004","Population":2562}]},"key":"Regions Code","fields":["Population"]}}],"encoding":{"color":{"field":"Population","type":"quantitative","title":"People born in Lithuania","scale":{"scheme":"greens"}},"tooltip":[{"field":"properties.label","title":"Region"},{"field":"Population"}]},"mark":{"type":"geoshape","stroke":"white","fillOpacity":0.7}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Population of people born in Estonia, Latvia and Lithuania in England's and Wales's 10 regions"},"width":300,"height":600,"data":{"values":[{"Region":"North East","Country":" Estonia","Population":142},{"Region":"North East","Country":" Latvia","Population":1042},{"Region":"North East","Country":" Lithuania","Population":1942},{"Region":"North West","Country":" Estonia","Population":662},{"Region":"North West","Country":" Latvia","Population":7296},{"Region":"North West","Country":" Lithuania","Population":8949},{"Region":"Yorkshire and The Humber","Country":" Estonia","Population":590},{"Region":"Yorkshire and The Humber","Country":" Latvia","Population":11656},{"Region":"Yorkshire and The Humber","Country":" Lithuania","Population":11616},{"Region":"East Midlands","Country":" Estonia","Population":769},{"Region":"East Midlands","Country":" Latvia","Population":16156},{"Region":"East Midlands","Country":" Lithuania","Population":19532},{"Region":"West Midlands","Country":" Estonia","Population":620},{"Region":"West Midlands","Country":" Latvia","Population":10240},{"Region":"West Midlands","Country":" Lithuania","Population":9647},{"Region":"East of England","Country":" Estonia","Population":1092},{"Region":"East of England","Country":" Latvia","Population":12233},{"Region":"East of England","Country":" Lithuania","Population":37896},{"Region":"London","Country":" Estonia","Population":3392},{"Region":"London","Country":" Latvia","Population":12531},{"Region":"London","Country":" Lithuania","Population":45378},{"Region":"South East","Country":" Estonia","Population":1838},{"Region":"South East","Country":" Latvia","Population":11402},{"Region":"South East","Country":" Lithuania","Population":19071},{"Region":"South West","Country":" Estonia","Population":704},{"Region":"South West","Country":" Latvia","Population":4809},{"Region":"South West","Country":" Lithuania","Population":7565},{"Region":"Wales","Country":" Estonia","Population":206},{"Region":"Wales","Country":" Latvia","Population":1219},{"Region":"Wales","Country":" Lithuania","Population":2562}]},"encoding":{"x":{"field":"Region","axis":{"labelAngle":45,"ticks":true}},"y":{"field":"Population","title":"Population","type":"quantitative"},"color":{"field":"Country"},"column":{"field":"Country","header":{"titleFontSize":10}},"tooltip":[{"field":"Region"},{"field":"Country"},{"field":"Population"}]},"mark":"bar","resolve":{"scale":{"x":"independent"}}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Population of people born in Estonia, Latvia and Lithuania in England and Wales' 10 regions"},"width":600,"height":400,"data":{"values":[{"Region":"North East","Country":" Estonia","Population":142},{"Region":"North East","Country":" Latvia","Population":1042},{"Region":"North East","Country":" Lithuania","Population":1942},{"Region":"North West","Country":" Estonia","Population":662},{"Region":"North West","Country":" Latvia","Population":7296},{"Region":"North West","Country":" Lithuania","Population":8949},{"Region":"Yorkshire and The Humber","Country":" Estonia","Population":590},{"Region":"Yorkshire and The Humber","Country":" Latvia","Population":11656},{"Region":"Yorkshire and The Humber","Country":" Lithuania","Population":11616},{"Region":"East Midlands","Country":" Estonia","Population":769},{"Region":"East Midlands","Country":" Latvia","Population":16156},{"Region":"East Midlands","Country":" Lithuania","Population":19532},{"Region":"West Midlands","Country":" Estonia","Population":620},{"Region":"West Midlands","Country":" Latvia","Population":10240},{"Region":"West Midlands","Country":" Lithuania","Population":9647},{"Region":"East of England","Country":" Estonia","Population":1092},{"Region":"East of England","Country":" Latvia","Population":12233},{"Region":"East of England","Country":" Lithuania","Population":37896},{"Region":"London","Country":" Estonia","Population":3392},{"Region":"London","Country":" Latvia","Population":12531},{"Region":"London","Country":" Lithuania","Population":45378},{"Region":"South East","Country":" Estonia","Population":1838},{"Region":"South East","Country":" Latvia","Population":11402},{"Region":"South East","Country":" Lithuania","Population":19071},{"Region":"South West","Country":" Estonia","Population":704},{"Region":"South West","Country":" Latvia","Population":4809},{"Region":"South West","Country":" Lithuania","Population":7565},{"Region":"Wales","Country":" Estonia","Population":206},{"Region":"Wales","Country":" Latvia","Population":1219},{"Region":"Wales","Country":" Lithuania","Population":2562}]},"encoding":{"x":{"field":"Region","axis":{"labelAngle":45,"ticks":true},"sort":{"encoding":"y"}},"y":{"field":"Population","title":"Population","type":"quantitative"},"color":{"field":"Country"},"tooltip":[{"field":"Region"},{"field":"Country"},{"field":"Population"}]},"mark":"bar"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Baltic populations by regions"},"config":{"view":{"stroke":null}},"data":{"values":[{"Country":" Estonia","Population":142,"Region":"North East"},{"Country":" Latvia","Population":1042,"Region":"North East"},{"Country":" Lithuania","Population":1942,"Region":"North East"},{"Country":" Estonia","Population":662,"Region":"North West"},{"Country":" Latvia","Population":7296,"Region":"North West"},{"Country":" Lithuania","Population":8949,"Region":"North West"},{"Country":" Estonia","Population":590,"Region":"Yorkshire and The Humber"},{"Country":" Latvia","Population":11656,"Region":"Yorkshire and The Humber"},{"Country":" Lithuania","Population":11616,"Region":"Yorkshire and The Humber"},{"Country":" Estonia","Population":769,"Region":"East Midlands"},{"Country":" Latvia","Population":16156,"Region":"East Midlands"},{"Country":" Lithuania","Population":19532,"Region":"East Midlands"},{"Country":" Estonia","Population":620,"Region":"West Midlands"},{"Country":" Latvia","Population":10240,"Region":"West Midlands"},{"Country":" Lithuania","Population":9647,"Region":"West Midlands"},{"Country":" Estonia","Population":1092,"Region":"East of England"},{"Country":" Latvia","Population":12233,"Region":"East of England"},{"Country":" Lithuania","Population":37896,"Region":"East of England"},{"Country":" Estonia","Population":3392,"Region":"London"},{"Country":" Latvia","Population":12531,"Region":"London"},{"Country":" Lithuania","Population":45378,"Region":"London"},{"Country":" Estonia","Population":1838,"Region":"South East"},{"Country":" Latvia","Population":11402,"Region":"South East"},{"Country":" Lithuania","Population":19071,"Region":"South East"},{"Country":" Estonia","Population":704,"Region":"South West"},{"Country":" Latvia","Population":4809,"Region":"South West"},{"Country":" Lithuania","Population":7565,"Region":"South West"},{"Country":" Estonia","Population":206,"Region":"Wales"},{"Country":" Latvia","Population":1219,"Region":"Wales"},{"Country":" Lithuania","Population":2562,"Region":"Wales"}]},"params":[{"name":"region","value":"North East","bind":{"input":"select","name":"Select Region: ","options":["North East","North West","Yorkshire and The Humber","East Midlands","West Midlands","East of England","London","South East","South West","Wales"]}}],"transform":[{"filter":{"field":"Region","oneOf":["North East"]}}],"encoding":{"theta":{"field":"Population","title":"Population","type":"quantitative"},"color":{"field":"Country"},"tooltip":[{"field":"Country"},{"field":"Population"},{"field":"Region"}]},"layer":[{"mark":{"type":"arc","outerRadius":80}},{"encoding":{"text":{"field":"Country"}},"mark":{"type":"text","radius":100}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"UK Regional Density"},"width":300,"height":250,"data":{"url":"https://gicentre.github.io/data/census21/ewRegions.json","format":{"type":"topojson","feature":"regions"}},"transform":[{"lookup":"properties.code","from":{"data":{"values":[{"Regions Code":"E12000001","Density":308.5},{"Regions Code":"E12000002","Density":525.8},{"Regions Code":"E12000003","Density":355.8},{"Regions Code":"E12000004","Density":312.4},{"Regions Code":"E12000005","Density":457.8},{"Regions Code":"E12000006","Density":331.4},{"Regions Code":"E12000007","Density":5597.6},{"Regions Code":"E12000008","Density":486.5},{"Regions Code":"E12000009","Density":239.2},{"Regions Code":"W92000004","Density":149.9}]},"key":"Regions Code","fields":["Density"]}}],"encoding":{"color":{"field":"Density","type":"quantitative","title":"Population Density"},"tooltip":[{"field":"properties.label","title":"Region"},{"field":"Density"}]},"mark":{"type":"geoshape","stroke":"white","fillOpacity":0.7}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"UK Baltic Regional Proportion"},"width":300,"height":250,"data":{"url":"https://gicentre.github.io/data/census21/ewRegions.json","format":{"type":"topojson","feature":"regions"}},"transform":[{"lookup":"properties.code","from":{"data":{"values":[{"Regions Code":"E12000001","Proportion":0.1181},{"Regions Code":"E12000002","Proportion":0.2279},{"Regions Code":"E12000003","Proportion":0.4354},{"Regions Code":"E12000004","Proportion":0.747},{"Regions Code":"E12000005","Proportion":0.3446},{"Regions Code":"E12000006","Proportion":0.8086},{"Regions Code":"E12000007","Proportion":0.6966},{"Regions Code":"E12000008","Proportion":0.3482},{"Regions Code":"E12000009","Proportion":0.2294},{"Regions Code":"W92000004","Proportion":0.1283}]},"key":"Regions Code","fields":["Proportion"]}}],"encoding":{"color":{"field":"Proportion","type":"quantitative","title":"% of Baltic Born "},"tooltip":[{"field":"properties.label","title":"Region"},{"field":"Proportion"}]},"mark":{"type":"geoshape","stroke":"white","fillOpacity":0.7}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Bubble Plot of Estonian-born Population by Region"},"data":{"values":[{"Region":"North East","EmploymentRate":71.2,"Disposable Household Income":17663,"Estonian Born Population":142},{"Region":"North West","EmploymentRate":73.8,"Disposable Household Income":18864,"Estonian Born Population":662},{"Region":"Yorkshire and The Humber","EmploymentRate":74.4,"Disposable Household Income":18363,"Estonian Born Population":590},{"Region":"East Midlands","EmploymentRate":75.5,"Disposable Household Income":18956,"Estonian Born Population":769},{"Region":"West Midlands","EmploymentRate":73.8,"Disposable Household Income":18566,"Estonian Born Population":620},{"Region":"East of England","EmploymentRate":76.9,"Disposable Household Income":22337,"Estonian Born Population":1092},{"Region":"London","EmploymentRate":75.1,"Disposable Household Income":31094,"Estonian Born Population":3392},{"Region":"South East","EmploymentRate":78.7,"Disposable Household Income":24623,"Estonian Born Population":1838},{"Region":"South West","EmploymentRate":77.2,"Disposable Household Income":21221,"Estonian Born Population":704},{"Region":"Wales","EmploymentRate":72.4,"Disposable Household Income":18038,"Estonian Born Population":206}]},"encoding":{"x":{"field":"EmploymentRate","title":"Employment Rate (%)","type":"quantitative","scale":{"zero":false}},"y":{"field":"Disposable Household Income","title":"GDHI per head (£)","type":"quantitative","scale":{"zero":false}},"size":{"field":"Estonian Born Population","title":"Estonian-born Population","type":"quantitative"},"color":{"field":"Region","title":"Region"},"tooltip":[{"field":"Region"},{"field":"EmploymentRate"},{"field":"Disposable Household Income"},{"field":"Estonian Born Population"}]},"layer":[{"mark":"circle"}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Bubble Plot of Latvian-born Population by Region"},"data":{"values":[{"Region":"North East","EmploymentRate":71.2,"Disposable Household Income":17663,"Latvian Born Population":1042},{"Region":"North West","EmploymentRate":73.8,"Disposable Household Income":18864,"Latvian Born Population":7296},{"Region":"Yorkshire and The Humber","EmploymentRate":74.4,"Disposable Household Income":18363,"Latvian Born Population":11656},{"Region":"East Midlands","EmploymentRate":75.5,"Disposable Household Income":18956,"Latvian Born Population":16156},{"Region":"West Midlands","EmploymentRate":73.8,"Disposable Household Income":18566,"Latvian Born Population":10240},{"Region":"East of England","EmploymentRate":76.9,"Disposable Household Income":22337,"Latvian Born Population":12233},{"Region":"London","EmploymentRate":75.1,"Disposable Household Income":31094,"Latvian Born Population":12531},{"Region":"South East","EmploymentRate":78.7,"Disposable Household Income":24623,"Latvian Born Population":11402},{"Region":"South West","EmploymentRate":77.2,"Disposable Household Income":21221,"Latvian Born Population":4809},{"Region":"Wales","EmploymentRate":72.4,"Disposable Household Income":18038,"Latvian Born Population":1219}]},"encoding":{"x":{"field":"EmploymentRate","title":"Employment Rate (%)","type":"quantitative","scale":{"zero":false}},"y":{"field":"Disposable Household Income","title":"GDHI per head (£)","type":"quantitative","scale":{"zero":false}},"size":{"field":"Latvian Born Population","title":"Latvian-born Population","type":"quantitative"},"color":{"field":"Region","title":"Region"},"tooltip":[{"field":"Region"},{"field":"EmploymentRate"},{"field":"Disposable Household Income"},{"field":"Latvian Born Population"}]},"layer":[{"mark":"circle"}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Bubble Plot of Lithuanian-born Population by Region"},"data":{"values":[{"Region":"North East","EmploymentRate":71.2,"Disposable Household Income":17663,"Lithuanian Born Population":1942},{"Region":"North West","EmploymentRate":73.8,"Disposable Household Income":18864,"Lithuanian Born Population":8949},{"Region":"Yorkshire and The Humber","EmploymentRate":74.4,"Disposable Household Income":18363,"Lithuanian Born Population":11616},{"Region":"East Midlands","EmploymentRate":75.5,"Disposable Household Income":18956,"Lithuanian Born Population":19532},{"Region":"West Midlands","EmploymentRate":73.8,"Disposable Household Income":18566,"Lithuanian Born Population":9647},{"Region":"East of England","EmploymentRate":76.9,"Disposable Household Income":22337,"Lithuanian Born Population":37896},{"Region":"London","EmploymentRate":75.1,"Disposable Household Income":31094,"Lithuanian Born Population":45378},{"Region":"South East","EmploymentRate":78.7,"Disposable Household Income":24623,"Lithuanian Born Population":19071},{"Region":"South West","EmploymentRate":77.2,"Disposable Household Income":21221,"Lithuanian Born Population":7565},{"Region":"Wales","EmploymentRate":72.4,"Disposable Household Income":18038,"Lithuanian Born Population":2562}]},"encoding":{"x":{"field":"EmploymentRate","title":"Employment Rate (%)","type":"quantitative","scale":{"zero":false}},"y":{"field":"Disposable Household Income","title":"GDHI per head (£)","type":"quantitative","scale":{"zero":false}},"size":{"field":"Lithuanian Born Population","title":"Lithuanian-born Population","type":"quantitative"},"color":{"field":"Region","title":"Region"},"tooltip":[{"field":"Region"},{"field":"EmploymentRate"},{"field":"Disposable Household Income"},{"field":"Lithuanian Born Population"}]},"layer":[{"mark":"circle"}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Parallel Coordinates Plot of Estonian Observations by Region"},"height":500,"width":500,"data":{"values":[{"Region":"North East","Factor":"Born","Population":142},{"Region":"North West","Factor":"Born","Population":662},{"Region":"Yorkshire and The Humber","Factor":"Born","Population":590},{"Region":"East Midlands","Factor":"Born","Population":769},{"Region":"West Midlands","Factor":"Born","Population":620},{"Region":"East of England","Factor":"Born","Population":1092},{"Region":"London","Factor":"Born","Population":3392},{"Region":"South East","Factor":"Born","Population":1838},{"Region":"South West","Factor":"Born","Population":704},{"Region":"Wales","Factor":"Born","Population":206},{"Region":"North East","Factor":"Ethnicity","Population":78},{"Region":"North West","Factor":"Ethnicity","Population":376},{"Region":"Yorkshire and The Humber","Factor":"Ethnicity","Population":313},{"Region":"East Midlands","Factor":"Ethnicity","Population":386},{"Region":"West Midlands","Factor":"Ethnicity","Population":350},{"Region":"East of England","Factor":"Ethnicity","Population":547},{"Region":"London","Factor":"Ethnicity","Population":1671},{"Region":"South East","Factor":"Ethnicity","Population":936},{"Region":"South West","Factor":"Ethnicity","Population":354},{"Region":"Wales","Factor":"Ethnicity","Population":138},{"Region":"North East","Factor":"Language","Population":34},{"Region":"North West","Factor":"Language","Population":237},{"Region":"Yorkshire and The Humber","Factor":"Language","Population":180},{"Region":"East Midlands","Factor":"Language","Population":165},{"Region":"West Midlands","Factor":"Language","Population":171},{"Region":"East of England","Factor":"Language","Population":267},{"Region":"London","Factor":"Language","Population":787},{"Region":"South East","Factor":"Language","Population":553},{"Region":"South West","Factor":"Language","Population":178},{"Region":"Wales","Factor":"Language","Population":68}]},"encoding":{"x":{"field":"Factor","type":"nominal"},"y":{"field":"Population","type":"quantitative"},"color":{"field":"Region","title":"Region"},"tooltip":[{"field":"Region"},{"field":"Factor"},{"field":"Population"}]},"layer":[{"mark":"line"}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Parallel Coordinates Plot of Latvian Observations by Region"},"height":500,"width":500,"data":{"values":[{"Region":"North East","Factor":"Born","Population":1042},{"Region":"North West","Factor":"Born","Population":7296},{"Region":"Yorkshire and The Humber","Factor":"Born","Population":11656},{"Region":"East Midlands","Factor":"Born","Population":16156},{"Region":"West Midlands","Factor":"Born","Population":10240},{"Region":"East of England","Factor":"Born","Population":12233},{"Region":"London","Factor":"Born","Population":12531},{"Region":"South East","Factor":"Born","Population":11402},{"Region":"South West","Factor":"Born","Population":4809},{"Region":"Wales","Factor":"Born","Population":1219},{"Region":"North East","Factor":"Ethnicity","Population":560},{"Region":"North West","Factor":"Ethnicity","Population":4100},{"Region":"Yorkshire and The Humber","Factor":"Ethnicity","Population":6934},{"Region":"East Midlands","Factor":"Ethnicity","Population":9069},{"Region":"West Midlands","Factor":"Ethnicity","Population":6135},{"Region":"East of England","Factor":"Ethnicity","Population":6400},{"Region":"London","Factor":"Ethnicity","Population":5834},{"Region":"South East","Factor":"Ethnicity","Population":5728},{"Region":"South West","Factor":"Ethnicity","Population":2587},{"Region":"Wales","Factor":"Ethnicity","Population":724},{"Region":"North East","Factor":"Language","Population":452},{"Region":"North West","Factor":"Language","Population":3616},{"Region":"Yorkshire and The Humber","Factor":"Language","Population":5653},{"Region":"East Midlands","Factor":"Language","Population":8107},{"Region":"West Midlands","Factor":"Language","Population":4885},{"Region":"East of England","Factor":"Language","Population":5496},{"Region":"London","Factor":"Language","Population":3604},{"Region":"South East","Factor":"Language","Population":4049},{"Region":"South West","Factor":"Language","Population":2010},{"Region":"Wales","Factor":"Language","Population":488}]},"encoding":{"x":{"field":"Factor","type":"nominal"},"y":{"field":"Population","type":"quantitative"},"color":{"field":"Region","title":"Region"},"tooltip":[{"field":"Region"},{"field":"Factor"},{"field":"Population"}]},"layer":[{"mark":"line"}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","title":{"text":"Parallel Coordinates Plot of Lithuanian Observations by Region"},"height":500,"width":500,"data":{"values":[{"Region":"North East","Factor":"Born","Population":1942},{"Region":"North West","Factor":"Born","Population":8949},{"Region":"Yorkshire and The Humber","Factor":"Born","Population":11616},{"Region":"East Midlands","Factor":"Born","Population":19532},{"Region":"West Midlands","Factor":"Born","Population":9647},{"Region":"East of England","Factor":"Born","Population":37896},{"Region":"London","Factor":"Born","Population":45378},{"Region":"South East","Factor":"Born","Population":19071},{"Region":"South West","Factor":"Born","Population":7565},{"Region":"Wales","Factor":"Born","Population":2562},{"Region":"North East","Factor":"Ethnicity","Population":1161},{"Region":"North West","Factor":"Ethnicity","Population":5371},{"Region":"Yorkshire and The Humber","Factor":"Ethnicity","Population":7269},{"Region":"East Midlands","Factor":"Ethnicity","Population":11858},{"Region":"West Midlands","Factor":"Ethnicity","Population":6062},{"Region":"East of England","Factor":"Ethnicity","Population":22501},{"Region":"London","Factor":"Ethnicity","Population":25967},{"Region":"South East","Factor":"Ethnicity","Population":11049},{"Region":"South West","Factor":"Ethnicity","Population":4331},{"Region":"Wales","Factor":"Ethnicity","Population":1644},{"Region":"North East","Factor":"Language","Population":1221},{"Region":"North West","Factor":"Language","Population":6169},{"Region":"Yorkshire and The Humber","Factor":"Language","Population":8836},{"Region":"East Midlands","Factor":"Language","Population":15320},{"Region":"West Midlands","Factor":"Language","Population":6977},{"Region":"East of England","Factor":"Language","Population":30371},{"Region":"London","Factor":"Language","Population":30768},{"Region":"South East","Factor":"Language","Population":12928},{"Region":"South West","Factor":"Language","Population":5288},{"Region":"Wales","Factor":"Language","Population":1780}]},"encoding":{"x":{"field":"Factor","type":"nominal"},"y":{"field":"Population","type":"quantitative"},"color":{"field":"Region","title":"Region"},"tooltip":[{"field":"Region"},{"field":"Factor"},{"field":"Population"}]},"layer":[{"mark":"line"}]}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

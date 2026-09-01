@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v4.json","height":900,"width":556.2422744128553,"config":{"view":{"stroke":""}},"data":{"values":[{"Year":"1980","Death Rate":11.7,"Ammonia":100,"Nitrogen Oxides":100,"Sulphur Dioxide":100,"Non-methane Volatile Organic Compounds":100,"pm10":100,"pm2p5":100,"Pollution Producing Sectors":35.12,"Service Sectors":64.88},{"Year":"1981","Death Rate":11.7,"Ammonia":99.6,"Nitrogen Oxides":95.6,"Sulphur Dioxide":90.9,"Non-methane Volatile Organic Compounds":98.3,"pm10":96.2,"pm2p5":95.4,"Pollution Producing Sectors":33.65,"Service Sectors":66.35},{"Year":"1982","Death Rate":11.8,"Ammonia":102.1,"Nitrogen Oxides":95.2,"Sulphur Dioxide":87.1,"Non-methane Volatile Organic Compounds":99,"pm10":94.1,"pm2p5":94,"Pollution Producing Sectors":32.68,"Service Sectors":67.32},{"Year":"1983","Death Rate":11.7,"Ammonia":102.4,"Nitrogen Oxides":93.7,"Sulphur Dioxide":80.3,"Non-methane Volatile Organic Compounds":99,"pm10":92.9,"pm2p5":90.8,"Pollution Producing Sectors":31.72,"Service Sectors":68.28},{"Year":"1984","Death Rate":11.4,"Ammonia":103.4,"Nitrogen Oxides":92.1,"Sulphur Dioxide":77.3,"Non-methane Volatile Organic Compounds":92.7,"pm10":83.4,"pm2p5":82.4,"Pollution Producing Sectors":30.98,"Service Sectors":69.02},{"Year":"1985","Death Rate":11.9,"Ammonia":102.4,"Nitrogen Oxides":95.1,"Sulphur Dioxide":77.7,"Non-methane Volatile Organic Compounds":99.5,"pm10":91.8,"pm2p5":90.5,"Pollution Producing Sectors":30.48,"Service Sectors":69.52},{"Year":"1986","Death Rate":11.7,"Ammonia":101.8,"Nitrogen Oxides":98.2,"Sulphur Dioxide":80.8,"Non-methane Volatile Organic Compounds":103.3,"pm10":94.3,"pm2p5":94,"Pollution Producing Sectors":29.77,"Service Sectors":70.23},{"Year":"1987","Death Rate":11.3,"Ammonia":102.9,"Nitrogen Oxides":100.2,"Sulphur Dioxide":80.5,"Non-methane Volatile Organic Compounds":105.1,"pm10":93.2,"pm2p5":87.7,"Pollution Producing Sectors":29.26,"Service Sectors":70.74},{"Year":"1988","Death Rate":11.4,"Ammonia":100.7,"Nitrogen Oxides":102.8,"Sulphur Dioxide":79.3,"Non-methane Volatile Organic Compounds":107.5,"pm10":90.9,"pm2p5":85,"Pollution Producing Sectors":28.77,"Service Sectors":71.23},{"Year":"1989","Death Rate":11.5,"Ammonia":99.4,"Nitrogen Oxides":104.3,"Sulphur Dioxide":76.9,"Non-methane Volatile Organic Compounds":109.2,"pm10":91.8,"pm2p5":84.3,"Pollution Producing Sectors":28.36,"Service Sectors":71.64},{"Year":"1990","Death Rate":11.2,"Ammonia":102,"Nitrogen Oxides":104.4,"Sulphur Dioxide":78.1,"Non-methane Volatile Organic Compounds":112.4,"pm10":88.5,"pm2p5":82.5,"Pollution Producing Sectors":27.67,"Service Sectors":72.33},{"Year":"1991","Death Rate":11.2,"Ammonia":101.6,"Nitrogen Oxides":101.3,"Sulphur Dioxide":74.6,"Non-methane Volatile Organic Compounds":110.2,"pm10":87.9,"pm2p5":82.4,"Pollution Producing Sectors":26.46,"Service Sectors":73.54},{"Year":"1992","Death Rate":11,"Ammonia":96.9,"Nitrogen Oxides":99.3,"Sulphur Dioxide":73.4,"Non-methane Volatile Organic Compounds":106.5,"pm10":82.6,"pm2p5":78.8,"Pollution Producing Sectors":25.52,"Service Sectors":74.48},{"Year":"1993","Death Rate":11.4,"Ammonia":95.2,"Nitrogen Oxides":93.5,"Sulphur Dioxide":66.4,"Non-methane Volatile Organic Compounds":101,"pm10":76.3,"pm2p5":73.4,"Pollution Producing Sectors":24.83,"Service Sectors":75.17},{"Year":"1994","Death Rate":10.8,"Ammonia":96.7,"Nitrogen Oxides":90,"Sulphur Dioxide":56.9,"Non-methane Volatile Organic Compounds":96.2,"pm10":72.2,"pm2p5":70.2,"Pollution Producing Sectors":24.67,"Service Sectors":75.33},{"Year":"1995","Death Rate":11.1,"Ammonia":94.1,"Nitrogen Oxides":85.8,"Sulphur Dioxide":51,"Non-methane Volatile Organic Compounds":88.8,"pm10":66.8,"pm2p5":64.2,"Pollution Producing Sectors":24.51,"Service Sectors":75.49},{"Year":"1996","Death Rate":11,"Ammonia":96.9,"Nitrogen Oxides":82.1,"Sulphur Dioxide":43.5,"Non-methane Volatile Organic Compounds":86.3,"pm10":66.9,"pm2p5":63.7,"Pollution Producing Sectors":24.39,"Service Sectors":75.61},{"Year":"1997","Death Rate":10.8,"Ammonia":98.7,"Nitrogen Oxides":75.6,"Sulphur Dioxide":35.8,"Non-methane Volatile Organic Compounds":82.3,"pm10":63,"pm2p5":60.5,"Pollution Producing Sectors":24.13,"Service Sectors":75.87},{"Year":"1998","Death Rate":10.7,"Ammonia":99,"Nitrogen Oxides":73.4,"Sulphur Dioxide":35.3,"Non-methane Volatile Organic Compounds":76.3,"pm10":59.7,"pm2p5":57.5,"Pollution Producing Sectors":24.01,"Service Sectors":75.99},{"Year":"1999","Death Rate":10.7,"Ammonia":97.2,"Nitrogen Oxides":69.5,"Sulphur Dioxide":27.4,"Non-methane Volatile Organic Compounds":68.9,"pm10":58.6,"pm2p5":57,"Pollution Producing Sectors":23.03,"Service Sectors":76.97},{"Year":"2000","Death Rate":10.4,"Ammonia":94.7,"Nitrogen Oxides":66.9,"Sulphur Dioxide":26.7,"Non-methane Volatile Organic Compounds":63.1,"pm10":55.7,"pm2p5":52,"Pollution Producing Sectors":22.25,"Service Sectors":77.75},{"Year":"2001","Death Rate":10.2,"Ammonia":92.2,"Nitrogen Oxides":65.7,"Sulphur Dioxide":24.8,"Non-methane Volatile Organic Compounds":60.5,"pm10":56.9,"pm2p5":51.7,"Pollution Producing Sectors":21.52,"Service Sectors":78.48},{"Year":"2002","Death Rate":10.2,"Ammonia":91.1,"Nitrogen Oxides":62.1,"Sulphur Dioxide":22.4,"Non-methane Volatile Organic Compounds":57,"pm10":50,"pm2p5":45.9,"Pollution Producing Sectors":20.71,"Service Sectors":79.29},{"Year":"2003","Death Rate":10.3,"Ammonia":89,"Nitrogen Oxides":61,"Sulphur Dioxide":21.9,"Non-methane Volatile Organic Compounds":52.7,"pm10":53.5,"pm2p5":46.4,"Pollution Producing Sectors":20.02,"Service Sectors":79.98},{"Year":"2004","Death Rate":9.8,"Ammonia":91,"Nitrogen Oxides":59.3,"Sulphur Dioxide":18.5,"Non-methane Volatile Organic Compounds":49.4,"pm10":49.7,"pm2p5":45.3,"Pollution Producing Sectors":19.51,"Service Sectors":80.49},{"Year":"2005","Death Rate":9.6,"Ammonia":88,"Nitrogen Oxides":58.8,"Sulphur Dioxide":16,"Non-methane Volatile Organic Compounds":46,"pm10":48.2,"pm2p5":44.4,"Pollution Producing Sectors":19.13,"Service Sectors":80.87},{"Year":"2006","Death Rate":9.4,"Ammonia":86.2,"Nitrogen Oxides":56.7,"Sulphur Dioxide":15.2,"Non-methane Volatile Organic Compounds":44.3,"pm10":46.8,"pm2p5":43.6,"Pollution Producing Sectors":18.79,"Service Sectors":81.21},{"Year":"2007","Death Rate":9.4,"Ammonia":85,"Nitrogen Oxides":54.5,"Sulphur Dioxide":13.2,"Non-methane Volatile Organic Compounds":42.6,"pm10":44.3,"pm2p5":41.4,"Pollution Producing Sectors":18.63,"Service Sectors":81.37},{"Year":"2008","Death Rate":9.4,"Ammonia":80.2,"Nitrogen Oxides":49.1,"Sulphur Dioxide":11,"Non-methane Volatile Organic Compounds":39.5,"pm10":42.3,"pm2p5":41.1,"Pollution Producing Sectors":18.21,"Service Sectors":81.79},{"Year":"2009","Death Rate":9,"Ammonia":81,"Nitrogen Oxides":42.6,"Sulphur Dioxide":9,"Non-methane Volatile Organic Compounds":35.4,"pm10":40,"pm2p5":39.2,"Pollution Producing Sectors":17.72,"Service Sectors":82.28},{"Year":"2010","Death Rate":8.9,"Ammonia":81.4,"Nitrogen Oxides":41.7,"Sulphur Dioxide":9.4,"Non-methane Volatile Organic Compounds":34.4,"pm10":43.8,"pm2p5":42,"Pollution Producing Sectors":17.21,"Service Sectors":82.79},{"Year":"2011","Death Rate":8.7,"Ammonia":82.5,"Nitrogen Oxides":38.6,"Sulphur Dioxide":8.6,"Non-methane Volatile Organic Compounds":33.6,"pm10":39.7,"pm2p5":37.7,"Pollution Producing Sectors":17.13,"Service Sectors":82.87},{"Year":"2012","Death Rate":8.9,"Ammonia":81.5,"Nitrogen Oxides":39.5,"Sulphur Dioxide":9.5,"Non-methane Volatile Organic Compounds":33.1,"pm10":39.7,"pm2p5":39.5,"Pollution Producing Sectors":17,"Service Sectors":83},{"Year":"2013","Death Rate":9,"Ammonia":80.4,"Nitrogen Oxides":37.5,"Sulphur Dioxide":8.2,"Non-methane Volatile Organic Compounds":31.9,"pm10":41.5,"pm2p5":40,"Pollution Producing Sectors":16.64,"Service Sectors":83.36},{"Year":"2014","Death Rate":8.8,"Ammonia":84.2,"Nitrogen Oxides":35.1,"Sulphur Dioxide":6.7,"Non-methane Volatile Organic Compounds":31.7,"pm10":39.6,"pm2p5":37.9,"Pollution Producing Sectors":16.61,"Service Sectors":83.39},{"Year":"2015","Death Rate":9.3,"Ammonia":85.6,"Nitrogen Oxides":33.8,"Sulphur Dioxide":5.2,"Non-methane Volatile Organic Compounds":31.7,"pm10":39.4,"pm2p5":38.1,"Pollution Producing Sectors":16.42,"Service Sectors":83.58},{"Year":"2016","Death Rate":9.1,"Ammonia":87.1,"Nitrogen Oxides":30.6,"Sulphur Dioxide":3.8,"Non-methane Volatile Organic Compounds":31.1,"pm10":39.9,"pm2p5":37.6,"Pollution Producing Sectors":16.41,"Service Sectors":83.59},{"Year":"2017","Death Rate":9.2,"Ammonia":87.7,"Nitrogen Oxides":29.6,"Sulphur Dioxide":3.6,"Non-methane Volatile Organic Compounds":31.5,"pm10":41.1,"pm2p5":37.4,"Pollution Producing Sectors":16.29,"Service Sectors":83.71},{"Year":"2018","Death Rate":9.3,"Ammonia":87.2,"Nitrogen Oxides":28,"Sulphur Dioxide":3.4,"Non-methane Volatile Organic Compounds":32,"pm10":41.5,"pm2p5":38.1,"Pollution Producing Sectors":15.9,"Service Sectors":84.1}]},"encoding":{"x":{"field":"Year","type":"temporal","axis":{"title":"","grid":false,"values":[{"year":1980},{"year":1990},{"year":2000},{"year":2009},{"year":2018}]}}},"layer":[{"selection":{"hover":{"type":"single","fields":["date"],"empty":"none","on":"mouseover","clear":"mouseout","nearest":true}},"encoding":{"opacity":{"condition":{"selection":"hover","value":0.3},"value":0},"tooltip":[{"field":"Year","type":"temporal","format":"%Y"},{"field":"Death Rate","title":"Death Rate (per 1000)"},{"field":"Ammonia"},{"field":"Nitrogen Oxides"},{"field":"Sulphur Dioxide"},{"field":"Non-methane Volatile Organic Compounds","title":"Non-methane Compounds"},{"field":"pm10"},{"field":"pm2p5","title":"pm2.5"},{"field":"Pollution Producing Sectors","title":"Polluting Emitting Sectors (%)"}]},"mark":"rule"},{"layer":[{"encoding":{"y":{"field":"Pollution Producing Sectors","type":"quantitative","axis":{"title":"Pollution Emitting Sectors (%)        Pollution Emmissions (Standardized)","titleY":618,"grid":true,"values":[35,100]}}},"mark":{"type":"area","line":{"stroke":"#666666"},"fill":{"gradient":"linear","x1":1,"y1":1,"x2":1,"y2":0,"stops":[{"offset":0,"color":"#ffffff"},{"offset":1,"color":"#666666"}]}}},{"encoding":{"y":{"field":"Ammonia","type":"quantitative","axis":{"title":"","grid":true,"values":[100]}}},"layer":[{"mark":{"type":"line","color":"#e6ab02","interpolate":"monotone"}},{"transform":[{"filter":"year(datum.Year) == 2018"}],"encoding":{"text":{"value":"Ammonia"}},"mark":{"type":"text","align":"left","dx":4}}]},{"encoding":{"y":{"field":"Nitrogen Oxides","type":"quantitative","axis":{"title":"","grid":true,"values":[100]}}},"layer":[{"mark":{"type":"line","color":"#d95f02","interpolate":"monotone"}},{"transform":[{"filter":"year(datum.Year) == 2018"}],"encoding":{"text":{"value":"Nitrogen Oxides"}},"mark":{"type":"text","align":"left","dx":4}}]},{"encoding":{"y":{"field":"Sulphur Dioxide","type":"quantitative","axis":{"title":"","grid":true,"values":[100]}}},"layer":[{"mark":{"type":"line","color":"#e7298a","interpolate":"monotone"}},{"transform":[{"filter":"year(datum.Year) == 2018"}],"encoding":{"text":{"value":"Sulphur Dioxide"}},"mark":{"type":"text","align":"left","dx":4}}]},{"encoding":{"y":{"field":"Non-methane Volatile Organic Compounds","type":"quantitative","axis":{"title":"","grid":true,"values":[100]}}},"layer":[{"mark":{"type":"line","color":"#7570b3","interpolate":"monotone"}},{"transform":[{"filter":"year(datum.Year) == 2018"}],"encoding":{"text":{"value":"Non-methane Volatile Organic Compounds"}},"mark":{"type":"text","align":"left","dx":4}}]},{"encoding":{"y":{"field":"pm10","type":"quantitative","axis":{"title":"","grid":true,"values":[100]}}},"layer":[{"mark":{"type":"line","color":"#1b9e77","interpolate":"monotone"}},{"transform":[{"filter":"year(datum.Year) == 2018"}],"encoding":{"text":{"value":"pm10"}},"mark":{"type":"text","align":"left","dx":4}}]},{"encoding":{"y":{"field":"pm2p5","type":"quantitative","axis":{"title":"","grid":true,"values":[100]}}},"layer":[{"mark":{"type":"line","color":"#66a61e","interpolate":"monotone"}},{"transform":[{"filter":"year(datum.Year) == 2018"}],"encoding":{"text":{"value":"pm2.5"}},"mark":{"type":"text","align":"left","dx":4}}]}]},{"encoding":{"y":{"field":"Death Rate","type":"quantitative","scale":{"zero":false},"axis":{"title":"Crude Death Rate (per 1000)","grid":true,"values":[12]}}},"layer":[{"mark":{"type":"line","color":"Black","strokeDash":[5],"interpolate":"monotone"}},{"transform":[{"filter":"year(datum.Year) == 1980"}],"encoding":{"text":{"value":"Death Rate"}},"mark":{"type":"text","align":"left","dx":-60}}]}],"resolve":{"scale":{"y":"independent"}}}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

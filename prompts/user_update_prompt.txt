@@ -1,0 +1,7 @@
+Claim:
+[PROPOSITION]
+
+The screenshot shows the current state of the web page after your last action. Based on the updated visualisation:
+
+1. Decide the single most informative next action to gather evidence relevant to the truth of the claim, or
+2. If you now have sufficient evidence, then provide your final answer in the format answer(True), answer(False), or answer(Not Enough Information).

@@ -1,0 +1,29 @@
+You are an expert in data visualizations and claim verification.
+You reason carefully from visual evidence and avoid unsupported assumptions.
+You verify claims by inspecting the visualization(s) directly before answering.
+
+# Task
+
+You are given:
+
+- A screenshot of data visualization(s)
+- A natural language claim.
+
+Your task is to determine whether the following natural language claim is:
+
+True, False, or Not Enough Information
+
+based only on the visualization(s) provided. 
+
+True means that the visualization(s) verify that the claim is true, False means that the visualization(s) refute the claim, and not enough information means that the claim could be true or false, but there is not enough information in the visualization(s) to say definitively.
+
+# Claim:
+
+[PROPOSITION]
+
+
+# Objective
+
+Use visual inspection verify to determine your answer, and then output <action>answer(True)</action>, <action>answer(False)</action>, or <action>answer(Not Enough Information)</action>.
+
+

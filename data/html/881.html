@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":350,"height":400,"data":{"values":[{"code":"W92000004","areaName":"Wales","notApplicable":548078,"none":509682,"level1":223025,"level2":367360,"apprentice":143316,"level3":440652,"level4":806773,"other":68608},{"code":"E12000001","areaName":"North East","notApplicable":468053,"none":442379,"level1":208919,"level2":301648,"apprentice":144765,"level3":404417,"level4":622419,"other":54413},{"code":"E12000002","areaName":"North West","notApplicable":1391762,"none":1174699,"level1":583083,"level2":819133,"apprentice":353909,"level3":1061950,"level4":1880049,"other":152812},{"code":"E12000003","areaName":"Yorkshire and The Humber","notApplicable":1020475,"none":919640,"level1":449065,"level2":607396,"apprentice":273719,"level3":777070,"level4":1315456,"other":117953},{"code":"E12000004","areaName":"East Midlands","notApplicable":882009,"none":778906,"level1":415084,"level2":556046,"apprentice":239223,"level3":731371,"level4":1163784,"other":113631},{"code":"E12000005","areaName":"West Midlands","notApplicable":1149428,"none":1015300,"level1":494710,"level2":666695,"apprentice":253185,"level3":818973,"level4":1413723,"other":138740},{"code":"E12000006","areaName":"East","notApplicable":1186790,"none":932209,"level1":554976,"level2":742611,"apprentice":284157,"level3":863162,"level4":1625376,"other":145790},{"code":"E12000007","areaName":"London","notApplicable":1695743,"none":1151250,"level1":545269,"level2":707518,"apprentice":227622,"level3":937875,"level4":3316829,"other":217622},{"code":"E12000008","areaName":"South East","notApplicable":1723485,"none":1162221,"level1":739122,"level2":1046800,"apprentice":386759,"level3":1313552,"level4":2702048,"other":204078},{"code":"E12000009","areaName":"South West","notApplicable":965346,"none":741183,"level1":465970,"level2":678280,"apprentice":283597,"level3":876607,"level4":1566774,"other":123429}]},"transform":[{"lookup":"areaName","from":{"data":{"url":"https://gicentre.github.io/data/uk/ukRegions.json","format":{"type":"topojson","feature":"regions"}},"key":"properties.eer18nm"},"as":"geo"},{"calculate":"datum.level1 + datum.level2 + datum.level3 + datum.level4 + datum.other + datum.apprentice","as":"qualifications"}],"projection":{"type":"transverseMercator","rotate":{"expr":"[2,0,0]"}},"encoding":{"shape":{"field":"geo","type":"geojson"},"color":{"field":"qualifications","type":"quantitative","scale":{"scheme":"bluepurple"},"legend":{"orient":"none","title":"Individuals Attaining Qualification"}},"tooltip":{"field":"areaName"}},"mark":{"type":"geoshape","stroke":"white"}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":300,"height":300,"data":{"values":[{"code":"W92000004","category":"N/A","value":1916529,"areaName":"Wales"},{"code":"W92000004","category":"worked12","value":136790,"areaName":"Wales"},{"code":"W92000004","category":"notWorked12","value":778991,"areaName":"Wales"},{"code":"W92000004","category":"neverWorked","value":275184,"areaName":"Wales"},{"code":"E12000001","category":"N/A","value":1606109,"areaName":"North East"},{"code":"E12000001","category":"worked12","value":117767,"areaName":"North East"},{"code":"E12000001","category":"notWorked12","value":622065,"areaName":"North East"},{"code":"E12000001","category":"neverWorked","value":301072,"areaName":"North East"},{"code":"E12000002","category":"N/A","value":4733507,"areaName":"North West"},{"code":"E12000002","category":"worked12","value":333426,"areaName":"North West"},{"code":"E12000002","category":"notWorked12","value":1609858,"areaName":"North West"},{"code":"E12000002","category":"neverWorked","value":740606,"areaName":"North West"},{"code":"E12000003","category":"N/A","value":3481844,"areaName":"Yorkshire and The Humber"},{"code":"E12000003","category":"worked12","value":248891,"areaName":"Yorkshire and The Humber"},{"code":"E12000003","category":"notWorked12","value":1214698,"areaName":"Yorkshire and The Humber"},{"code":"E12000003","category":"neverWorked","value":535341,"areaName":"Yorkshire and The Humber"},{"code":"E12000004","category":"N/A","value":3154330,"areaName":"East Midlands"},{"code":"E12000004","category":"worked12","value":229221,"areaName":"East Midlands"},{"code":"E12000004","category":"notWorked12","value":1089730,"areaName":"East Midlands"},{"code":"E12000004","category":"neverWorked","value":406772,"areaName":"East Midlands"},{"code":"E12000005","category":"N/A","value":3788317,"areaName":"West Midlands"},{"code":"E12000005","category":"worked12","value":262925,"areaName":"West Midlands"},{"code":"E12000005","category":"notWorked12","value":1289185,"areaName":"West Midlands"},{"code":"E12000005","category":"neverWorked","value":610332,"areaName":"West Midlands"},{"code":"E12000006","category":"N/A","value":4215431,"areaName":"East"},{"code":"E12000006","category":"worked12","value":271820,"areaName":"East"},{"code":"E12000006","category":"notWorked12","value":1394562,"areaName":"East"},{"code":"E12000006","category":"neverWorked","value":453261,"areaName":"East"},{"code":"E12000007","category":"N/A","value":6055820,"areaName":"London"},{"code":"E12000007","category":"worked12","value":440731,"areaName":"London"},{"code":"E12000007","category":"notWorked12","value":1336449,"areaName":"London"},{"code":"E12000007","category":"neverWorked","value":966729,"areaName":"London"},{"code":"E12000008","category":"N/A","value":6195264,"areaName":"South East"},{"code":"E12000008","category":"worked12","value":420077,"areaName":"South East"},{"code":"E12000008","category":"notWorked12","value":2020237,"areaName":"South East"},{"code":"E12000008","category":"neverWorked","value":642487,"areaName":"South East"},{"code":"E12000009","category":"N/A","value":3657680,"areaName":"South West"},{"code":"E12000009","category":"worked12","value":268111,"areaName":"South West"},{"code":"E12000009","category":"notWorked12","value":1407208,"areaName":"South West"},{"code":"E12000009","category":"neverWorked","value":368187,"areaName":"South West"},{"code":"W92000004","category":"N/A","value":1916529,"areaName":"Wales"},{"code":"W92000004","category":"worked12","value":136790,"areaName":"Wales"},{"code":"W92000004","category":"notWorked12","value":778991,"areaName":"Wales"},{"code":"W92000004","category":"neverWorked","value":275184,"areaName":"Wales"}]},"encoding":{"x":{"field":"areaName","type":"nominal","title":"Region"},"y":{"field":"value","type":"quantitative","title":"Value"},"color":{"field":"category","type":"nominal","scale":{"scheme":"plasma"},"legend":{"title":"Employment Category"}}},"mark":{"type":"bar","tooltip":{"content":"encoding"}}}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","height":500,"width":300,"data":{"values":[{"code":"W92000004","category":"N/A","value":0,"Region":"Wales"},{"code":"W92000004","category":"ABBangladeshi","value":15314,"Region":"Wales"},{"code":"W92000004","category":"ABChinese","value":14454,"Region":"Wales"},{"code":"W92000004","category":"ABIndian","value":21070,"Region":"Wales"},{"code":"W92000004","category":"ABPakistani","value":17534,"Region":"Wales"},{"code":"W92000004","category":"ABAsian","value":20656,"Region":"Wales"},{"code":"W92000004","category":"BBAfrican","value":19907,"Region":"Wales"},{"code":"W92000004","category":"BBCaribbean","value":3700,"Region":"Wales"},{"code":"W92000004","category":"BBBlack","value":3947,"Region":"Wales"},{"code":"W92000004","category":"whiteAndAsian","value":14035,"Region":"Wales"},{"code":"W92000004","category":"whiteAndBlackAfrican","value":8068,"Region":"Wales"},{"code":"W92000004","category":"whiteAndBlackCaribbean","value":13732,"Region":"Wales"},{"code":"W92000004","category":"multiple","value":12763,"Region":"Wales"},{"code":"W92000004","category":"wBritish","value":2814247,"Region":"Wales"},{"code":"W92000004","category":"wIrish","value":13214,"Region":"Wales"},{"code":"W92000004","category":"wTraveller","value":3550,"Region":"Wales"},{"code":"W92000004","category":"wRoma","value":1843,"Region":"Wales"},{"code":"W92000004","category":"wOther","value":82994,"Region":"Wales"},{"code":"W92000004","category":"arab","value":11641,"Region":"Wales"},{"code":"W92000004","category":"other","value":14825,"Region":"Wales"},{"code":"E12000001","category":"N/A","value":0,"Region":"North East"},{"code":"E12000001","category":"ABBangladeshi","value":16355,"Region":"North East"},{"code":"E12000001","category":"ABChinese","value":14442,"Region":"North East"},{"code":"E12000001","category":"ABIndian","value":22021,"Region":"North East"},{"code":"E12000001","category":"ABPakistani","value":27290,"Region":"North East"},{"code":"E12000001","category":"ABAsian","value":17938,"Region":"North East"},{"code":"E12000001","category":"BBAfrican","value":22066,"Region":"North East"},{"code":"E12000001","category":"BBCaribbean","value":1704,"Region":"North East"},{"code":"E12000001","category":"BBBlack","value":2865,"Region":"North East"},{"code":"E12000001","category":"whiteAndAsian","value":12490,"Region":"North East"},{"code":"E12000001","category":"whiteAndBlackAfrican","value":6527,"Region":"North East"},{"code":"E12000001","category":"whiteAndBlackCaribbean","value":5650,"Region":"North East"},{"code":"E12000001","category":"multiple","value":8604,"Region":"North East"},{"code":"E12000001","category":"wBritish","value":2397557,"Region":"North East"},{"code":"E12000001","category":"wIrish","value":8384,"Region":"North East"},{"code":"E12000001","category":"wTraveller","value":2621,"Region":"North East"},{"code":"E12000001","category":"wRoma","value":2375,"Region":"North East"},{"code":"E12000001","category":"wOther","value":51783,"Region":"North East"},{"code":"E12000001","category":"arab","value":10406,"Region":"North East"},{"code":"E12000001","category":"other","value":15936,"Region":"North East"},{"code":"E12000002","category":"N/A","value":0,"Region":"North West"},{"code":"E12000002","category":"ABBangladeshi","value":60859,"Region":"North West"},{"code":"E12000002","category":"ABChinese","value":54051,"Region":"North West"},{"code":"E12000002","category":"ABIndian","value":140413,"Region":"North West"},{"code":"E12000002","category":"ABPakistani","value":303611,"Region":"North West"},{"code":"E12000002","category":"ABAsian","value":63751,"Region":"North West"},{"code":"E12000002","category":"BBAfrican","value":126608,"Region":"North West"},{"code":"E12000002","category":"BBCaribbean","value":25919,"Region":"North West"},{"code":"E12000002","category":"BBBlack","value":21391,"Region":"North West"},{"code":"E12000002","category":"whiteAndAsian","value":47829,"Region":"North West"},{"code":"E12000002","category":"whiteAndBlackAfrican","value":30011,"Region":"North West"},{"code":"E12000002","category":"whiteAndBlackCaribbean","value":46962,"Region":"North West"},{"code":"E12000002","category":"multiple","value":38443,"Region":"North West"},{"code":"E12000002","category":"wBritish","value":6019385,"Region":"North West"},{"code":"E12000002","category":"wIrish","value":61422,"Region":"North West"},{"code":"E12000002","category":"wTraveller","value":5741,"Region":"North West"},{"code":"E12000002","category":"wRoma","value":7359,"Region":"North West"},{"code":"E12000002","category":"wOther","value":253487,"Region":"North West"},{"code":"E12000002","category":"arab","value":43865,"Region":"North West"},{"code":"E12000002","category":"other","value":66291,"Region":"North West"},{"code":"E12000003","category":"N/A","value":0,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"ABBangladeshi","value":29018,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"ABChinese","value":29589,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"ABIndian","value":81322,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"ABPakistani","value":296437,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"ABAsian","value":50689,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"BBAfrican","value":80907,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"BBCaribbean","value":22736,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"BBBlack","value":14000,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"whiteAndAsian","value":36888,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"whiteAndBlackAfrican","value":15644,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"whiteAndBlackCaribbean","value":39296,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"multiple","value":25189,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"wBritish","value":4431265,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"wIrish","value":25215,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"wTraveller","value":5891,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"wRoma","value":9464,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"wOther","value":208130,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"arab","value":25474,"Region":"Yorkshire and The Humber"},{"code":"E12000003","category":"other","value":53620,"Region":"Yorkshire and The Humber"},{"code":"E12000004","category":"N/A","value":0,"Region":"East Midlands"},{"code":"E12000004","category":"ABBangladeshi","value":20980,"Region":"East Midlands"},{"code":"E12000004","category":"ABChinese","value":22973,"Region":"East Midlands"},{"code":"E12000004","category":"ABIndian","value":229831,"Region":"East Midlands"},{"code":"E12000004","category":"ABPakistani","value":71038,"Region":"East Midlands"},{"code":"E12000004","category":"ABAsian","value":46281,"Region":"East Midlands"},{"code":"E12000004","category":"BBAfrican","value":83161,"Region":"East Midlands"},{"code":"E12000004","category":"BBCaribbean","value":30828,"Region":"East Midlands"},{"code":"E12000004","category":"BBBlack","value":15997,"Region":"East Midlands"},{"code":"E12000004","category":"whiteAndAsian","value":30803,"Region":"East Midlands"},{"code":"E12000004","category":"whiteAndBlackAfrican","value":14341,"Region":"East Midlands"},{"code":"E12000004","category":"whiteAndBlackCaribbean","value":46400,"Region":"East Midlands"},{"code":"E12000004","category":"multiple","value":25703,"Region":"East Midlands"},{"code":"E12000004","category":"wBritish","value":3882390,"Region":"East Midlands"},{"code":"E12000004","category":"wIrish","value":27130,"Region":"East Midlands"},{"code":"E12000004","category":"wTraveller","value":4620,"Region":"East Midlands"},{"code":"E12000004","category":"wRoma","value":7196,"Region":"East Midlands"},{"code":"E12000004","category":"wOther","value":258438,"Region":"East Midlands"},{"code":"E12000004","category":"arab","value":13360,"Region":"East Midlands"},{"code":"E12000004","category":"other","value":48584,"Region":"East Midlands"},{"code":"E12000005","category":"N/A","value":0,"Region":"West Midlands"},{"code":"E12000005","category":"ABBangladeshi","value":77518,"Region":"West Midlands"},{"code":"E12000005","category":"ABChinese","value":33301,"Region":"West Midlands"},{"code":"E12000005","category":"ABIndian","value":276030,"Region":"West Midlands"},{"code":"E12000005","category":"ABPakistani","value":319165,"Region":"West Midlands"},{"code":"E12000005","category":"ABAsian","value":88250,"Region":"West Midlands"},{"code":"E12000005","category":"BBAfrican","value":146089,"Region":"West Midlands"},{"code":"E12000005","category":"BBCaribbean","value":90192,"Region":"West Midlands"},{"code":"E12000005","category":"BBBlack","value":32738,"Region":"West Midlands"},{"code":"E12000005","category":"whiteAndAsian","value":46478,"Region":"West Midlands"},{"code":"E12000005","category":"whiteAndBlackAfrican","value":16011,"Region":"West Midlands"},{"code":"E12000005","category":"whiteAndBlackCaribbean","value":81193,"Region":"West Midlands"},{"code":"E12000005","category":"multiple","value":34542,"Region":"West Midlands"},{"code":"E12000005","category":"wBritish","value":4275557,"Region":"West Midlands"},{"code":"E12000005","category":"wIrish","value":47886,"Region":"West Midlands"},{"code":"E12000005","category":"wTraveller","value":6207,"Region":"West Midlands"},{"code":"E12000005","category":"wRoma","value":6809,"Region":"West Midlands"},{"code":"E12000005","category":"wOther","value":248565,"Region":"West Midlands"},{"code":"E12000005","category":"arab","value":31790,"Region":"West Midlands"},{"code":"E12000005","category":"other","value":92436,"Region":"West Midlands"},{"code":"E12000006","category":"N/A","value":0,"Region":"East"},{"code":"E12000006","category":"ABBangladeshi","value":50685,"Region":"East"},{"code":"E12000006","category":"ABChinese","value":38444,"Region":"East"},{"code":"E12000006","category":"ABIndian","value":136974,"Region":"East"},{"code":"E12000006","category":"ABPakistani","value":99452,"Region":"East"},{"code":"E12000006","category":"ABAsian","value":80314,"Region":"East"},{"code":"E12000006","category":"BBAfrican","value":118731,"Region":"East"},{"code":"E12000006","category":"BBCaribbean","value":41884,"Region":"East"},{"code":"E12000006","category":"BBBlack","value":24334,"Region":"East"},{"code":"E12000006","category":"whiteAndAsian","value":51448,"Region":"East"},{"code":"E12000006","category":"whiteAndBlackAfrican","value":27376,"Region":"East"},{"code":"E12000006","category":"whiteAndBlackCaribbean","value":51950,"Region":"East"},{"code":"E12000006","category":"multiple","value":48880,"Region":"East"},{"code":"E12000006","category":"wBritish","value":4972149,"Region":"East"},{"code":"E12000006","category":"wIrish","value":57964,"Region":"East"},{"code":"E12000006","category":"wTraveller","value":8977,"Region":"East"},{"code":"E12000006","category":"wRoma","value":9675,"Region":"East"},{"code":"E12000006","category":"wOther","value":429599,"Region":"East"},{"code":"E12000006","category":"arab","value":15639,"Region":"East"},{"code":"E12000006","category":"other","value":70593,"Region":"East"},{"code":"E12000007","category":"N/A","value":0,"Region":"London"},{"code":"E12000007","category":"ABBangladeshi","value":322054,"Region":"London"},{"code":"E12000007","category":"ABChinese","value":147520,"Region":"London"},{"code":"E12000007","category":"ABIndian","value":656272,"Region":"London"},{"code":"E12000007","category":"ABPakistani","value":290549,"Region":"London"},{"code":"E12000007","category":"ABAsian","value":401245,"Region":"London"},{"code":"E12000007","category":"BBAfrican","value":697054,"Region":"London"},{"code":"E12000007","category":"BBCaribbean","value":345405,"Region":"London"},{"code":"E12000007","category":"BBBlack","value":145911,"Region":"London"},{"code":"E12000007","category":"whiteAndAsian","value":125188,"Region":"London"},{"code":"E12000007","category":"whiteAndBlackAfrican","value":77341,"Region":"London"},{"code":"E12000007","category":"whiteAndBlackCaribbean","value":132555,"Region":"London"},{"code":"E12000007","category":"multiple","value":170691,"Region":"London"},{"code":"E12000007","category":"wBritish","value":3239281,"Region":"London"},{"code":"E12000007","category":"wIrish","value":156333,"Region":"London"},{"code":"E12000007","category":"wTraveller","value":7031,"Region":"London"},{"code":"E12000007","category":"wRoma","value":37689,"Region":"London"},{"code":"E12000007","category":"wOther","value":1290838,"Region":"London"},{"code":"E12000007","category":"arab","value":139791,"Region":"London"},{"code":"E12000007","category":"other","value":416977,"Region":"London"},{"code":"E12000008","category":"N/A","value":0,"Region":"South East"},{"code":"E12000008","category":"ABBangladeshi","value":39881,"Region":"South East"},{"code":"E12000008","category":"ABChinese","value":64329,"Region":"South East"},{"code":"E12000008","category":"ABIndian","value":241537,"Region":"South East"},{"code":"E12000008","category":"ABPakistani","value":145311,"Region":"South East"},{"code":"E12000008","category":"ABAsian","value":159487,"Region":"South East"},{"code":"E12000008","category":"BBAfrican","value":150540,"Region":"South East"},{"code":"E12000008","category":"BBCaribbean","value":43523,"Region":"South East"},{"code":"E12000008","category":"BBBlack","value":27521,"Region":"South East"},{"code":"E12000008","category":"whiteAndAsian","value":88106,"Region":"South East"},{"code":"E12000008","category":"whiteAndBlackAfrican","value":38633,"Region":"South East"},{"code":"E12000008","category":"whiteAndBlackCaribbean","value":62087,"Region":"South East"},{"code":"E12000008","category":"multiple","value":72045,"Region":"South East"},{"code":"E12000008","category":"wBritish","value":7315058,"Region":"South East"},{"code":"E12000008","category":"wIrish","value":78219,"Region":"South East"},{"code":"E12000008","category":"wTraveller","value":16748,"Region":"South East"},{"code":"E12000008","category":"wRoma","value":12786,"Region":"South East"},{"code":"E12000008","category":"wOther","value":586569,"Region":"South East"},{"code":"E12000008","category":"arab","value":29574,"Region":"South East"},{"code":"E12000008","category":"other","value":106109,"Region":"South East"},{"code":"E12000009","category":"N/A","value":0,"Region":"South West"},{"code":"E12000009","category":"ABBangladeshi","value":12217,"Region":"South West"},{"code":"E12000009","category":"ABChinese","value":26516,"Region":"South West"},{"code":"E12000009","category":"ABIndian","value":58847,"Region":"South West"},{"code":"E12000009","category":"ABPakistani","value":17432,"Region":"South West"},{"code":"E12000009","category":"ABAsian","value":44172,"Region":"South West"},{"code":"E12000009","category":"BBAfrican","value":43318,"Region":"South West"},{"code":"E12000009","category":"BBCaribbean","value":17226,"Region":"South West"},{"code":"E12000009","category":"BBBlack","value":9070,"Region":"South West"},{"code":"E12000009","category":"whiteAndAsian","value":34960,"Region":"South West"},{"code":"E12000009","category":"whiteAndBlackAfrican","value":15644,"Region":"South West"},{"code":"E12000009","category":"whiteAndBlackCaribbean","value":33217,"Region":"South West"},{"code":"E12000009","category":"multiple","value":30253,"Region":"South West"},{"code":"E12000009","category":"wBritish","value":5008149,"Region":"South West"},{"code":"E12000009","category":"wIrish","value":31698,"Region":"South West"},{"code":"E12000009","category":"wTraveller","value":6382,"Region":"South West"},{"code":"E12000009","category":"wRoma","value":5785,"Region":"South West"},{"code":"E12000009","category":"wOther","value":257594,"Region":"South West"},{"code":"E12000009","category":"arab","value":10302,"Region":"South West"},{"code":"E12000009","category":"other","value":38404,"Region":"South West"},{"code":"W92000004","category":"N/A","value":0,"Region":"Wales"},{"code":"W92000004","category":"ABBangladeshi","value":15314,"Region":"Wales"},{"code":"W92000004","category":"ABChinese","value":14454,"Region":"Wales"},{"code":"W92000004","category":"ABIndian","value":21070,"Region":"Wales"},{"code":"W92000004","category":"ABPakistani","value":17534,"Region":"Wales"},{"code":"W92000004","category":"ABAsian","value":20656,"Region":"Wales"},{"code":"W92000004","category":"BBAfrican","value":19907,"Region":"Wales"},{"code":"W92000004","category":"BBCaribbean","value":3700,"Region":"Wales"},{"code":"W92000004","category":"BBBlack","value":3947,"Region":"Wales"},{"code":"W92000004","category":"whiteAndAsian","value":14035,"Region":"Wales"},{"code":"W92000004","category":"whiteAndBlackAfrican","value":8068,"Region":"Wales"},{"code":"W92000004","category":"whiteAndBlackCaribbean","value":13732,"Region":"Wales"},{"code":"W92000004","category":"multiple","value":12763,"Region":"Wales"},{"code":"W92000004","category":"wBritish","value":2814247,"Region":"Wales"},{"code":"W92000004","category":"wIrish","value":13214,"Region":"Wales"},{"code":"W92000004","category":"wTraveller","value":3550,"Region":"Wales"},{"code":"W92000004","category":"wRoma","value":1843,"Region":"Wales"},{"code":"W92000004","category":"wOther","value":82994,"Region":"Wales"},{"code":"W92000004","category":"arab","value":11641,"Region":"Wales"},{"code":"W92000004","category":"other","value":14825,"Region":"Wales"}]},"mark":{"type":"bar","tooltip":{"content":"encoding"}},"encoding":{"x":{"field":"category","type":"nominal","title":""},"y":{"field":"value","aggregate":"sum","title":""},"color":{"field":"Region","scale":{"scheme":"magma"},"legend":null},"column":{"field":"Region"}}}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>

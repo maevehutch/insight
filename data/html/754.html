@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>project — Visualizations Only</title><link href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" rel="stylesheet"/><style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style><script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/apache-arrow@4/Arrow.es2015.min.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/vega-loader-arrow@0.0/build/vega-loader-arrow.min.js" type="text/javascript"></script></head><body><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","height":600,"width":500,"layer":[{"data":{"url":"https://gicentre.github.io/data/census21/ewRegions.json","format":{"type":"topojson","feature":"regions"}},"transform":[{"lookup":"properties.code","from":{"data":{"values":[{"RCode":"E12000001","Regions":"North East","Hospitals":47},{"RCode":"E12000002","Regions":"North West","Hospitals":90},{"RCode":"E12000003","Regions":"Yorkshire and The Humber","Hospitals":58},{"RCode":"E12000004","Regions":"East Midlands","Hospitals":69},{"RCode":"E12000005","Regions":"West Midlands","Hospitals":62},{"RCode":"E12000006","Regions":"East of England","Hospitals":39},{"RCode":"E12000007","Regions":"London","Hospitals":84},{"RCode":"E12000008","Regions":"South East","Hospitals":137},{"RCode":"E12000009","Regions":"South West","Hospitals":118},{"RCode":"W92000004","Regions":"Wales","Hospitals":84}]},"key":"RCode","fields":["Hospitals"]}}],"encoding":{"color":{"field":"Hospitals","title":"Number Of Hospitals","type":"quantitative","scale":{"scheme":"goldgreen"}},"tooltip":[{"field":"properties.label","title":"Region"},{"field":"Hospitals","title":"Number Of Hospitals"}]},"mark":{"type":"geoshape","stroke":"white"}},{"data":{"values":[{"code":"E12000001","region":"North East","cx":-1.9035887386905277,"cy":55.016534807485804},{"code":"E12000002","region":"North West","cx":-2.7249809456657648,"cy":54.054433494792164},{"code":"E12000003","region":"Yorkshire and The Humber","cx":-1.273743720134668,"cy":53.984942164514415},{"code":"E12000004","region":"East Midlands","cx":-0.8127250768872454,"cy":52.92742452922053},{"code":"E12000005","region":"West Midlands","cx":-2.2751425319895686,"cy":52.47899746530129},{"code":"E12000006","region":"East","cx":0.5377695584019455,"cy":52.25037375931202},{"code":"E12000007","region":"London","cx":-0.11630438670696702,"cy":51.504658984740715},{"code":"E12000008","region":"South East","cx":-0.5297921536997312,"cy":51.29536099954033},{"code":"E12000009","region":"South West","cx":-3.1273480777500486,"cy":50.997691316616354},{"code":"W92000004","region":"Wales","cx":-3.7351572919222695,"cy":52.301101679342715}]},"transform":[{"lookup":"code","from":{"data":{"values":[{"RRcode":"E12000001","Percentage":0.024734378,"Age":"Aged 15 years and under"},{"RRcode":"E12000001","Percentage":0.017374687,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000001","Percentage":0.029050099,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000001","Percentage":0.055256582,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000001","Percentage":0.104294891,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000001","Percentage":0.155905276,"Age":"Aged 65 years and over"},{"RRcode":"E12000002","Percentage":0.006184247,"Age":"Aged 15 years and under"},{"RRcode":"E12000002","Percentage":0.060329013,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000002","Percentage":0.025688929,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000002","Percentage":0.04967864,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000002","Percentage":0.097141691,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000002","Percentage":0.145095451,"Age":"Aged 65 years and over"},{"RRcode":"E12000003","Percentage":0.006368603,"Age":"Aged 15 years and under"},{"RRcode":"E12000003","Percentage":0.015814024,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000003","Percentage":0.024705109,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000003","Percentage":0.047232418,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000003","Percentage":0.087903871,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000003","Percentage":0.135957379,"Age":"Aged 65 years and over"},{"RRcode":"E12000004","Percentage":0.005614455,"Age":"Aged 15 years and under"},{"RRcode":"E12000004","Percentage":0.01487216,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000004","Percentage":0.022966307,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000004","Percentage":0.040781717,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000004","Percentage":0.07810123,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000004","Percentage":0.12614536,"Age":"Aged 65 years and over"},{"RRcode":"E12000005","Percentage":0.006243975,"Age":"Aged 15 years and under"},{"RRcode":"E12000005","Percentage":0.015722346,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000005","Percentage":0.023708148,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000005","Percentage":0.044424671,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000005","Percentage":0.086535203,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000005","Percentage":0.137318715,"Age":"Aged 65 years and over"},{"RRcode":"E12000006","Percentage":0.005320234,"Age":"Aged 15 years and under"},{"RRcode":"E12000006","Percentage":0.015204049,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000006","Percentage":0.019789475,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000006","Percentage":0.033740257,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000006","Percentage":0.064454479,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000006","Percentage":0.109881235,"Age":"Aged 65 years and over"},{"RRcode":"E12000007","Percentage":0.005706643,"Age":"Aged 15 years and under"},{"RRcode":"E12000007","Percentage":0.012390648,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000007","Percentage":0.014058632,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000007","Percentage":0.031027647,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000007","Percentage":0.082380308,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000007","Percentage":0.140979933,"Age":"Aged 65 years and over"},{"RRcode":"E12000008","Percentage":0.004843674,"Age":"Aged 15 years and under"},{"RRcode":"E12000008","Percentage":0.013815738,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000008","Percentage":0.019087137,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000008","Percentage":0.029737305,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000008","Percentage":0.058337241,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000008","Percentage":0.104417001,"Age":"Aged 65 years and over"},{"RRcode":"E12000009","Percentage":0.005255111,"Age":"Aged 15 years and under"},{"RRcode":"E12000009","Percentage":0.016061034,"Age":"Aged 16 to 24 years"},{"RRcode":"E12000009","Percentage":0.022747783,"Age":"Aged 25 to 34 years"},{"RRcode":"E12000009","Percentage":0.03870236,"Age":"Aged 35 to 49 years"},{"RRcode":"E12000009","Percentage":0.068394648,"Age":"Aged 50 to 64 years"},{"RRcode":"E12000009","Percentage":0.277991384,"Age":"Aged 65 years and over"},{"RRcode":"W92000004","Percentage":0.006245473,"Age":"Aged 15 years and under"},{"RRcode":"W92000004","Percentage":0.018193145,"Age":"Aged 16 to 24 years"},{"RRcode":"W92000004","Percentage":0.030835565,"Age":"Aged 25 to 34 years"},{"RRcode":"W92000004","Percentage":0.05535176,"Age":"Aged 35 to 49 years"},{"RRcode":"W92000004","Percentage":0.102766953,"Age":"Aged 50 to 64 years"},{"RRcode":"W92000004","Percentage":0.14922271,"Age":"Aged 65 years and over"}]},"key":"RRcode","fields":["Percentage"]}},{"calculate":"datum.Percentage * 100","as":"Percentage"}],"encoding":{"longitude":{"field":"cx"},"latitude":{"field":"cy"},"size":{"field":"Percentage","title":"Percentage Of Bad Health","scale":{"range":[0,1500],"type":"pow","exponent":1.1627906976744187}},"tooltip":[{"field":"region","title":"region"},{"field":"Percentage","type":"quantitative","format":".4","title":"Percentage Of Bad Health"}]},"mark":{"type":"circle","opacity":0.5}}]}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":500,"height":350,"data":{"values":[{"Age (6 categories)":"Aged 15 years and under","General health (4 categories)":"Bad or very bad health","Observation":5073,"Regions":"South West"},{"Age (6 categories)":"Aged 16 to 24 years","General health (4 categories)":"Bad or very bad health","Observation":9406,"Regions":"South West"},{"Age (6 categories)":"Aged 25 to 34 years","General health (4 categories)":"Bad or very bad health","Observation":15653,"Regions":"South West"},{"Age (6 categories)":"Aged 35 to 49 years","General health (4 categories)":"Bad or very bad health","Observation":39584,"Regions":"South West"},{"Age (6 categories)":"Aged 50 to 64 years","General health (4 categories)":"Bad or very bad health","Observation":79726,"Regions":"South West"},{"Age (6 categories)":"Aged 65 years and over","General health (4 categories)":"Bad or very bad health","Observation":139644,"Regions":"South West"}]},"encoding":{"x":{"field":"Age (6 categories)","type":"nominal","title":"Age Groups","scale":{"type":"log"},"axis":{"grid":false}},"y":{"field":"General health (4 categories)","type":"nominal","title":"Bad Health In South West 2021","scale":{"type":"log"},"axis":null},"size":{"field":"Observation","scale":{"range":[0,5000],"type":"pow","exponent":1}},"color":{"field":"Observation","type":"quantitative","scale":{"scheme":"orangered"}},"tooltip":[{"field":"Observation","type":"quantitative","title":"Total"},{"field":"Regions","type":"nominal","title":"Regions"}]},"mark":"circle"}</span></p></div><div data-role="litvisOutput" style="display: inline;"><p class="vega-lite" interactive="true" style="display: inline-block"><span style="display: none">{"$schema":"https://vega.github.io/schema/vega-lite/v5.json","width":600,"height":450,"config":{"view":{"stroke":null},"legend":{"orient":"bottom-right","offset":0}},"data":{"url":"https://gicentre.github.io/data/geoTutorials/londonBoroughs.json","format":{"type":"topojson","feature":"boroughs"}},"transform":[{"lookup":"id","from":{"data":{"values":[{"Lower tier local authorities":"City of London","Disability (3 categories)":"Disabled under the Equality Act","Observation":208,"Percentage":0.226332971},{"Lower tier local authorities":"Barking and Dagenham","Disability (3 categories)":"Disabled under the Equality Act","Observation":9512,"Percentage":0.328079192},{"Lower tier local authorities":"Barnet","Disability (3 categories)":"Disabled under the Equality Act","Observation":14211,"Percentage":0.286067999},{"Lower tier local authorities":"Bexley","Disability (3 categories)":"Disabled under the Equality Act","Observation":9808,"Percentage":0.271810221},{"Lower tier local authorities":"Brent","Disability (3 categories)":"Disabled under the Equality Act","Observation":13024,"Percentage":0.316400651},{"Lower tier local authorities":"Bromley","Disability (3 categories)":"Disabled under the Equality Act","Observation":11582,"Percentage":0.252364143},{"Lower tier local authorities":"Camden","Disability (3 categories)":"Disabled under the Equality Act","Observation":9767,"Percentage":0.30634841},{"Lower tier local authorities":"Croydon","Disability (3 categories)":"Disabled under the Equality Act","Observation":15133,"Percentage":0.275872755},{"Lower tier local authorities":"Ealing","Disability (3 categories)":"Disabled under the Equality Act","Observation":13470,"Percentage":0.300595836},{"Lower tier local authorities":"Enfield","Disability (3 categories)":"Disabled under the Equality Act","Observation":14306,"Percentage":0.318789553},{"Lower tier local authorities":"Greenwich","Disability (3 categories)":"Disabled under the Equality Act","Observation":12140,"Percentage":0.291995382},{"Lower tier local authorities":"Hackney","Disability (3 categories)":"Disabled under the Equality Act","Observation":11591,"Percentage":0.313101026},{"Lower tier local authorities":"Hammersmith and Fulham","Disability (3 categories)":"Disabled under the Equality Act","Observation":6848,"Percentage":0.298102037},{"Lower tier local authorities":"Haringey","Disability (3 categories)":"Disabled under the Equality Act","Observation":11373,"Percentage":0.314910702},{"Lower tier local authorities":"Harrow","Disability (3 categories)":"Disabled under the Equality Act","Observation":9022,"Percentage":0.288630111},{"Lower tier local authorities":"Havering","Disability (3 categories)":"Disabled under the Equality Act","Observation":10716,"Percentage":0.278706858},{"Lower tier local authorities":"Hillingdon","Disability (3 categories)":"Disabled under the Equality Act","Observation":10895,"Percentage":0.276053412},{"Lower tier local authorities":"Hounslow","Disability (3 categories)":"Disabled under the Equality Act","Observation":10596,"Percentage":0.300229507},{"Lower tier local authorities":"Islington","Disability (3 categories)":"Disabled under the Equality Act","Observation":11041,"Percentage":0.31489034},{"Lower tier local authorities":"Kensington and Chelsea","Disability (3 categories)":"Disabled under the Equality Act","Observation":5824,"Percentage":0.318060182},{"Lower tier local authorities":"Kingston upon Thames","Disability (3 categories)":"Disabled under the Equality Act","Observation":5156,"Percentage":0.234470214},{"Lower tier local authorities":"Lambeth","Disability (3 categories)":"Disabled under the Equality Act","Observation":11408,"Percentage":0.271509151},{"Lower tier local authorities":"Lewisham","Disability (3 categories)":"Disabled under the Equality Act","Observation":11806,"Percentage":0.272983722},{"Lower tier local authorities":"Merton","Disability (3 categories)":"Disabled under the Equality Act","Observation":6532,"Percentage":0.252181299},{"Lower tier local authorities":"Newham","Disability (3 categories)":"Disabled under the Equality Act","Observation":13839,"Percentage":0.329264811},{"Lower tier local authorities":"Redbridge","Disability (3 categories)":"Disabled under the Equality Act","Observation":11045,"Percentage":0.298336124},{"Lower tier local authorities":"Richmond upon Thames","Disability (3 categories)":"Disabled under the Equality Act","Observation":5474,"Percentage":0.233144512},{"Lower tier local authorities":"Southwark","Disability (3 categories)":"Disabled under the Equality Act","Observation":11521,"Percentage":0.274165913},{"Lower tier local authorities":"Sutton","Disability (3 categories)":"Disabled under the Equality Act","Observation":7575,"Percentage":0.255782543},{"Lower tier local authorities":"Tower Hamlets","Disability (3 categories)":"Disabled under the Equality Act","Observation":13209,"Percentage":0.329196262},{"Lower tier local authorities":"Waltham Forest","Disability (3 categories)":"Disabled under the Equality Act","Observation":10993,"Percentage":0.299031609},{"Lower tier local authorities":"Wandsworth","Disability (3 categories)":"Disabled under the Equality Act","Observation":9236,"Percentage":0.246661681},{"Lower tier local authorities":"Westminster","Disability (3 categories)":"Disabled under the Equality Act","Observation":9458,"Percentage":0.336296402}]},"key":"Lower tier local authorities","fields":["Disability (3 categories)","Observation","Percentage"]}},{"calculate":"datum.Percentage * 100","as":"Percentage"}],"projection":{"type":"transverseMercator","rotate":{"expr":"[2,0,0]"}},"encoding":{"color":{"field":"Observation","type":"quantitative","title":"Disability Rate","scale":{"scheme":"browns"}},"tooltip":[{"field":"id","title":"Borough"},{"field":"Disability (3 categories)","title":"Disability"},{"field":"Observation","title":"Observation"},{"field":"Percentage","title":"Percentage of Bad Health"}]},"mark":{"type":"geoshape","stroke":"white"}}</span></p></div><script>
+      var vegaEls = document.querySelectorAll('.vega, .vega-lite');
+      function reportVegaError(el, error) {
+        el.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+      }
+      for (var i = 0; i < vegaEls.length; i++) {
+        const vegaEl = vegaEls[i]
+        try {
+          var spec = JSON.parse(vegaEl.textContent);
+          vegaEmbed(vegaEl, spec, { actions: false, renderer: 'svg' })
+          .catch(function(error) {
+            reportVegaError(vegaEl, error);
+          })
+        } catch (error) {
+          reportVegaError(vegaEl, error);
+        }
+      }
+      </script></body></html>
